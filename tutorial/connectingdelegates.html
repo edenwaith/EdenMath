@@ -1,0 +1,52 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Connecting Delegates</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">Connecting Delegates</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+One useful function for an application to have is to shut down when all of its windows have closed.  This relieves the user of having to go manually quit the application after all of the windows have disappeared.  Here is the code which will later be added to EMController.m to tell EdenMath when all windows have closed.
+
+<PRE>
+
+// -------------------------------------------------------
+// (BOOL) applicationShould....:(NSApplication *)theApplication
+// Terminate the program when the last window closes
+// -------------------------------------------------------
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication 
+{
+    return YES;
+}
+
+</PRE>
+
+However, for the window and the code to react to each other, the window needs to be connected up to the EMController class.
+
+<OL>
+  <LI>In the MainMenu.nib window, click on the Instances tab if it isn't already selected.</LI>
+  <LI>CTRL-click and drag a connection line from the Window icon to the EMController icon.  In the Show Info palette, click the Connect button.</LI>
+  <LI>Repeat this process with the File's Owner icon to the EMController.</LI>
+</OL>
+
+<IMG SRC = "images/connect-controller.jpg" ALT = "Connecting the Controller">
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>

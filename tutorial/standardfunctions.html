@@ -1,0 +1,168 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Standard Functions and Linking</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">Standard Functions and Linking</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+Here is the main brunt of the program.  After the initial work is completed, much of the program is fairly repetitive work.
+<BR><BR>
+This is where you can be a little more creative in how you want to design things, but this program gives examples of how a scientific calculator can be laid out and constructed.  
+Additional functionality can be added to your own scientific calculator such as statistics functions or type conversions.
+<BR><BR>
+One large difference between many of the functions is that of the set of binary operations (+, -, x, /) verses unary operations (!, %).  Binary operations require two operands, whereas a unary operation requires only one operand.
+<BR><BR>
+Here is some sample code from EMController.m
+
+<PRE>
+
+// -------------------------------------------------------
+// (void) enter:(id)sender
+// -------------------------------------------------------
+- (void)enter:(id)sender 
+{
+    [self saveState];
+    [em enter];
+    [self updateDisplay];
+}
+
+// -------------------------------------------------------
+// (void) add:(id)sender
+// -------------------------------------------------------
+- (void)add:(id)sender 
+{
+    [self saveState];
+    [em operation:ADD_OP];
+    [self updateDisplay];
+}
+
+// -------------------------------------------------------
+// (void) subtract:(id)sender
+// -------------------------------------------------------
+- (void)subtract:(id)sender 
+{
+    [self saveState];
+    [em operation:SUBTRACT_OP];
+    [self updateDisplay];
+}
+
+// -------------------------------------------------------
+// (void) percentage:(id)sender
+// -------------------------------------------------------
+- (void)percentage:(id)sender
+{
+    [self saveState];
+    [em percentage];
+    [self updateDisplay];
+}
+
+</PRE>
+
+As you can see here, the last three functions are associated with the +, -, and % keys on the calculator.  But if you notice the functions called to the EMResponder, only <FONT FACE = "Courier">operation</FONT> and <FONT FACE = "Courier">percentage</FONT> are called in those three functions.  The <FONT FACE = "Courier">enter</FONT> function is very important when putting together the operands and the operator.
+Now here is the code in the EMResponder.m file.
+
+<PRE>
+
+// -------------------------------------------------------
+// (void)operation:(OpType)new_op_type
+// -------------------------------------------------------
+- (void)operation:(OpType)new_op_type
+{
+    if (op_type == NO_OP) 
+    {
+        previous_value 	= current_value;
+        isNewDigit 	= YES;
+        op_type 	= new_op_type;
+        trailing_digits = 0;
+    } 
+    else 
+    {
+        // cascading operations
+        [self enter]; // calculate previous value, first
+        previous_value = current_value;
+        isNewDigit = YES;
+        op_type = new_op_type;
+        trailing_digits = 0;
+    }
+}
+
+// -------------------------------------------------------
+// (void)enter
+// -------------------------------------------------------
+- (void)enter 
+{
+    switch (op_type) 
+    {
+        case NO_OP:
+            break;
+        case ADD_OP:
+            current_value = previous_value + current_value;
+            break;
+        case SUBTRACT_OP:
+            current_value = previous_value - current_value;
+            break;
+        case MULTIPLY_OP:
+            current_value = previous_value * current_value;
+            break;
+        case DIVIDE_OP:
+            if (current_value != 0.0)
+            {
+                current_value = previous_value / current_value;
+            }
+            break;
+        case EXPONENT_OP: // x^y
+            current_value = pow(previous_value, current_value);
+            break;
+        case XROOT_OP: // y&#8730;x
+            current_value = pow(previous_value, 1/current_value);
+            break;
+        case MOD_OP:
+            current_value = (int)previous_value % (int)current_value;
+            break;
+        case EE_OP:
+            current_value = previous_value * pow(10, current_value);
+            break;
+        case NPR_OP: // n!/(n-r)!
+            current_value = [self factorial:previous_value] / [self factorial:(previous_value - current_value)];
+            break;
+        case NCR_OP: // n!/(r! * (n-r)!)
+            current_value = [self factorial:previous_value] / ([self factorial:current_value] * [self factorial:(previous_value - current_value)]);
+            break;
+    }
+    previous_value 	= 0.0;
+    op_type 		= NO_OP;
+    trailing_digits 	= 0;
+    isNewDigit 		= YES;
+}
+
+// -------------------------------------------------------
+// (void)percentage
+// -------------------------------------------------------
+- (void)percentage
+{
+    current_value = current_value * 0.01;
+    isNewDigit 	  = YES;
+    trailing_digits = 0;
+}
+
+</PRE>
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>

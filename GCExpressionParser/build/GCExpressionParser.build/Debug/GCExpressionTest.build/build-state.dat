@@ -1,0 +1,477 @@
+TGCExpressionTest
+v7
+r0
+t386557066.151345
+cCheck dependencies
+cProcessInfoPlistFile "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Info.plist" Info.plist
+cStripNIB "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/English.lproj/MainMenu.nib"
+cCopyStringsFile "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+cCopyPlistFile "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/Info.plist" Info.plist
+cCpResource "build/Debug/GCExpressionTest.app/Contents/Resources/Implementation Notes" "Implementation Notes"
+cCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/main.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m" normal ppc objective-c com.apple.compilers.gcc.4_0
+cCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/ZExpParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm" normal ppc objective-c++ com.apple.compilers.gcc.4_0
+cCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionController.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m" normal ppc objective-c com.apple.compilers.gcc.4_0
+cCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCMathParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m" normal ppc objective-c com.apple.compilers.gcc.4_0
+cCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/main.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m" normal i386 objective-c com.apple.compilers.gcc.4_0
+cLd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionTest" normal ppc
+cCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/ZExpParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionController.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m" normal i386 objective-c com.apple.compilers.gcc.4_0
+cCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCMathParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m" normal i386 objective-c com.apple.compilers.gcc.4_0
+cLd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionTest" normal i386
+cCreateUniversalBinary "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/MacOS/GCExpressionTest" normal "ppc i386"
+cTouch "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app"
+
+N/Developer/SDKs/MacOSX10.4u.sdk
+c000000004D29070B00000000000000EE
+t1294534411
+s238
+
+N/Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.4u.sdk/usr/include/alloca.h
+c00000000463BAA5A0000000000000588
+t1178315354
+s1416
+
+N/Developer/SDKs/MacOSX10.4u.sdk/usr/include/ctype.h
+c00000000463BAA5B0000000000002627
+t1178315355
+s9767
+
+N/Developer/SDKs/MacOSX10.4u.sdk/usr/include/math.h
+c00000000462E7AF500000000000004B7
+t1177451253
+s1207
+
+N/Developer/SDKs/MacOSX10.4u.sdk/usr/include/stdio.h
+c00000000463BAA5A0000000000003B7F
+t1178315354
+s15231
+
+N/Developer/SDKs/MacOSX10.4u.sdk/usr/include/stdlib.h
+c00000000463BAA5A0000000000002647
+t1178315354
+s9799
+
+N/Developer/SDKs/MacOSX10.4u.sdk/usr/include/string.h
+c00000000463BAA5A00000000000014D3
+t1178315354
+s5331
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004D29071500000000000000EE
+t1294534421
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/alloca.h
+c0000000047BA99300000000000000588
+t1203411248
+s1416
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/ctype.h
+c0000000047BA99310000000000002C3A
+t1203411249
+s11322
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/math.h
+c0000000047BA987000000000000004B7
+t1203411056
+s1207
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdio.h
+c0000000047BA99310000000000003D1D
+t1203411249
+s15645
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdlib.h
+c0000000047BA99310000000000002A79
+t1203411249
+s10873
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/string.h
+c0000000047BA99320000000000001731
+t1203411250
+s5937
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/English.lproj/InfoPlist.strings
+c0000000046D402F300000000000000BE
+t1188299507
+s190
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/English.lproj/MainMenu.nib
+c0000000046D428EF00000000000000AA
+t1188309231
+s170
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.h
+c0000000046D42822000000000000017C
+t1188309026
+s380
+i<Cocoa/Cocoa.h>
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m
+c0000000046D420750000000000000275
+t1188307061
+s629
+i"GCExpressionController.h"
+i"GCMathParser.h"
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.h
+c0000000046D42A0E0000000000000465
+t1188309518
+s1125
+i<Cocoa/Cocoa.h>
+i"ZExpParser.h"
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m
+c0000000046D427420000000000000C3D
+t1188308802
+s3133
+i"GCMathParser.h"
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/Implementation Notes
+c0000000046D429790000000000001162
+t1188309369
+s4450
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/Info.plist
+c0000000046D4047D0000000000000354
+t1188299901
+s852
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.h
+c0000000046D428220000000000000814
+t1188309026
+s2068
+i<math.h>
+i<string.h>
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm
+c0000000046D4282200000000000063F3
+t1188309026
+s25587
+i"ZExpParser.h"
+i"GCMathParser.h"
+i<stdlib.h>
+i<string.h>
+i<ctype.h>
+i<alloca.h>
+i<stdio.h>
+i<alloca.h>
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app
+t1364864266
+s102
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Info.plist
+t1364864262
+s794
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/MacOS/GCExpressionTest
+t1364864266
+s77132
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/PkgInfo
+t1364864262
+s8
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1364864262
+s190
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/English.lproj/MainMenu.nib
+t1364864262
+s17191
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/Implementation Notes
+t1364864262
+s4450
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/Info.plist
+t1215588106
+s852
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionController.o
+t1364864265
+s9416
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionTest
+t1364864266
+s36172
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionTest.LinkFileList
+c00000000487467090000000000000254
+t1215588105
+s596
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCMathParser.o
+t1364864265
+s18944
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/ZExpParser.o
+t1364864266
+s18660
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/main.o
+t1364864264
+s4708
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionController.o
+t1364864264
+s9644
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionTest
+t1364864264
+s36368
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionTest.LinkFileList
+c00000000487467090000000000000250
+t1215588105
+s592
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCMathParser.o
+t1364864264
+s21016
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/ZExpParser.o
+t1364864263
+s21156
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/main.o
+t1364864263
+s4952
+
+N/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m
+c0000000046D402F300000000000000F6
+t1188299507
+s246
+i<Cocoa/Cocoa.h>
+
+NInfo.plist
+c0000000046D4047D0000000000000354
+t1188299901
+s852
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies386557062#386557062#0(106"[WARN]Warning: The Copy Bundle Resources build phase contains this target's Info.plist file 'Info.plist'.1(22@99"Warning: The Copy Bundle Resources build phase contains this target's Info.plist file 'Info.plist'.386557062#18446744073709551615#0#0(1@0"0(0#1#0"8615508896#0"0#
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionController.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m" normal i386 objective-c com.apple.compilers.gcc.4_0
+s386557064.736479
+e386557065.336748
+r1
+xCompileC
+xbuild/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionController.o
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@86"Compile /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m386557064#386557065#0(0"0(0#0#78"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m8613652800#1161"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.0 -x objective-c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mfix-and-continue -mmacosx-version-min=10.4 -gdwarf-2 "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/GCExpressionTest.hmap" "-F/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/include" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources/i386" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources" -c "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m" -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionController.o"0#
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionController.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCMathParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m" normal i386 objective-c com.apple.compilers.gcc.4_0
+s386557065.336849
+e386557065.965391
+r1
+xCompileC
+xbuild/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCMathParser.o
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@76"Compile /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m386557065#386557065#0(0"0(0#0#68"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m8615221088#1141"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.0 -x objective-c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mfix-and-continue -mmacosx-version-min=10.4 -gdwarf-2 "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/GCExpressionTest.hmap" "-F/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/include" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources/i386" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources" -c "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m" -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCMathParser.o"0#
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCMathParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/ZExpParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s386557064.713766
+e386557066.040719
+r1
+xCompileC
+xbuild/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/ZExpParser.o
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@75"Compile /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm386557064#386557066#0(0"0(0#0#67"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm8622968416#1191"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mfix-and-continue -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 -gdwarf-2 "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/GCExpressionTest.hmap" "-F/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/include" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources/i386" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources" -c "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm" -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/ZExpParser.o"0#
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/ZExpParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/main.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m" normal i386 objective-c com.apple.compilers.gcc.4_0
+s386557064.061864
+e386557064.713665
+r1
+xCompileC
+xbuild/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/main.o
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@68"Compile /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m386557064#386557064#0(0"0(0#0#60"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m8622819488#1125"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.0 -x objective-c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mfix-and-continue -mmacosx-version-min=10.4 -gdwarf-2 "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/GCExpressionTest.hmap" "-F/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/include" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources/i386" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources" -c "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m" -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/main.o"0#
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/main.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionController.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m" normal ppc objective-c com.apple.compilers.gcc.4_0
+s386557063.355036
+e386557064.061739
+r1
+xCompileC
+xbuild/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionController.o
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@86"Compile /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m386557063#386557064#0(0"0(0#0#78"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m8622229664#1168"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.0 -x objective-c -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mfix-and-continue -mtune=G5 -mmacosx-version-min=10.4 -gdwarf-2 "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/GCExpressionTest.hmap" "-F/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/include" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources/ppc" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources" -c "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m" -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionController.o"0#
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionController.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCExpressionController.m" normal ppc objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCMathParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m" normal ppc objective-c com.apple.compilers.gcc.4_0
+s386557063.793909
+e386557064.495852
+r1
+xCompileC
+xbuild/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCMathParser.o
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@76"Compile /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m386557063#386557064#0(0"0(0#0#68"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m8613820736#1148"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.0 -x objective-c -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mfix-and-continue -mtune=G5 -mmacosx-version-min=10.4 -gdwarf-2 "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/GCExpressionTest.hmap" "-F/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/include" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources/ppc" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources" -c "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m" -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCMathParser.o"0#
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCMathParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/GCMathParser.m" normal ppc objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/ZExpParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm" normal ppc objective-c++ com.apple.compilers.gcc.4_0
+s386557062.746624
+e386557063.793356
+r1
+xCompileC
+xbuild/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/ZExpParser.o
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm
+xnormal
+xppc
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@75"Compile /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm386557062#386557063#0(0"0(0#0#67"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm8622290112#1198"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.0 -x objective-c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 -gdwarf-2 "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/GCExpressionTest.hmap" "-F/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/include" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources/ppc" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources" -c "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm" -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/ZExpParser.o"0#
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/ZExpParser.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ZExpParser.mm" normal ppc objective-c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/main.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m" normal ppc objective-c com.apple.compilers.gcc.4_0
+s386557062.745735
+e386557063.354934
+r1
+xCompileC
+xbuild/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/main.o
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@68"Compile /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m386557062#386557063#0(0"0(0#0#60"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m8622362432#1132"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.0 -x objective-c -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mfix-and-continue -mtune=G5 -mmacosx-version-min=10.4 -gdwarf-2 "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/GCExpressionTest.hmap" "-F/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/include" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources/ppc" "-I/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/DerivedSources" -c "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m" -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/main.o"0#
+
+CCompileC build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/main.o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/main.m" normal ppc objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCopyPlistFile "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/Info.plist" Info.plist
+r0
+
+CCopyStringsFile "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+s386557062.599436
+e386557062.722489
+r1
+xCopyStringsFile
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings386557062#386557062#0(0"0(0#0#85"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/English.lproj/InfoPlist.strings8623064256#409"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/English.lproj"0#
+
+CCpResource "build/Debug/GCExpressionTest.app/Contents/Resources/Implementation Notes" "Implementation Notes"
+s386557062.722621
+e386557062.745628
+r1
+xCpResource
+xbuild/Debug/GCExpressionTest.app/Contents/Resources/Implementation Notes
+xImplementation Notes
+lSLF07#2@25"Copy Implementation Notes386557062#386557062#0(0"0(0#0#74"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/Implementation Notes8622536672#410"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/Implementation Notes" "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources"0#
+
+CCreateUniversalBinary "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/MacOS/GCExpressionTest" normal "ppc i386"
+s386557066.142509
+e386557066.147500
+r1
+xCreateUniversalBinary
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/MacOS/GCExpressionTest
+xnormal
+xppc i386
+lSLF07#2@104"CreateUniversalBinary build/Debug/GCExpressionTest.app/Contents/MacOS/GCExpressionTest normal "ppc i386"386557066#386557066#0(0"0(0#0#62"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/ppc i3868622057760#523"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    /usr/bin/lipo -create "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionTest" "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionTest" -output "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/MacOS/GCExpressionTest"0#
+
+CLd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionTest" normal i386
+s386557066.040902
+e386557066.142407
+r1
+xLd
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionTest
+xnormal
+xi386
+lSLF07#2@155"Link /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionTest386557066#386557066#0(0"0(0#0#0"8622712672#703"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv MACOSX_DEPLOYMENT_TARGET 10.4    /Developer/usr/bin/g++-4.0 -arch i386 -isysroot /Developer/SDKs/MacOSX10.4u.sdk "-L/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" "-F/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" -filelist "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionTest.LinkFileList" -mmacosx-version-min=10.4 -framework Cocoa -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/i386/GCExpressionTest"0#
+
+CLd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionTest" normal ppc
+s386557064.496026
+e386557064.736374
+r1
+xLd
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionTest
+xnormal
+xppc
+old: warning: object file compiled with -mlong-branch which is no longer needed. To remove this warning, recompile without -mlong-branch: /Developer/SDKs/MacOSX10.4u.sdk/usr/lib/crt1.o
+old: warning: object file compiled with -mlong-branch which is no longer needed. To remove this warning, recompile without -mlong-branch: /Developer/usr/bin/../lib/gcc/powerpc-apple-darwin10/4.0.1/crt3.o
+lSLF07#2@154"Link /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionTest386557064#386557064#0(387"ld: warning: object file compiled with -mlong-branch which is no longer needed. To remove this warning, recompile without -mlong-branch: /Developer/SDKs/MacOSX10.4u.sdk/usr/lib/crt1.old: warning: object file compiled with -mlong-branch which is no longer needed. To remove this warning, recompile without -mlong-branch: /Developer/usr/bin/../lib/gcc/powerpc-apple-darwin10/4.0.1/crt3.o2(22@170"Object file compiled with -mlong-branch which is no longer needed. To remove this warning, recompile without -mlong-branch: /Developer/SDKs/MacOSX10.4u.sdk/usr/lib/crt1.o386557064#0#184#0(6@0"386557064#0#0#0#0#0"0(22@189"Object file compiled with -mlong-branch which is no longer needed. To remove this warning, recompile without -mlong-branch: /Developer/usr/bin/../lib/gcc/powerpc-apple-darwin10/4.0.1/crt3.o386557064#184#203#0(6@0"386557064#0#0#0#0#0"0(0#0#0"8622882944#700"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    setenv MACOSX_DEPLOYMENT_TARGET 10.4    /Developer/usr/bin/g++-4.0 -arch ppc -isysroot /Developer/SDKs/MacOSX10.4u.sdk "-L/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" "-F/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug" -filelist "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionTest.LinkFileList" -mmacosx-version-min=10.4 -framework Cocoa -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/GCExpressionParser.build/Debug/GCExpressionTest.build/Objects-normal/ppc/GCExpressionTest"0#
+
+CProcessInfoPlistFile "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Info.plist" Info.plist
+s386557062.578554
+e386557062.598677
+r1
+xProcessInfoPlistFile
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist386557062#386557062#0(0"0(0#0#64"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/Info.plist8618495104#371"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    builtin-infoPlistUtility Info.plist -genpkginfo "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/PkgInfo" -expandbuildsettings -platform macosx -o "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Info.plist"0#
+
+CStripNIB "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/English.lproj/MainMenu.nib"
+s386557062.598777
+e386557062.729913
+r1
+xStripNIB
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/English.lproj/MainMenu.nib
+lSLF07#2@35"StripNIB English.lproj/MainMenu.nib386557062#386557062#0(0"0(0#0#80"/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/English.lproj/MainMenu.nib8623092864#355"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    /Developer/usr/bin/ibtool --strip "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app/Contents/Resources/English.lproj/MainMenu.nib" --output-format human-readable-text "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/English.lproj/MainMenu.nib"0#
+
+CTouch "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app"
+s386557066.147589
+e386557066.151305
+r1
+xTouch
+x/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app
+lSLF07#2@92"Touch /Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app386557066#386557066#0(0"0(0#0#0"8617726144#174"    cd "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser"    /usr/bin/touch -c "/Users/admin/Programs/EdenMath 1.2/GCExpressionParser/build/Debug/GCExpressionTest.app"0#
+

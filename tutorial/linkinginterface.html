@@ -1,0 +1,97 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Linking Interface to Functions & Variables</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">Linking Interface to Functions & Variables</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+<TABLE ALIGN = "RIGHT">
+<TR>
+  <TD>
+
+	<IMG SRC = "images/linking.jpg" ALT = "Linking the Interface" ALIGN = "RIGHT">
+	
+	<BR/><BR/>
+	
+	<IMG SRC = "images/showbutton-info.gif" ALT = "Show Button Info" ALIGN = "RIGHT">
+
+  </TD>
+</TR>
+</TABLE>
+
+Occasionally, the NIB needs to be notified of updated files so it can recognize the functions and variables defined within the source code.
+
+<UL>
+  <LI>One way to notify the NIB of updated files is to drag the .h files (such as EMController.h) from the Groups & Files window in Project Builder over to the Instances tab in the MainMenu.nib of Interface Builder.</LI>
+  <LI>The other way is to click on the EMController in the MainMenu.nib, and then click on the Classes tab.  The controller's name should be highlighted in the Classes list.  CTRL+click (or right-click) and select to Read EMController.h.  This will now synchronize the information between the controller and its associated files.</LI>
+</UL>
+
+<B>Linking to a function</B>
+
+<BR/><BR/>
+
+CTRL+click on a button or other interface element (the + key, for example), and drag a connection line from the button to the EMController in the MainNib.nib palette.  Release the mouse button.  
+
+<BR><BR>
+
+Once a connection has been established between an interface element and the controller, the Show Info palette will list in the Action table the available functions which can interact and respond to the interface.
+
+In the Show Info palette, click on the name of the corresponding function in the Actions table, and click on the Connect button.
+
+<BR/><BR/>
+
+An example would be to link the addition key (+) to the <FONT FACE = "Courier">add:</FONT> function.  Most of the provided functions are associated with logical names, such as the Cos button connects to the <FONT FACE = "Courier">cosine:</FONT> function, Ln connects to <FONT FACE = "Courier">ln:</FONT>, and so on.
+
+<BR/><BR/>
+
+The major exception to this pattern is with the numbered buttons.  To reduce the amount of code, each of the numbered buttons connects up to <FONT FACE = "Courier">digitButton:</FONT>.
+
+<PRE>
+- (void) digitButton: (id) sender
+{
+    [self saveState];
+    [em newDigit: [[sender title] intValue]];
+    [self updateDisplay];
+}
+</PRE>
+
+The call <FONT FACE = "Courier">[[sender title] intValue]</FONT> takes the 'title' of the pressed button and converts it into an integer to be sent to the <FONT FACE = "Courier">newDigit:</FONT> function.
+
+<BR/><BR/>
+
+<B>Linking to a variable</B>
+
+<BR/><BR/>
+
+Occasionally, the code will need to communicate with the interface, such as updating the information in a display field.  Linking to a variable is very similar to the process of linking to a function.  CTRL+click from the controller object to the interface object, which is the reverse method of connecting up the interface.  If done correctly, the Show Info palette will show which variables can be connected in the Outlets table.  Select the appropriate variable and then click on the Connect button at the bottom of the Show Info palette.
+
+<BR/><BR/>
+
+For EdenMath, the controller needs to send updated information to the display field.  A connection line is made from EMController to the display field.  The variable displayField appears in the Outlets table in the Show Info palette.  The Connect button is pressed to establish the connection between the controller and the display field.
+
+<BR/><BR/>
+
+Learning how to integrate the source code and the interface together seems a little odd at first, especially if you come from a Java background where pretty much everything in an interface has to be explicitly defined within the code.  With a little experience, the Interface Builder becomes one of your best friends in creating visually-pleasing and useful interfaces.
+
+<BR CLEAR = "ALL">
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>

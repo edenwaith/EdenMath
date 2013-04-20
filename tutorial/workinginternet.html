@@ -1,0 +1,109 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Working With the Internet</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">Working With the Internet</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+<B>Opening Web Pages</B>
+
+<BR/><BR/>
+
+Two new menu items added to EdenMath 1.1.1 are EdenMath Product Page and Send Feedback.  Both of these features use NSWorkspace's openURL function, which will open up a web page in your default web browser.  The following code for the goToProductPage function shows how to open up a web page from a Cocoa application.
+
+<PRE>
+- (IBAction) goToProductPage: (id) sender
+{
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/edenmath/"]];
+}
+</PRE>
+
+If you want to send an e-mail instead of opening up a web page, just change the web address to an e-mail address like mailto:my_name@mydomain.com.
+
+<BR/><BR/>
+
+<B>Check For New Updates (a.k.a. Internet Version Checking)</B>
+
+<BR/><BR/>
+
+One handy feature is the ability to check for new product updates.  EdenMath, like many of Edenwaith's products, has a Check For Updates menu item in the EdenMath menu.  
+
+<BR/><BR/>
+
+The function <FONT FACE = "Courier">checkForNewVersion:</FONT> retrieves two basic pieces of information: the version number of the software on the local machine, and the version number of the most current update.
+The current version number is retrieved from NSBundle, and this value is stored in an NSString.  The latest version number is retrieved from an XML file, which is generally hosted on the Web.
+
+<BR/><BR/>
+
+Once these two pieces of information are retrieved, they are then compared.  If <FONT FACE = "Courier">currentVersionNumber</FONT> and <FONT FACE = "Courier">latestVersionNumber</FONT> are not equal, then it is assumed that the software on the local machine is old.  If this is true, then a dialog box appears, allowing the user to jump to a website to download the latest version.  Take a look through the code to get a feel for what it does.
+
+<PRE>
+- (IBAction) checkForNewVersion: (id) sender
+{
+    NSString *currentVersionNumber = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSDictionary *productVersionDict = [NSDictionary dictionaryWithContentsOfURL: [NSURL URLWithString:@"http://www.edenwaith.com/version.xml"]];
+    NSString *latestVersionNumber = [productVersionDict valueForKey:@"EdenMath"];
+    int button = 0;
+
+    if ( latestVersionNumber == nil )
+    {
+        NSBeep();
+        NSRunAlertPanel(@"Could not check for update", @"A problem arose while attempting to check for a new version of EdenMath.  Edenwaith.com may be temporarily unavailable or your network may be down.", @"OK", nil, nil);
+    }
+    else if ( [latestVersionNumber isEqualTo: currentVersionNumber] )
+    {
+        NSRunAlertPanel(@"Software is Up-To-Date", @"You have the most recent version of EdenMath.", @"OK", nil, nil);
+    }
+    else
+    {
+        button = NSRunAlertPanel(@"New Version is Available", @"A new version of EdenMath is available.", @"OK", @"Cancel", nil);
+        
+        if (NSOKButton == button)
+        {
+            [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/downloads/edenmath.php"]];
+        }
+    }
+}
+</PRE>
+
+Notice how <FONT FACE = "Courier">latestVersionNumber</FONT> is checked to see if its value is empty (nil).  This can happen if the version.xml file could not be found, or if there is no internet connection present.  Without this check, the function might return incorrect information.
+The other two conditions are to respond appropriately whether or not the two version numbers match.  If they are the same, then an information box appears telling the user that they have the most recent version of the application.  Otherwise, a dialog box appears which allows the user to go download the latest software.  Notice how this makes use of NSWorkspace's openURL, as discussed above.
+
+<BR/><BR/>
+
+However, none of this is possible without an XML file to contain the most up-to-date information.  The XML file makes use of dictionary pairs: the key contains the application name, which is associated with the version or build number.  Below is an example of the file version.xml.  Additional applications can be added to one file by adding new key and string pairs.
+
+<PRE>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+	&lt;key&gt;EdenMath&lt;/key&gt;
+	&lt;string&gt;5&lt;/string&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</PRE>
+
+Further information about Internet Version Checking can be found at <A HREF = "http://cocoadevcentral.com/articles/000048.php" TARGET = "_BLANK">http://cocoadevcentral.com/articles/000048.php</A>.
+
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>

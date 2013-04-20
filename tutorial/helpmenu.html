@@ -1,0 +1,44 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Adding a Help Menu</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">Adding a Help Menu</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+A majority of these instructions come from the HTML file placed at /Developer/Documentation/Apple Help/Tutorial/Tutorial.htm on the Mac OS X hard drive. 
+<BR><BR>
+<OL>
+	<LI>Create your help file and save it in an HTML format.  A good place to save it would be in the same folder as your project is stored in, under a new directory called Help.</LI>
+	<LI>Click on the Resources folder in the file view. </LI>
+	<LI>Go to the Project menu and select Add Files. </LI>
+	<LI>Find the folder which will contain the help files (in this example the folder is named Help), and click the Open button. </LI>
+	<LI>Click on the "Create Folder References for any added folders" radio button, and then click the Add button. </LI>
+	<LI>Click on the Targets tab, then on the application's target. </LI>
+	<LI>In the Application Settings panel, set the Identifier for the application to be something unique like com.yourcompany.yourapplication.  In this example, I put com.edenwaith.edenmath </LI>
+	<LI>Hit the Expert button and add the two custom help keys with string values, CFBundleHelpBookFolder, and CFBundleHelpBookName.  These should be set to the name of the added help folder (Help, in this case), and the AppleTitle (EdenMath Help) defined in t
+he main help file.  An alternative method to this step is to add the CF values in the info.plist file.  Refer to <A HREF = "http://www.oreillynet.com/pub/a/mac/2001/05/25/mac_help.html" TARGET = "_blank">http://www.oreillynet.com/pub/a/mac/2001/05/25/mac_help.html</A> for 
+these instructions. </LI>
+	<LI>This meta tag needs to be in the header portion of your main help HTML file: <FONT FACE = "Courier">&lt;meta name="AppleTitle" content="MyCoolApp Help"&gt;</FONT></LI>
+	<LI>To add a custom 16x16 icon which is used with the Mac OS 10.2 Help Viewer, add the following code to your main help file: <FONT FACE = "Courier">&lt;META NAME = "AppleIcon" CONTENT = "Help/my-cool-icon.gif"&gt;</FONT>.  Make sure that my-cool-icon.gif is in the Help folder <U>and</U> it has been included into your project in Project Builder.</LI>
+</OL>
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>

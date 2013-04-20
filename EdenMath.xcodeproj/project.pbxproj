@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXApplicationTarget section */
+		29B97326FDCFA39411CA2CEA /* EdenMath */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = 843067560951E69000198D61 /* Build configuration list for PBXApplicationTarget "EdenMath" */;
+			buildPhases = (
+				29B97327FDCFA39411CA2CEA /* Headers */,
+				29B97328FDCFA39411CA2CEA /* Resources */,
+				29B9732BFDCFA39411CA2CEA /* Sources */,
+				29B9732DFDCFA39411CA2CEA /* Frameworks */,
+			);
+			dependencies = (
+			);
+			name = EdenMath;
+			productInstallPath = "$(HOME)/Applications";
+			productName = EdenMath;
+			productReference = 17587328FF379C6511CA2CBB /* EdenMath.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>EdenMath</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>Help</string>
+	<key>CFBundleHelpBookName</key>
+	<string>EdenMath Help</string>
+	<key>CFBundleIconFile</key>
+	<string>EdenMath12</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.edenwaith.edenmath</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>6</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>New item</key>
+	<string></string>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		080E96DCFE201CFB7F000001 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		29B9732CFDCFA39411CA2CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8405E9D10DF7861000A4E72F /* EMController.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FFB8C202223F9B0117F909 /* EMController.h */; };
+		8405E9D20DF7861000A4E72F /* EMResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F86F740225FF320188614A /* EMResponder.h */; };
+		8405E9D40DF7861000A4E72F /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8405E9D50DF7861000A4E72F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8405E9D60DF7861000A4E72F /* Help in Resources */ = {isa = PBXBuildFile; fileRef = F51E2D16024DB91601000002 /* Help */; };
+		8405E9D70DF7861000A4E72F /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
+		8405E9DD0DF7861000A4E72F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8405E9DE0DF7861000A4E72F /* EMController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FFB8C302223F9B0117F909 /* EMController.m */; };
+		8405E9DF0DF7861000A4E72F /* EMResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F86F750225FF320188614A /* EMResponder.m */; };
+		8405E9E10DF7861000A4E72F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		841C3D9016BDD067009A5E20 /* EdenMath12.icns in Resources */ = {isa = PBXBuildFile; fileRef = 841C3D8F16BDD067009A5E20 /* EdenMath12.icns */; };
+		841C3DF116BDEAF4009A5E20 /* xy.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEE16BDEAF4009A5E20 /* xy.png */; };
+		841C3DF216BDEAF4009A5E20 /* 10x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEF16BDEAF4009A5E20 /* 10x.png */; };
+		841C3DF316BDEAF4009A5E20 /* ex.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DF016BDEAF4009A5E20 /* ex.png */; };
+		845D31D4064F0D0F000C5867 /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
+		846F61A80664316B000C5867 /* ex.gif in Resources */ = {isa = PBXBuildFile; fileRef = 846F61A70664316B000C5867 /* ex.gif */; };
+		846F61AA06652E8C000C5867 /* xy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 846F61A906652E8C000C5867 /* xy.gif */; };
+		846F61AC06652F29000C5867 /* 10x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 846F61AB06652F29000C5867 /* 10x.gif */; };
+		84F1ADB213BED2810094FF29 /* grammar.y in Sources */ = {isa = PBXBuildFile; fileRef = 84F1ADB013BED2810094FF29 /* grammar.y */; };
+		84F1ADB313BED2810094FF29 /* rules.l in Sources */ = {isa = PBXBuildFile; fileRef = 84F1ADB113BED2810094FF29 /* rules.l */; };
+		84F7523016C4A54300B63FBA /* EMWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F7522E16C4A54300B63FBA /* EMWindow.h */; };
+		84F7523116C4A54300B63FBA /* EMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7522F16C4A54300B63FBA /* EMWindow.m */; };
+		F51E2D17024DB91601000002 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = F51E2D16024DB91601000002 /* Help */; };
+		F5F86F760225FF320188614A /* EMResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F86F740225FF320188614A /* EMResponder.h */; };
+		F5F86F770225FF320188614A /* EMResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F86F750225FF320188614A /* EMResponder.m */; };
+		F5FFB8C402223F9B0117F909 /* EMController.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FFB8C202223F9B0117F909 /* EMController.h */; };
+		F5FFB8C502223F9B0117F909 /* EMController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FFB8C302223F9B0117F909 /* EMController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		17587328FF379C6511CA2CBB /* EdenMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = EdenMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8405E9E60DF7861000A4E72F /* Info-EdenMath__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-EdenMath__Upgraded_.plist"; sourceTree = "<group>"; };
+		8405E9E70DF7861000A4E72F /* EdenMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdenMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8413BD6D1713A87A0047EDE1 /* grammar.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = grammar.ym; path = ../EdenGraph/grammar.ym; sourceTree = SOURCE_ROOT; };
+		841C3D8F16BDD067009A5E20 /* EdenMath12.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = EdenMath12.icns; path = images/EdenMath12.icns; sourceTree = "<group>"; };
+		841C3DEE16BDEAF4009A5E20 /* xy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xy.png; path = images/xy.png; sourceTree = "<group>"; };
+		841C3DEF16BDEAF4009A5E20 /* 10x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10x.png; path = images/10x.png; sourceTree = "<group>"; };
+		841C3DF016BDEAF4009A5E20 /* ex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ex.png; path = images/ex.png; sourceTree = "<group>"; };
+		845D31D3064F0D0F000C5867 /* EdenMath.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = EdenMath.icns; sourceTree = "<group>"; };
+		846F61A70664316B000C5867 /* ex.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ex.gif; sourceTree = "<group>"; };
+		846F61A906652E8C000C5867 /* xy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = xy.gif; sourceTree = "<group>"; };
+		846F61AB06652F29000C5867 /* 10x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 10x.gif; sourceTree = "<group>"; };
+		84F1AD9D13BED2500094FF29 /* MathCore */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MathCore; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F1ADB013BED2810094FF29 /* grammar.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = grammar.y; path = ../EdenGraph/grammar.y; sourceTree = SOURCE_ROOT; };
+		84F1ADB113BED2810094FF29 /* rules.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; name = rules.l; path = ../EdenGraph/rules.l; sourceTree = SOURCE_ROOT; };
+		84F7522E16C4A54300B63FBA /* EMWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMWindow.h; sourceTree = "<group>"; };
+		84F7522F16C4A54300B63FBA /* EMWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMWindow.m; sourceTree = "<group>"; };
+		F51E2D16024DB91601000002 /* Help */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = folder; path = Help; sourceTree = "<group>"; };
+		F5F86F740225FF320188614A /* EMResponder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EMResponder.h; sourceTree = "<group>"; };
+		F5F86F750225FF320188614A /* EMResponder.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = EMResponder.m; sourceTree = "<group>"; };
+		F5FFB8C202223F9B0117F909 /* EMController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EMController.h; sourceTree = "<group>"; };
+		F5FFB8C302223F9B0117F909 /* EMController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29B9732DFDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8405E9E00DF7861000A4E72F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8405E9E10DF7861000A4E72F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F1AD9B13BED2500094FF29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F5FFB8C202223F9B0117F909 /* EMController.h */,
+				F5FFB8C302223F9B0117F909 /* EMController.m */,
+				F5F86F740225FF320188614A /* EMResponder.h */,
+				F5F86F750225FF320188614A /* EMResponder.m */,
+				84F7522E16C4A54300B63FBA /* EMWindow.h */,
+				84F7522F16C4A54300B63FBA /* EMWindow.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17587328FF379C6511CA2CBB /* EdenMath.app */,
+				8405E9E70DF7861000A4E72F /* EdenMath.app */,
+				84F1AD9D13BED2500094FF29 /* MathCore */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* EdenMath */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				8405E9E60DF7861000A4E72F /* Info-EdenMath__Upgraded_.plist */,
+			);
+			name = EdenMath;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				84F1ADA313BED2610094FF29 /* MathCore */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84380B0D0BCDE4E7009A8CC2 /* Images */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				F51E2D16024DB91601000002 /* Help */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84380B0D0BCDE4E7009A8CC2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				841C3D8F16BDD067009A5E20 /* EdenMath12.icns */,
+				845D31D3064F0D0F000C5867 /* EdenMath.icns */,
+				846F61A906652E8C000C5867 /* xy.gif */,
+				846F61AB06652F29000C5867 /* 10x.gif */,
+				846F61A70664316B000C5867 /* ex.gif */,
+				841C3DEE16BDEAF4009A5E20 /* xy.png */,
+				841C3DEF16BDEAF4009A5E20 /* 10x.png */,
+				841C3DF016BDEAF4009A5E20 /* ex.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		84F1ADA313BED2610094FF29 /* MathCore */ = {
+			isa = PBXGroup;
+			children = (
+				84F1ADB013BED2810094FF29 /* grammar.y */,
+				8413BD6D1713A87A0047EDE1 /* grammar.ym */,
+				84F1ADB113BED2810094FF29 /* rules.l */,
+			);
+			name = MathCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29B97327FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5FFB8C402223F9B0117F909 /* EMController.h in Headers */,
+				F5F86F760225FF320188614A /* EMResponder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8405E9D00DF7861000A4E72F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8405E9D10DF7861000A4E72F /* EMController.h in Headers */,
+				8405E9D20DF7861000A4E72F /* EMResponder.h in Headers */,
+				84F7523016C4A54300B63FBA /* EMWindow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8405E9CF0DF7861000A4E72F /* EdenMath (Upgraded) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8405E9E20DF7861000A4E72F /* Build configuration list for PBXNativeTarget "EdenMath (Upgraded)" */;
+			buildPhases = (
+				8405E9D00DF7861000A4E72F /* Headers */,
+				8405E9D30DF7861000A4E72F /* Resources */,
+				8405E9DC0DF7861000A4E72F /* Sources */,
+				8405E9E00DF7861000A4E72F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EdenMath (Upgraded)";
+			productInstallPath = "$(HOME)/Applications";
+			productName = EdenMath;
+			productReference = 8405E9E70DF7861000A4E72F /* EdenMath.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84F1AD9C13BED2500094FF29 /* MathCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F1ADA413BED2610094FF29 /* Build configuration list for PBXNativeTarget "MathCore" */;
+			buildPhases = (
+				84F1AD9A13BED2500094FF29 /* Sources */,
+				84F1AD9B13BED2500094FF29 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MathCore;
+			productName = MathCore;
+			productReference = 84F1AD9D13BED2500094FF29 /* MathCore */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8430675A0951E69000198D61 /* Build configuration list for PBXProject "EdenMath" */;
+			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* EdenMath */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8405E9CF0DF7861000A4E72F /* EdenMath (Upgraded) */,
+				29B97326FDCFA39411CA2CEA /* EdenMath */,
+				84F1AD9C13BED2500094FF29 /* MathCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29B97328FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080E96DCFE201CFB7F000001 /* MainMenu.nib in Resources */,
+				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
+				F51E2D17024DB91601000002 /* Help in Resources */,
+				845D31D4064F0D0F000C5867 /* EdenMath.icns in Resources */,
+				846F61A80664316B000C5867 /* ex.gif in Resources */,
+				846F61AA06652E8C000C5867 /* xy.gif in Resources */,
+				846F61AC06652F29000C5867 /* 10x.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8405E9D30DF7861000A4E72F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8405E9D40DF7861000A4E72F /* MainMenu.nib in Resources */,
+				8405E9D50DF7861000A4E72F /* InfoPlist.strings in Resources */,
+				8405E9D60DF7861000A4E72F /* Help in Resources */,
+				8405E9D70DF7861000A4E72F /* EdenMath.icns in Resources */,
+				841C3D9016BDD067009A5E20 /* EdenMath12.icns in Resources */,
+				841C3DF116BDEAF4009A5E20 /* xy.png in Resources */,
+				841C3DF216BDEAF4009A5E20 /* 10x.png in Resources */,
+				841C3DF316BDEAF4009A5E20 /* ex.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29B9732BFDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29B9732CFDCFA39411CA2CEA /* main.m in Sources */,
+				F5FFB8C502223F9B0117F909 /* EMController.m in Sources */,
+				F5F86F770225FF320188614A /* EMResponder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8405E9DC0DF7861000A4E72F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8405E9DD0DF7861000A4E72F /* main.m in Sources */,
+				8405E9DE0DF7861000A4E72F /* EMController.m in Sources */,
+				8405E9DF0DF7861000A4E72F /* EMResponder.m in Sources */,
+				84F7523116C4A54300B63FBA /* EMWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F1AD9A13BED2500094FF29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F1ADB213BED2810094FF29 /* grammar.y in Sources */,
+				84F1ADB313BED2810094FF29 /* rules.l in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8405E9E30DF7861000A4E72F /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-EdenMath__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EdenMath;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		8405E9E40DF7861000A4E72F /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-EdenMath__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EdenMath;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		8405E9E50DF7861000A4E72F /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-EdenMath__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EdenMath;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		843067570951E69000198D61 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EdenMath;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		843067580951E69000198D61 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EdenMath;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		843067590951E69000198D61 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EdenMath;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		8430675B0951E69000198D61 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 4.0;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				OTHER_LDFLAGS_ppc = "-prebind";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		8430675C0951E69000198D61 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3.9;
+				OTHER_LDFLAGS_ppc = "-prebind";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+			};
+			name = Deployment;
+		};
+		8430675D0951E69000198D61 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3.9;
+				OTHER_LDFLAGS_ppc = "-prebind";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+			};
+			name = Default;
+		};
+		84F1AD9F13BED2500094FF29 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = MathCore;
+			};
+			name = Development;
+		};
+		84F1ADA013BED2500094FF29 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = MathCore;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		84F1ADA113BED2500094FF29 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = MathCore;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8405E9E20DF7861000A4E72F /* Build configuration list for PBXNativeTarget "EdenMath (Upgraded)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8405E9E30DF7861000A4E72F /* Development */,
+				8405E9E40DF7861000A4E72F /* Deployment */,
+				8405E9E50DF7861000A4E72F /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		843067560951E69000198D61 /* Build configuration list for PBXApplicationTarget "EdenMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843067570951E69000198D61 /* Development */,
+				843067580951E69000198D61 /* Deployment */,
+				843067590951E69000198D61 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		8430675A0951E69000198D61 /* Build configuration list for PBXProject "EdenMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8430675B0951E69000198D61 /* Development */,
+				8430675C0951E69000198D61 /* Deployment */,
+				8430675D0951E69000198D61 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		84F1ADA413BED2610094FF29 /* Build configuration list for PBXNativeTarget "MathCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F1AD9F13BED2500094FF29 /* Development */,
+				84F1ADA013BED2500094FF29 /* Deployment */,
+				84F1ADA113BED2500094FF29 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

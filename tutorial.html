@@ -1,0 +1,323 @@
+<HTML>
+
+<HEAD>
+
+<meta name="AppleTitle" content="EdenMath Help"/>
+
+<TITLE>EdenMath Tutorial - How to create a scientific calculator with Cocoa</TITLE>
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<B>Purpose</B>
+<BR><BR>
+Upon a programmer's first brush with the Cocoa API (based upon Next's derivative of Objective-C),
+this new language can seem a little befuddling to the uninitiated with different terms and new
+methods to design interfaces.
+<BR><BR>
+While I will try and dumb down this tutorial enough so I don't lose too many people (myself
+included), I'm not going to stop to explain basic programming concepts (i.e. What's a compiler?). 
+If you are reading this tutorial, hopefully you have at least some background in programming,
+preferably in C, C++, Java, or best yet, Objective-C.
+<BR><BR>
+To create your own scientific calculator, you will need these items:
+<UL>
+  <LI>A Macintosh computer with Mac OS X (preferably 10.1)</LI>
+  <LI>Project Builder (1.1 for OS 10.1)</LI>
+</UL>
+The EdenMath scientific calculator was designed on a Year 2000 400 MHz G4 PowerMac with 320 MB of RAM and a Year 2001 500 MHz G3 Ice iBook with 320 MB of RAM.  Both ran  Mac OS 10.1 and Project Builder 1.1.  Project Builder and other Apple Developer tools
+
+ can be acquired by purchasing a retail version of OS X, or by joining the free ADC membership and downloading the tools.  <!-- Add hyperlink to ADC, and check to see whether or not the tools can be purchased. -->
+<BR><BR>
+There are some small differences in interface design between Project Builder 1.0 (available for OS 10.0.x) and Project Builder 1.1.  I will make note of any differences I can find.  If you need more reference to PB 1.0, the book Learning Cocoa is a good r
+
+eference.
+
+<BR><BR>
+
+<B>Disclaimer</B>
+<BR><BR>
+As with any program, there are multiple ways to design and implement it.  What is being offered in
+this tutorial is just one way of many.  I make no offer that this is necessarily the best or the
+slickest way to go about creating a calculator.  It comes down to this: the program works, and it
+works well.
+<BR><BR>
+Since EdenMath is freeware, and this tutorial was included, EdenMath and its code should be used for educational purposes.  Do not redistribute or steal the code to put into your own application and claim it is yours.  Anyway, it would be pretty silly to 
+just steal this code, recompile it, and distribute another Scientific Calculator out there, especially since there are quite a few already available (some for free, others available as shareware).  And if free isn't good enought for you, well...what's wro
+ng with you?  Isn't enough that I spent my own time to create this application, AND be nice enough to create a tutorial and make the source code available?! 
+
+<BR><BR>
+
+<B>Starting Out</B>
+<BR><BR>
+1. Start up the Project Builder (/Developer/Applications/Project Builder). <BR>
+2. Select a Cocoa Application (not a Document-based application). <BR>
+3. Name the program whatever you want.  In this example, it has been named EdenMath. <BR>
+
+<BR><BR>
+
+<B>Main.m</B>
+<BR><BR>
+By default, there should be a main.m file in the Other Sources file.  You don't need to make any modifications to it.  The <FONT FACE = "Courier">#import &lt;Cocoa/Cocoa.h&gt;</FONT> line can be also replaced with <FONT FACE = "Courier">#import &lt;AppKit
+
+
+
+/AppKit.h&gt</FONT>.
+
+<BR><BR>
+
+The entire main.m file will look like this:
+
+<BR><BR>
+
+<PRE>
+
+#import &lt;Cocoa/Cocoa.h&gt;
+
+int main(int argc, const char *argv[])
+{
+    return NSApplicationMain(argc, argv);
+}
+
+</PRE>
+
+<BR><BR>
+
+<B>Setting Up the Interface</B>
+
+<BR><BR>
+1. Open up the MainMenu.nib by double-clicking on the NIB file in the Resources folder. <BR>
+2. Click on the window where the interface will be added.  Go to the Tools menu and click on Show Info. <BR>
+3. The Window Info window should appear.  Select the Attributes option in the drop down menu if it is not already selected. <BR>
+4. In the Title field, type in the name of your application.  In this case, I gave the name EdenMath. <BR>
+
+<BR><BR>
+
+<B>Adding a Display</B>
+<BR><BR>
+1. In the Views palette, drag a text field (underneath the Button) and drag it over to the interface window. <BR>
+2. In the NSTextField Info palette, select the alignment to be right aligned ->|. <BR>
+3. Type the number 0 for the Title.
+
+<BR><BR>
+
+<B>Adding a Controller</B>
+<BR><BR>
+1. In the MainMenu.nib window, click on the Classes tab. <BR>
+2. If necessary, scroll around until you find the NSObject and click on NSObject to highlight it. <BR>
+3. Go to the Classes menu and click on Subclass NSObject.  <BR>
+4. Double-click on MyObject to rename it.  In this example, I named it EMController. <BR>
+5. Highlight the EMController in the MainMenu.nib.  In the EMController Class Info palette, click on the + to the right of Outlet text.  Rename myOutlet to displayField. <BR>
+6. Make an instance of the EMController class by going to the Classes menu and selecting Instantiate EMController. <BR>
+7. Now connect the EMController to the display.  CTRL-click and drag a line from EMController to the text field in the interface window. <BR>
+8. Click the Connect button in the EMController (Custom) Info palette.
+
+<BR><BR>
+
+<B>Generating Files</B>
+<BR><BR>
+1. Go to the Classes pane of the nib file window. <BR>
+2. Select the EMController class. <BR>
+3. Choose Create Files from the Classes menu. <BR>
+4. The Interface Builder will then display a dialog box.  Verify that the checkboxes in the Create column next to the .h and .m files are selected. <BR>
+5. Verify that the checkbox next to Nib Files is selected. <BR>
+6. Click the Choose button. 
+
+<BR><BR>
+
+<B>Creating Responder</B>
+<BR><BR>
+Now it's time to create a responder class which will respond to the input the EMController brings in. <BR>
+1. Go to File -> New File. <BR>
+2. Create a new Objective-C file, and name it EMResponder.  Two files will be generated, EMResponder.h and EMResponder.m. <BR>
+3. In the EMController.h and EMController.m, add the line <FONT FACE = "Courier">#import &lt;EMResponder.h&gt;</FONT> <BR>
+4. Since this program will deal heavily with math (being a calculator and all), add the line <FONT FACE = "Courier">#include &lt;math.h&gt; </FONT> to the top of the EMResponder.h file.
+
+<BR><BR>
+
+<B>Begin Coding</B>
+<BR><BR>
+Now it's time to begin the real 'fun'.  Starting out takes a bit of explaining, but soon things will start rolling along quite smoothly.  For right now, we are going to set up the initial functions and connections between the two main classes: EMControlle
+
+r and EMResponder.  Let's start with the EMController files, then move on to EMResponder. <BR><BR>
+
+As with many header files, EMController contains the main variables, other types (such as structures or enumerated types) and function/method prototypes.  These functions (or methods as they are sometimes referred as) will be in the EMController.m file.  
+
+Here is the EMController.h file.  Copy or type it into your own header file.  <BR><BR>
+
+<B>EMController.h</B>
+
+<PRE>
+
+#import &lt;Foundation/Foundation.h&gt;
+#import &lt;AppKit/AppKit.h&gt;
+#import "EMResponder.h"
+
+@interface EMController : NSObject
+{
+    EMResponder *em; 			// model responder to buttons
+    IBOutlet NSTextField *displayField; // display field showing output
+    NSUndoManager *undoManager;		// the undo manager
+}
+
+// prototypes for EMController class methods will go under here
+
+@end
+
+</PRE>
+
+<BR><BR>
+
+Currently, the EMController.m file is pretty small, and it only allocates and deallocates memory for the program to run.  Many more functions will be added in later which will communicate with the EMResponder.  The comments should hopefully explain most o
+
+f what is going on so far.  Here is the file for EMController.m so far. 
+<BR><BR>
+<B>EMController.m.</B>
+
+<PRE>
+
+#import "EMController.h"
+
+@implementation EMController
+
+// -------------------------------------------------------
+// (id)init
+// Allocate memory and french fries for EdenMath
+// -------------------------------------------------------
+- (id)init 
+{
+    em 		= [[EMResponder alloc] init];
+    undoManager = [[NSUndoManager alloc] init];
+    return self;
+}
+
+// -------------------------------------------------------
+// (id)dealloc
+// Deallocate/free up memory used by Edenmath
+// -------------------------------------------------------
+- (void)dealloc 
+{
+    [em release];
+    [undoManager release];
+    [super dealloc];
+}
+
+@end
+
+</PRE>
+
+<B>EMResponder.h</B>
+
+<PRE>
+
+#import &lt;Foundation/Foundation.h&gt;
+
+typedef enum Op_Type 
+{
+    NO_OP 	= 0,
+    ADD_OP 	= 1,
+    SUBTRACT_OP = 2,
+    MULTIPLY_OP = 3, 
+    DIVIDE_OP 	= 4,       
+    EXPONENT_OP = 5,
+    XROOT_OP 	= 6,
+    MOD_OP 	= 7,
+    EE_OP 	= 8,
+    NPR_OP 	= 9,
+    NCR_OP 	= 10
+} OpType;
+
+typedef enum Angle_Type
+{
+    DEGREE 	= 0,
+    RADIAN 	= 1,
+    GRADIENT 	= 2
+} AngleType;
+
+@interface EMResponder : NSObject 
+{
+    double current_value;		// the current number (which is being edited)
+    double previous_value;              // the other operand (previous operand)
+    double e_value;			// the number e
+    OpType op_type;		        // the current operator
+    AngleType angle_type;	     	// type of angle used (radian, degree, gradient)
+    int trailing_digits;                // used in decimal number input
+    BOOL startNewDigit;                 // allow new number in display
+}
+
+@end
+
+</PRE>
+
+<BR><BR>
+
+<B>EMResponder.m</B>
+
+<PRE>
+
+#import "EMResponder.h"
+
+#include &lt;math.h&gt;
+
+@implementation EMResponder
+
+
+// -------------------------------------------------------
+// (id) init
+// -------------------------------------------------------
+- (id) init
+{
+    
+    current_value	= 0.0;
+    previous_value	= 0.0;
+    op_type	 	= NO_OPERATOR;
+    angle_type 		= DEGREE;
+    e_value		= 2.718281828;
+    trailing_digits 	= 0;
+    startNewDigit	= YES;
+    
+    return self;
+}
+
+@end
+
+</PRE>
+
+<B>Adding a Help Menu</B>
+<BR><BR>
+http://www.oreillynet.com/pub/a/mac/2001/05/25/mac_help.html
+
+<BR><BR>
+<B>Creating Icons</B> <BR><BR>
+(Note: modified instructions from Learning Cocoa, pages 316-318) <BR>
+1. Launch Photoshop and make a new 128 x 128 image with a transparent background.  To make the background transparent, in the box where the layers are shown, click on the eye icon to make the current layer invisible. <BR>
+2. Draw or copy the art into the document. <BR>
+3. Create a new image channel usin the Channels tab.  This new channel will function as an alpha mask.  Paint the areas of the mask that you wish to be transparent in the finder and in the Dock. <BR>
+4. Save the file as a TIFF image.  This is the recommended format for image files used in Cocoa. <BR>
+5. Launch the Icon Composer application in /Developer/Applications. <BR>
+6. Choose Import Image from the File menu.  Icon Composer's Open dialog box features a pop-up menu that lets you specify what kind of icon to make from the imported image.  You'll need a thumbnail icon at the very least, so select Thumbnail 32 Bit Data fr
+
+om 
+the Import To pop up at the bottom of the dialog box and open the TIFF document. <BR>
+7. Drag and drop the image from the Thumbnail row to the huge, Large, and SMall rows.  Icon compser will automatically scale the image for each size.  If your icon imagery doesn't scale well, you can create variations for each so users can clearly identif
+
+y 
+your application's icon no matter the icon size. <BR>
+8. Save the file from Icon Composer as Edenmath.icns. <BR>
+9. Add the icon file to the Project Builder project.  It's a good idea to copy the file into the project directory so it will travel with the project. <BR>
+10. In the Application Settings pane, type the name of the icon file in the text field labeled Icon. <BR>
+11. Build the project.  You should see the new icon in the finder, and it should appear in the Dock when the application is launched.  However, if you create the icon and add it to the project before the essential Cocoa code is written, the icon will not 
+
+appear in the Dock.<BR><BR>
+
+<HR>
+
+<FONT FACE = "Sans-Serif" SIZE = "1">
+Version 1.0 <BR>
+Last modified: 23. February 2002
+</FONT>
+
+</BODY>
+
+</HTML>

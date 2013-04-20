@@ -1,0 +1,76 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>EMResponder.h</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">EMResponder.h</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+As mentioned earlier, the EMResponder will be responsible for doing the brunt of the calculations.  The header sets up several enumerated types (to make the code a little easier to read in places) and the prototypes for the class methods.
+
+<BR><BR>
+
+<B>EMResponder.h</B>
+
+<PRE>
+
+#import &lt;Foundation/Foundation.h&gt;
+
+typedef enum Op_Type 
+{
+    NO_OP 	= 0,		// no operator
+    ADD_OP 	= 1,		// addition
+    SUBTRACT_OP = 2,		// subtraction
+    MULTIPLY_OP = 3, 		// multiplication
+    DIVIDE_OP 	= 4,    	// division
+    EXPONENT_OP = 5,		// exponent
+    XROOT_OP 	= 6,		// taking the root to the xth degree
+    MOD_OP 	= 7,		// modulus division
+    EE_OP 	= 8,		// EE operator
+    NPR_OP 	= 9,		// permuations
+    NCR_OP 	= 10		// combinations
+} OpType;
+
+typedef enum Angle_Type
+{
+    DEGREE 	 = 0,
+    RADIAN 	 = 1,
+    GRADIENT     = 2
+} AngleType;
+
+@interface EMResponder : NSObject 
+{
+    double current_value;       // the current number (which is being edited)
+    double previous_value;      // the other operand (previous operand)
+    double e_value;             // the number e
+    OpType op_type;             // the current operator
+    AngleType angle_type;       // type of angle used (radian, degree, gradient)
+    int trailing_digits;        // used in decimal number input
+    BOOL startNewDigit;         // allow new number in display
+}
+
+@end
+
+// class method prototypes
+
+</PRE>
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>

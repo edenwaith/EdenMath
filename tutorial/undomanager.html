@@ -1,0 +1,81 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Undo Manager</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">Undo Manager</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+<IMG SRC = "images/left-arrow.gif" ALIGN = "RIGHT">
+
+The arrow key on the EdenMath interface allows the user to take back multiple previous operations.  This is possible by the Undo Manager provided by Cocoa.
+
+<BR/><BR/>
+
+Here is the code which will be in the EMController.m file.
+
+<PRE>
+
+// -------------------------------------------------------
+// (void) undoAction
+// -------------------------------------------------------
+- (void)undoAction:(id)sender 
+{
+    if ([undoManager canUndo])
+    {
+        [undoManager undo];
+    }
+}
+
+// -------------------------------------------------------
+// (NSUndoManager *) windowWillReturnUndoManager:(NSWindow *)sender
+// -------------------------------------------------------
+- (NSUndoManager *)windowWillReturnUndoManager:(NSWindow *)sender 
+{
+    return undoManager;
+}
+
+</PRE>
+
+Notice that in the <FONT FACE = "Courier">init</FONT> and <FONT FACE = "Courier">dealloc</FONT> function, there are these two lines of code:
+
+<PRE>
+
+undoManager = [[NSUndoManager alloc] init];
+
+[undoManager release];
+
+</PRE>
+
+Since space is specifically allocated for the Undo Manager, it also needs to be deallocated when the program closes.
+
+<BR/><BR/>
+
+CTRL+click and drag a connection from the arrow button to the EMController, and connect to the <FONT FACE = "Courier">undoAction:</FONT> function (which should be added first if it hasn't already).
+
+<BR/><BR/>
+
+There is no code in the EMResponder files which is associated with the Undo Manager.
+
+<BR/><BR/>
+
+The Undo and Redo menu items in the Edit menu are already connected to the functions <FONT FACE = "Courier">undo:</FONT> and <FONT FACE = "Courier">redo:</FONT> which lay within the FirstResponder's responsibilities.
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,63 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>EMResponder.m</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">EMResponder.m</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+Presently, the EMResponder.m file is pretty small, but it will evolve into one of the largest files in this project.  Take a look at the completed <A HREF = "EMResponder.m">EMResponder.m</A> file to get an idea of how much work will be put into this file.  In its current incarnation, EMResponder.m just initializes several variables.
+
+<BR><BR>
+
+<B>EMResponder.m</B>
+
+<PRE>
+
+#import "EMResponder.h"
+
+#include &lt;math.h&gt;
+
+@implementation EMResponder
+
+
+// -------------------------------------------------------
+// (id) init
+// -------------------------------------------------------
+- (id) init
+{
+    
+    current_value	= 0.0;
+    previous_value	= 0.0;
+    op_type	 	= NO_OP;
+    angle_type 		= DEGREE;
+    e_value		= M_E; 		// 2.7182818285
+    trailing_digits 	= 0;
+    startNewDigit	= YES;
+    
+    return self;
+}
+
+@end
+
+</PRE>
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>

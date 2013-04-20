@@ -1,0 +1,327 @@
+<html>
+
+<head>
+<title>EdenMath Developer's Tutorial Links</title>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<base target="Contents">
+<style>.Outline     { font-family: verdana, arial, helvetica; font-weight: bold; font-size: 75%; 
+               font-color: #003366; color: #003366; text-decoration: none; 
+               cursor: hand }
+.nav1        { font-size: 70%; font-family: verdana, arial, helvetica; text-decoration: none; 
+               color: #000000; border-bottom: 1 solid #000088 }
+.topic       { text-decoration: none; color: #000000 }
+a:link       { color: #000000 }
+a:active     { color: #000000 }
+a:visited    { color: #003366 }
+body         { background-color: #ffffff }
+</style>
+</head>
+
+<body>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+// 07/07/99	jpbagel
+
+function clickHandler() 
+{
+var targetId, srcElement, targetElement, picID, iIdx;
+srcElement = window.event.srcElement;
+	
+	if (srcElement.className == "Outline") 
+	{
+		
+		if (srcElement.tagName=="SPAN")
+		{
+			// User clicked the triangle...
+			iIdx= srcElement.id.substr(6,2);
+			targetId= "Out" + iIdx + "d";
+			//targetPic= document.all("GSIcon".concat(iIdx));
+		} else {
+			// User clicked the text...
+			iIdx= srcElement.id
+			targetId= "Out" + srcElement.id + "d";
+			//targetPic= document.all("GSIcon".concat(srcElement.id))
+		}
+		
+		targetElement = document.all(targetId);
+		
+		if (targetElement.style.display == "none") 
+		{
+			targetElement.style.display = "";
+			//targetPic.innerHTML="<img src='../images/down.gif'>";
+			targetPic.setAttribute ("ID",iIdx);
+		} else {
+			//targetPic.innerHTML="<img src='../images/triangle.gif'>";
+			targetElement.style.display = "none";
+			targetPic.setAttribute("ID",iIdx);
+		}	
+		
+	} else {
+		
+		srcElement=window.event.srcElement.parentElement
+		if(!srcElement)
+			return;
+		
+		if (srcElement.tagName=="SPAN")
+		{
+			// User clicked the triangle...
+			iIdx= srcElement.id.substr(6,2);
+			targetId= "Out" + iIdx + "d";
+			targetPic= document.all("GSIcon".concat(iIdx));
+		} else {
+			// User clicked the text...
+			iIdx= srcElement.id
+			targetId= "Out" + srcElement.id + "d";
+			targetPic= document.all("GSIcon".concat(srcElement.id))
+		}
+		
+		targetElement = document.all(targetId);
+		if(!targetElement)
+			return;
+			
+		if (targetElement.style.display == "none") 
+		{
+			targetElement.style.display = "";
+			targetPic.innerHTML="<img src='../images/down.gif'>";
+			targetPic.setAttribute ("ID",iIdx);
+		} else {
+			targetPic.innerHTML="<img src='../images/triangle.gif'>";
+			targetElement.style.display = "none";
+			targetPic.setAttribute("ID",iIdx);
+		}	
+
+	}
+}
+
+
+
+document.onclick = clickHandler;
+
+</SCRIPT>
+
+<!-- Intro  -->
+<div id="Out1" class="Outline">
+  <table cellpadding="2" cellspacing="0" width="100%">
+    <tr>
+      <td width="15" valign="TOP"><a id="1" class="Outline" title="Click to Show/Hide Topics" style="color:#000088" target="_self"><span class="Outline" id="GSIcon1"><!-- <img src="../images/triangle.gif" width="12" height="13">--></span></a></td>
+      <td><a id="1" class="Outline" title="Click to Show/Hide Topics" target="_self">Intro</a></td>
+    </tr>
+  </table>
+  <div id="Out1d" style="display: none">
+    <table cellpadding="2" cellspacing="0" width="100%">
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="purpose.html" class="topic" TARGET = "main">Purpose</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="disclaimer.html" class="topic" TARGET = "main">Disclaimer</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="references.html" class="topic" TARGET = "main">References</a></td>
+      </tr>
+    </table>
+
+
+
+  </div><!-- End DIV out1d -->
+</div><!-- End DIV out1 -->
+
+<!-- Starting Up -->
+<div id="Out29" class="Outline">
+  <table cellpadding="2" cellspacing="0" width="100%">
+    <tr>
+      <td width="15" valign="TOP"><a id="29" class="Outline" title="Click to Show/Hide Topics" style="color:#000088" target="_self"><span class="Outline" id="GSIcon29"></span></a></td>
+      <td><a id="29" class="Outline" title="Click to Show/Hide Topics" target="_self">Starting Up</a></td>
+    </tr>
+  </table>
+  <div id="Out29d" style="display: none">
+    <table cellpadding="2" cellspacing="0" width="100%">
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="startingproject.html" CLASS="topic" TARGET = "main">Starting the Project</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="main-m.html" CLASS="topic" TARGET = "main">Main.m</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="settinginterface.html" CLASS="topic" TARGET = "main">Setting Up the Interface</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="addingdisplay.html" CLASS="topic" TARGET = "main">Adding a Display</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="addingcontroller.html" CLASS="topic" TARGET = "main">Adding a Controller</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="generatingfiles.html" CLASS="topic" TARGET = "main">Generating Files</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="connectingdelegates.html" CLASS="topic" TARGET = "main">Connecting Delegates</a></td>
+      </tr>      
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="creatingresponder.html" CLASS="topic" TARGET = "main">Creating a Responder</a></td>
+      </tr>
+    </table>
+
+  </div><!-- End DIV out29d -->
+</div><!-- End DIV out29 -->
+
+<!-- The Coding -->
+<div id="Out27" class="Outline">
+  <table cellpadding="2" cellspacing="0" width="100%">
+    <tr>
+      <td width="15" valign="TOP"><a id="27" class="Outline" title="Click to Show/Hide Topics" style="color:#000088" target="_self"><span class="Outline" id="GSIcon27"></span></a></td>
+      <td><a id="27" class="Outline" title="Click to Show/Hide Topics" target="_self">The Coding</a></td>
+    </tr>
+  </table>
+  <div id="Out27d" style="display: none">
+    <table cellpadding="2" cellspacing="0" width="100%">
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="emcontroller-h.html" class="topic" TARGET = "main">EMController.h</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="emcontroller-m.html" class="topic" TARGET = "main">EMController.m
+          </a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="emresponder-h.html" CLASS="topic" TARGET = "main">EMResponder.h</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'">
+          <a href="emresponder-m.html" class="topic" TARGET = "main">EMResponder.m</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="creatingnumberbuttons.html" class="topic" TARGET = "main">
+          Creating Number Buttons</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="linkinginterface.html" class="topic" TARGET = "main">
+          Linking Interface to Functions</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="standardfunctions.html" class="topic" TARGET = "main">
+          Standard Functions and Linking</a></td>
+      </tr>
+<!--
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="copyandpaste.html" class="topic" TARGET = "main">
+          Copy & Paste</a></td>
+      </tr>
+-->
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="undomanager.html" class="topic" TARGET = "main">
+          Undo Manager</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a href="tooltips.html" class="topic" TARGET = "main">
+          Tool Tips</a></td>
+      </tr>
+    </table>
+
+  </div><!-- End DIV out27d -->
+</div><!-- End DIV out27 -->
+
+
+<!-- Finishing Off -->
+<div id="Out15" class="Outline">
+  <table cellpadding="2" cellspacing="0" width="100%">
+    <tr>
+      <td width="15" valign="TOP"><a id="15" class="Outline" title="Click to Show/Hide Topics" style="color:#000088" target="_self"><span class="Outline" id="GSIcon15"></span></a></td>
+      <td><a id="15" class="Outline" title="Click to Show/Hide Topics" target="_self">Finishing Off</a></td>
+    </tr>
+  </table>
+  <div id="Out15d" style="display: none">
+    <table cellpadding="2" cellspacing="0" width="100%">
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="menubar.html" CLASS="topic" TARGET = "main">Menu Bar</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="aboutmenu.html" CLASS="topic" TARGET = "main">About Menu</a></td>
+      </tr>            
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="helpmenu.html" CLASS="topic" TARGET = "main">Help Menu</a></td>
+      </tr>      
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="creatingicons.html" CLASS="topic" TARGET = "main">Creating Icons</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="compiler.html" CLASS="topic" TARGET = "main">Compiler Optimization</a></td>
+      </tr>
+    </table>
+  </div><!-- End DIV out28d -->
+</div><!-- End DIV out28 -->
+
+
+<!-- Download -->
+<div id="Out28" class="Outline">
+  <table cellpadding="2" cellspacing="0" width="100%">
+    <tr>
+      <td width="15" valign="TOP"><a id="28" class="Outline" title="Click to Show/Hide Topics" style="color:#000088" target="_self"><span class="Outline" id="GSIcon28"></span></a></td>
+      <td><a id="28" class="Outline" title="Click to Show/Hide Topics" target="_self">Download</a></td>
+    </tr>
+  </table>
+  <div id="Out28d" style="display: none">
+    <table cellpadding="2" cellspacing="0" width="100%">
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="download.html#Executable" CLASS="topic" TARGET = "main">Executable</a></td>
+      </tr>      
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="download.html#Source" CLASS="topic" TARGET = "main">Source files</a></td>
+      </tr>
+      <tr>
+        <td width="15"></td>
+        <td class="nav1" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='transparent'"><a
+          HREF="download.html#Entire" CLASS="topic" TARGET = "main">Entire project</a></td>
+      </tr>
+    </table>
+  </div><!-- End DIV out28d -->
+</div><!-- End DIV out28 -->
+
+
+</body>
+
+</html>

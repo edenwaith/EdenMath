@@ -1,0 +1,63 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>EMController.m</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">EMController.m</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+At this point, the EMController.m file is pretty small, and it only allocates and deallocates memory for the program to run.  Many more functions will be added in later which will communicate with the EMResponder.  The comments should hopefully explain most of what is going on so far.  Here is the file for EMController.m so far. 
+<BR><BR>
+<B>EMController.m.</B>
+
+<PRE>
+
+#import "EMController.h"
+
+@implementation EMController
+
+// -------------------------------------------------------
+// (id)init
+// Allocate memory and french fries for EdenMath
+// -------------------------------------------------------
+- (id)init 
+{
+    em 		= [[EMResponder alloc] init];
+    undoManager = [[NSUndoManager alloc] init];
+    return self;
+}
+
+// -------------------------------------------------------
+// (id)dealloc
+// Deallocate/free up memory used by Edenmath
+// -------------------------------------------------------
+- (void)dealloc 
+{
+    [em release];
+    [undoManager release];
+    [super dealloc];
+}
+
+@end
+
+</PRE>
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>

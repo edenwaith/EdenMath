@@ -1,0 +1,57 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>EMController.h</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">EMController.h</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+Now it's time to begin the real 'fun'.  Starting out takes a bit of explaining, but soon things will start rolling along quite smoothly.  For right now, we are going to set up the initial functions and connections between the two main classes: EMController and EMResponder.  Let's start with the EMController files, then move on to EMResponder. <BR><BR>
+
+As with many header files, EMController contains the main variables, other types (such as structures or enumerated types) and function/method prototypes.  These functions (or methods as they are referred as occasionally) will be in the EMController.m file.  
+
+
+
+
+Here is the starting implementation of the EMController.h file.  <BR><BR>
+
+<B>EMController.h</B>
+
+<PRE>
+
+#import &lt;Foundation/Foundation.h&gt;
+#import &lt;AppKit/AppKit.h&gt;
+#import "EMResponder.h"
+
+@interface EMController : NSObject
+{
+    EMResponder *em; 			// model responder to buttons
+    IBOutlet NSTextField *displayField; // display field showing output
+    NSUndoManager *undoManager;		// the undo manager
+}
+
+// prototypes for EMController class methods will go under here
+
+@end
+
+</PRE>
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>

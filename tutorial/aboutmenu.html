@@ -1,0 +1,54 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>About Menu</TITLE>
+
+<LINK REL = "stylesheet" TYPE = "text/css" HREF = "styles.css">
+
+
+</HEAD>
+
+<BODY BGCOLOR = "#FFFFFF">
+
+<SPAN CLASS = "MainHeader">About Menu</SPAN>
+
+<HR SIZE = "1">
+
+<SPAN CLASS = "BodyText">
+
+<IMG SRC = "images/about.jpg" ALT = "About Box" ALIGN = "RIGHT">
+
+Now it is time to define the keys for the program which will give a little information about the program to be displayed in the About box.
+
+<BR><BR>
+
+
+In the Groups and Files frame, click on the Resources folder.  Now click on the InfoPlist.strings file.  This will bring up a file of several defined keys for the program.
+Below is an example of the modified data for the program.  The CFBundleName defines the name of the resulting program.  The other keys define who created the program, version numbers, and the company.
+
+<BR CLEAR = "ALL">
+
+<PRE>
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "EdenMath";
+CFBundleShortVersionString = "EdenMath version 1.1.1";
+CFBundleGetInfoString = "EdenMath version 1.1.1, Copyright 2004 Edenwaith.";
+NSHumanReadableCopyright = "Copyright 2004 Edenwaith.";
+</PRE>
+
+Also, a Credits.rtf, Credits.rtfd, or Credits.html file can be added into the project under the Resources folder.  The Credits file can display much more information than what just the plist file will mention.  There are other tricks such as scrolling credits or even an easter egg box which can be added into the program, but those topics will not be covered here at this time (perhaps in a future article...maybe).
+
+<BR><BR>
+
+<A HREF = "http://cocoadevcentral.com/articles/000071.php#000071" TARGET = "_blank">Here</A> is a good link about the About Menu and its various features.
+
+</SPAN>
+<!-- End of BodyText -->
+
+<HR SIZE = "1">
+
+</BODY>
+
+</HTML>
