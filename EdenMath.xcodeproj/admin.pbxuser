@@ -586,6 +586,9 @@
 			84F75AC3174D9B6E00881615 /* PBXTextBookmark */ = 84F75AC3174D9B6E00881615 /* PBXTextBookmark */;
 			84F75AC4174D9B6E00881615 /* PBXTextBookmark */ = 84F75AC4174D9B6E00881615 /* PBXTextBookmark */;
 			84F75AC5174D9C5100881615 /* PBXTextBookmark */ = 84F75AC5174D9C5100881615 /* PBXTextBookmark */;
+			84F75ACE174DA2DB00881615 /* PBXTextBookmark */ = 84F75ACE174DA2DB00881615 /* PBXTextBookmark */;
+			84F75ACF174DA2DB00881615 /* PlistBookmark */ = 84F75ACF174DA2DB00881615 /* PlistBookmark */;
+			84F75AD0174DA2DB00881615 /* PlistBookmark */ = 84F75AD0174DA2DB00881615 /* PlistBookmark */;
 		};
 		sourceControlManager = 8430675E0951E69000198D61 /* Source Control */;
 		userBuildSettings = {
@@ -1182,6 +1185,40 @@
 		rType = 0;
 		vrLen = 1754;
 		vrLoc = 990;
+	};
+	84F75ACE174DA2DB00881615 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 84F75A66174C771E00881615 /* index.html */;
+		name = "index.html: 49";
+		rLen = 0;
+		rLoc = 1661;
+		rType = 0;
+		vrLen = 1754;
+		vrLoc = 990;
+	};
+	84F75ACF174DA2DB00881615 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8405E9E60DF7861000A4E72F /* Info-EdenMath__Upgraded_.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleShortVersionString,
+		);
+		name = "/Users/admin/Programs/Mac/Edenmath/Info-EdenMath__Upgraded_.plist";
+		rLen = 0;
+		rLoc = 0;
+	};
+	84F75AD0174DA2DB00881615 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8405E9E60DF7861000A4E72F /* Info-EdenMath__Upgraded_.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIconFile,
+		);
+		name = "/Users/admin/Programs/Mac/Edenmath/Info-EdenMath__Upgraded_.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
 	};
 	F523AA7E02138B6B01000004 /* EdenMath */ = {
 		isa = PBXExecutable;

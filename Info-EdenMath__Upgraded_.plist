@@ -6,10 +6,6 @@
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>EdenMath</string>
-	<key>CFBundleHelpBookFolder</key>
-	<string>Help</string>
-	<key>CFBundleHelpBookName</key>
-	<string>EdenMath Help2</string>
 	<key>CFBundleIconFile</key>
 	<string>EdenMath12</string>
 	<key>CFBundleIdentifier</key>

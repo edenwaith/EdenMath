@@ -67,7 +67,6 @@
 		8405E9D20DF7861000A4E72F /* EMResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F86F740225FF320188614A /* EMResponder.h */; };
 		8405E9D40DF7861000A4E72F /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8405E9D50DF7861000A4E72F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
-		8405E9D60DF7861000A4E72F /* Help in Resources */ = {isa = PBXBuildFile; fileRef = F51E2D16024DB91601000002 /* Help */; };
 		8405E9D70DF7861000A4E72F /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
 		8405E9DD0DF7861000A4E72F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8405E9DE0DF7861000A4E72F /* EMController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FFB8C302223F9B0117F909 /* EMController.m */; };
@@ -85,7 +84,6 @@
 		84F1ADB313BED2810094FF29 /* rules.l in Sources */ = {isa = PBXBuildFile; fileRef = 84F1ADB113BED2810094FF29 /* rules.l */; };
 		84F7523016C4A54300B63FBA /* EMWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F7522E16C4A54300B63FBA /* EMWindow.h */; };
 		84F7523116C4A54300B63FBA /* EMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7522F16C4A54300B63FBA /* EMWindow.m */; };
-		F51E2D17024DB91601000002 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = F51E2D16024DB91601000002 /* Help */; };
 		F5F86F760225FF320188614A /* EMResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F86F740225FF320188614A /* EMResponder.h */; };
 		F5F86F770225FF320188614A /* EMResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F86F750225FF320188614A /* EMResponder.m */; };
 		F5FFB8C402223F9B0117F909 /* EMController.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FFB8C202223F9B0117F909 /* EMController.h */; };
@@ -116,7 +114,6 @@
 		84F1ADB113BED2810094FF29 /* rules.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; name = rules.l; path = ../EdenGraph/rules.l; sourceTree = SOURCE_ROOT; };
 		84F7522E16C4A54300B63FBA /* EMWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMWindow.h; sourceTree = "<group>"; };
 		84F7522F16C4A54300B63FBA /* EMWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMWindow.m; sourceTree = "<group>"; };
-		F51E2D16024DB91601000002 /* Help */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = folder; path = Help; sourceTree = "<group>"; };
 		F5F86F740225FF320188614A /* EMResponder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EMResponder.h; sourceTree = "<group>"; };
 		F5F86F750225FF320188614A /* EMResponder.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = EMResponder.m; sourceTree = "<group>"; };
 		F5FFB8C202223F9B0117F909 /* EMController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EMController.h; sourceTree = "<group>"; };
@@ -218,7 +215,6 @@
 				84380B0D0BCDE4E7009A8CC2 /* Images */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				F51E2D16024DB91601000002 /* Help */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -350,7 +346,6 @@
 			files = (
 				080E96DCFE201CFB7F000001 /* MainMenu.nib in Resources */,
 				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
-				F51E2D17024DB91601000002 /* Help in Resources */,
 				845D31D4064F0D0F000C5867 /* EdenMath.icns in Resources */,
 				846F61A80664316B000C5867 /* ex.gif in Resources */,
 				846F61AA06652E8C000C5867 /* xy.gif in Resources */,
@@ -364,7 +359,6 @@
 			files = (
 				8405E9D40DF7861000A4E72F /* MainMenu.nib in Resources */,
 				8405E9D50DF7861000A4E72F /* InfoPlist.strings in Resources */,
-				8405E9D60DF7861000A4E72F /* Help in Resources */,
 				8405E9D70DF7861000A4E72F /* EdenMath.icns in Resources */,
 				841C3D9016BDD067009A5E20 /* EdenMath12.icns in Resources */,
 				841C3DF116BDEAF4009A5E20 /* xy.png in Resources */,

@@ -303,14 +303,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>22</integer>
-									<integer>18</integer>
-									<integer>14</integer>
+									<integer>28</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 554}}</string>
+							<string>{{0, 75}, {186, 554}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -342,14 +340,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>index.html</string>
+								<string>Info-EdenMath__Upgraded_.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -357,18 +353,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>index.html</string>
+										<string>Info-EdenMath__Upgraded_.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>84F75AC5174D9C5100881615</string>
+										<string>84F75AD0174DA2DB00881615</string>
 										<key>history</key>
 										<array>
 											<string>84F1ADEB13BED7630094FF29</string>
 											<string>84F1ADF113BED7A60094FF29</string>
 											<string>841C3DF516BDEB21009A5E20</string>
 											<string>841C3DF616BDEB21009A5E20</string>
-											<string>841C3DF716BDEB21009A5E20</string>
 											<string>841C3E5616BE0377009A5E20</string>
 											<string>841C3E6816BE0416009A5E20</string>
 											<string>841C3E6916BE0416009A5E20</string>
@@ -386,7 +381,8 @@
 											<string>84066A3D170A75F400710CC5</string>
 											<string>8413BD9817179EA20047EDE1</string>
 											<string>84F75A63174C771E00881615</string>
-											<string>84F75AC3174D9B6E00881615</string>
+											<string>84F75ACE174DA2DB00881615</string>
+											<string>84F75ACF174DA2DB00881615</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -567,7 +563,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>390962257.46991003</real>
+	<real>390963931.863002</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -584,6 +580,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>84F75AD2174DA2DB00881615</string>
+		<string>84F75AD3174DA2DB00881615</string>
+		<string>84F75AD4174DA2DB00881615</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>84F1ADA813BED2680094FF29</string>
 		<string>/Users/admin/Programs/Mac/Edenmath/EdenMath.xcodeproj</string>
@@ -923,8 +923,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -960,7 +958,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>84066A4A170A75F400710CC5</string>
+				<string>84F75AD1174DA2DB00881615</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -970,7 +968,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
