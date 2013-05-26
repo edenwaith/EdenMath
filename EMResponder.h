@@ -69,11 +69,13 @@ typedef enum Angle_Type
 - (void) square_root;
 - (void) cubed_root;
 - (void)ln;
+- (void) binaryLogarithm;
 - (void)logarithm;
 - (void)factorial;
 - (double) factorial: (double) n;
 
 - (void)powerE;
+- (void)power2;
 - (void)power10;
 - (void)inverse;
 

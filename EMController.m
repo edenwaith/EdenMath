@@ -589,6 +589,16 @@
 }
 
 // -------------------------------------------------------
+// (IBAction) binaryLogarithm:(id)sender
+// -------------------------------------------------------
+- (IBAction) binaryLogarithm: (id) sender
+{
+    [self saveState];
+    [em binaryLogarithm];
+    [self updateDisplay];
+}
+
+// -------------------------------------------------------
 // (void) logarithm:(id)sender
 // -------------------------------------------------------
 - (void)logarithm:(id)sender
@@ -609,7 +619,7 @@
 }
 
 // -------------------------------------------------------
-// (void) inverse:(id)sender
+// (void) powerE:(id)sender
 // e^x
 // -------------------------------------------------------
 - (void)powerE:(id)sender
@@ -619,9 +629,19 @@
     [self updateDisplay];
 }
 
+// -------------------------------------------------------
+// (void) power2:(id)sender
+// 2^x
+// -------------------------------------------------------
+- (IBAction) power2: (id) sender
+{
+    [self saveState];
+    [em power2];
+    [self updateDisplay];
+}
 
 // -------------------------------------------------------
-// (void) inverse:(id)sender
+// (void) power10:(id)sender
 // 10^x
 // -------------------------------------------------------
 - (void)power10:(id)sender
@@ -827,26 +847,38 @@
 		[alternateButton setState:NSOnState];
 		
 		[sineButton setTitle: @"sin⁻¹"];
+		[sineButton setToolTip: NSLocalizedString(@"Arcsine", nil)];
 		[sineButton setAction: @selector(arcsine:)];
 		
 		[cosineButton setTitle: @"cos⁻¹"];
+		[cosineButton setToolTip: NSLocalizedString(@"Arccosine", nil)];
 		[cosineButton setAction: @selector(arccosine:)];
 		
 		[tangentButton setTitle: @"tan⁻¹"];
+		[tangentButton setToolTip: NSLocalizedString(@"Arctangent", nil)];
 		[tangentButton setAction: @selector(arctangent:)];
 		
 		[x3Button setTitle: @"3√"];
+		[x3Button setToolTip: NSLocalizedString(@"Cubed Root", nil)];
 		[x3Button setAction: @selector(cubed_root:)];
 		
 		[xyButton setImage: nil];
 		[xyButton setTitle: @"y√x"];
+		[xyButton setToolTip: NSLocalizedString(@"", nil)];
 		[xyButton setAction: @selector(xroot:)];
 		
 		[lnButton setTitle: @""];
+		[lnButton setToolTip: NSLocalizedString(@"", nil)];
 		[lnButton setImage: [NSImage imageNamed:@"ex"]];
 		[lnButton setAction: @selector(powerE:)];
 		
+		[binaryLogButton setTitle: @""];
+		[binaryLogButton setToolTip: @""];
+		[binaryLogButton setImage: [NSImage imageNamed:@"2x"]];
+		[binaryLogButton setAction: @selector(power2:)];
+		
 		[logButton setTitle: @""];
+		[logButton setToolTip: NSLocalizedString(@"", nil)];
 		[logButton setImage: [NSImage imageNamed:@"10x"]];
 		[logButton setAction: @selector(power10:)];
 		
@@ -861,27 +893,39 @@
 		[alternateButton setState:NSOffState];
 		
 		[sineButton setTitle: @"sin"];
+		[sineButton setToolTip: NSLocalizedString(@"Sine", nil)];
 		[sineButton setAction: @selector(sine:)];
 		
 		[cosineButton setTitle: @"cos"];
+		[cosineButton setToolTip: NSLocalizedString(@"Cosine", nil)];
 		[cosineButton setAction: @selector(cosine:)];
 		
 		[tangentButton setTitle: @"tan"];
+		[tangentButton setToolTip: NSLocalizedString(@"Tangent", nil)];
 		[tangentButton setAction: @selector(tangent:)];
 		
 		[x3Button setTitle: @"x³"];
+		[x3Button setToolTip: NSLocalizedString(@"Cubed", nil)];
 		[x3Button setAction: @selector(cubed:)];
 		
 		[xyButton setTitle: @""];
+		[xyButton setToolTip: NSLocalizedString(@"Exponent", nil)];
 		[xyButton setImage: [NSImage imageNamed:@"xy"]];
 		[xyButton setAction: @selector(exponent:)];
 		
 		[lnButton setImage: nil];
 		[lnButton setTitle: @"ln"];
+		[lnButton setToolTip: NSLocalizedString(@"Natural Logarithm", nil)];
 		[lnButton setAction: @selector(ln:)];
 		
+		[binaryLogButton setImage: nil];
+		[binaryLogButton setTitle: @"log₂"];
+		[binaryLogButton setToolTip: NSLocalizedString(@"Binary Logarithm", nil)];
+		[binaryLogButton setAction: @selector(binaryLogarithm:)];
+		
 		[logButton setImage: nil];
-		[logButton setTitle: @"log"];
+		[logButton setTitle: @"log₁₀"];
+		[logButton setToolTip: NSLocalizedString(@"Logarithm (Base 10)", nil)];
 		[logButton setAction: @selector(logarithm:)];
 		
 		displayAlternates = NO;

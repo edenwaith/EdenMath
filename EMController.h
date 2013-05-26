@@ -25,6 +25,7 @@
 	IBOutlet NSButton	 *x3Button;
 	IBOutlet NSButton	 *xyButton;
 	IBOutlet NSButton	 *lnButton;
+	IBOutlet NSButton	 *binaryLogButton;
 	IBOutlet NSButton	 *logButton;
 	
 	BOOL displayAlternates;
@@ -81,9 +82,11 @@
 - (void)cubed_root:(id)sender;
 - (void)xroot:(id)sender;
 - (void)ln:(id)sender;
+- (IBAction) binaryLogarithm: (id) sender;
 - (void)logarithm:(id)sender;
 - (void)factorial:(id)sender;
 - (void)powerE:(id)sender;
+- (IBAction) power2: (id) sender;
 - (void)power10:(id)sender;
 - (void)inverse:(id)sender;
 

@@ -67,19 +67,16 @@
 		8405E9D20DF7861000A4E72F /* EMResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F86F740225FF320188614A /* EMResponder.h */; };
 		8405E9D40DF7861000A4E72F /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8405E9D50DF7861000A4E72F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
-		8405E9D70DF7861000A4E72F /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
 		8405E9DD0DF7861000A4E72F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8405E9DE0DF7861000A4E72F /* EMController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FFB8C302223F9B0117F909 /* EMController.m */; };
 		8405E9DF0DF7861000A4E72F /* EMResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F86F750225FF320188614A /* EMResponder.m */; };
 		8405E9E10DF7861000A4E72F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		841571B21751BF6500147AE6 /* 2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841571B11751BF6500147AE6 /* 2x.png */; };
 		841C3D9016BDD067009A5E20 /* EdenMath12.icns in Resources */ = {isa = PBXBuildFile; fileRef = 841C3D8F16BDD067009A5E20 /* EdenMath12.icns */; };
 		841C3DF116BDEAF4009A5E20 /* xy.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEE16BDEAF4009A5E20 /* xy.png */; };
 		841C3DF216BDEAF4009A5E20 /* 10x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEF16BDEAF4009A5E20 /* 10x.png */; };
 		841C3DF316BDEAF4009A5E20 /* ex.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DF016BDEAF4009A5E20 /* ex.png */; };
 		845D31D4064F0D0F000C5867 /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
-		846F61A80664316B000C5867 /* ex.gif in Resources */ = {isa = PBXBuildFile; fileRef = 846F61A70664316B000C5867 /* ex.gif */; };
-		846F61AA06652E8C000C5867 /* xy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 846F61A906652E8C000C5867 /* xy.gif */; };
-		846F61AC06652F29000C5867 /* 10x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 846F61AB06652F29000C5867 /* 10x.gif */; };
 		84F1ADB213BED2810094FF29 /* grammar.y in Sources */ = {isa = PBXBuildFile; fileRef = 84F1ADB013BED2810094FF29 /* grammar.y */; };
 		84F1ADB313BED2810094FF29 /* rules.l in Sources */ = {isa = PBXBuildFile; fileRef = 84F1ADB113BED2810094FF29 /* rules.l */; };
 		84F7523016C4A54300B63FBA /* EMWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F7522E16C4A54300B63FBA /* EMWindow.h */; };
@@ -101,14 +98,12 @@
 		8405E9E60DF7861000A4E72F /* Info-EdenMath__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-EdenMath__Upgraded_.plist"; sourceTree = "<group>"; };
 		8405E9E70DF7861000A4E72F /* EdenMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdenMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8413BD6D1713A87A0047EDE1 /* grammar.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = grammar.ym; path = ../EdenGraph/grammar.ym; sourceTree = SOURCE_ROOT; };
+		841571B11751BF6500147AE6 /* 2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2x.png; path = images/2x.png; sourceTree = "<group>"; };
 		841C3D8F16BDD067009A5E20 /* EdenMath12.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = EdenMath12.icns; path = images/EdenMath12.icns; sourceTree = "<group>"; };
 		841C3DEE16BDEAF4009A5E20 /* xy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xy.png; path = images/xy.png; sourceTree = "<group>"; };
 		841C3DEF16BDEAF4009A5E20 /* 10x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10x.png; path = images/10x.png; sourceTree = "<group>"; };
 		841C3DF016BDEAF4009A5E20 /* ex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ex.png; path = images/ex.png; sourceTree = "<group>"; };
 		845D31D3064F0D0F000C5867 /* EdenMath.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = EdenMath.icns; sourceTree = "<group>"; };
-		846F61A70664316B000C5867 /* ex.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ex.gif; sourceTree = "<group>"; };
-		846F61A906652E8C000C5867 /* xy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = xy.gif; sourceTree = "<group>"; };
-		846F61AB06652F29000C5867 /* 10x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 10x.gif; sourceTree = "<group>"; };
 		84F1AD9D13BED2500094FF29 /* MathCore */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MathCore; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F1ADB013BED2810094FF29 /* grammar.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = grammar.y; path = ../EdenGraph/grammar.y; sourceTree = SOURCE_ROOT; };
 		84F1ADB113BED2810094FF29 /* rules.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; name = rules.l; path = ../EdenGraph/rules.l; sourceTree = SOURCE_ROOT; };
@@ -233,10 +228,8 @@
 			children = (
 				841C3D8F16BDD067009A5E20 /* EdenMath12.icns */,
 				845D31D3064F0D0F000C5867 /* EdenMath.icns */,
-				846F61A906652E8C000C5867 /* xy.gif */,
-				846F61AB06652F29000C5867 /* 10x.gif */,
-				846F61A70664316B000C5867 /* ex.gif */,
 				841C3DEE16BDEAF4009A5E20 /* xy.png */,
+				841571B11751BF6500147AE6 /* 2x.png */,
 				841C3DEF16BDEAF4009A5E20 /* 10x.png */,
 				841C3DF016BDEAF4009A5E20 /* ex.png */,
 			);
@@ -347,9 +340,6 @@
 				080E96DCFE201CFB7F000001 /* MainMenu.nib in Resources */,
 				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
 				845D31D4064F0D0F000C5867 /* EdenMath.icns in Resources */,
-				846F61A80664316B000C5867 /* ex.gif in Resources */,
-				846F61AA06652E8C000C5867 /* xy.gif in Resources */,
-				846F61AC06652F29000C5867 /* 10x.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,11 +349,11 @@
 			files = (
 				8405E9D40DF7861000A4E72F /* MainMenu.nib in Resources */,
 				8405E9D50DF7861000A4E72F /* InfoPlist.strings in Resources */,
-				8405E9D70DF7861000A4E72F /* EdenMath.icns in Resources */,
 				841C3D9016BDD067009A5E20 /* EdenMath12.icns in Resources */,
 				841C3DF116BDEAF4009A5E20 /* xy.png in Resources */,
 				841C3DF216BDEAF4009A5E20 /* 10x.png in Resources */,
 				841C3DF316BDEAF4009A5E20 /* ex.png in Resources */,
+				841571B21751BF6500147AE6 /* 2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

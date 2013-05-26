@@ -358,10 +358,24 @@
 }
 
 // -------------------------------------------------------
-// (void) cubed_root
+// (void) binaryLogarithm
+// binary logarithm base 2
+// -------------------------------------------------------
+- (void) binaryLogarithm
+{
+    if (current_value > 0.0)
+    {
+        current_value = log2(current_value);
+    }
+    
+    isNewDigit = YES;
+}
+
+// -------------------------------------------------------
+// (void) logarithm
 // logarithm base 10
 // -------------------------------------------------------
-- (void)logarithm
+- (void) logarithm
 {
     if (current_value > 0.0)
     {
@@ -429,7 +443,18 @@
 }
 
 // -------------------------------------------------------
-// (void) 10^x
+// (void) power2
+// 2^x
+// -------------------------------------------------------
+- (void) power2
+{
+    current_value = pow(2, current_value);
+    isNewDigit 	  = YES;
+}
+
+// -------------------------------------------------------
+// (void) power10
+// 10^x
 // -------------------------------------------------------
 - (void) power10
 {
