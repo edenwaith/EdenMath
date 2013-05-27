@@ -10,7 +10,7 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = i386;
-		activeBuildConfigurationName = Development;
+		activeBuildConfigurationName = Deployment;
 		activeExecutable = 8405E9E80DF7861000A4E72F /* EdenMath (Upgraded) */;
 		activeTarget = 8405E9CF0DF7861000A4E72F /* EdenMath (Upgraded) */;
 		addToTargets = (
@@ -559,6 +559,7 @@
 			8415720C1752E39B00147AE6 = 8415720C1752E39B00147AE6 /* PBXTextBookmark */;
 			841572121752E82600147AE6 = 841572121752E82600147AE6 /* PBXTextBookmark */;
 			843B23F81752EAA000551006 /* PBXTextBookmark */ = 843B23F81752EAA000551006 /* PBXTextBookmark */;
+			843B24061752EB6E00551006 /* PBXTextBookmark */ = 843B24061752EB6E00551006 /* PBXTextBookmark */;
 			84F1ADEB13BED7630094FF29 = 84F1ADEB13BED7630094FF29 /* PBXBookmark */;
 			84F1ADF113BED7A60094FF29 = 84F1ADF113BED7A60094FF29 /* PBXTextBookmark */;
 			84F7525C16C5468800B63FBA = 84F7525C16C5468800B63FBA /* PBXTextBookmark */;
@@ -787,6 +788,16 @@
 		vrLen = 960;
 		vrLoc = 13241;
 	};
+	843B24061752EB6E00551006 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F5FFB8C302223F9B0117F909 /* EMController.m */;
+		name = "EMController.m: 456";
+		rLen = 0;
+		rLoc = 13527;
+		rType = 0;
+		vrLen = 936;
+		vrLoc = 13241;
+	};
 	84F1ADEB13BED7630094FF29 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 84F1ADEC13BED7630094FF29 /* edenmath.gif */;
@@ -921,7 +932,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {807, 12116}}";
 			sepNavSelRange = "{13527, 0}";
-			sepNavVisRange = "{13241, 960}";
+			sepNavVisRange = "{13241, 936}";
 			sepNavVisRect = "{{0, 1742}, {557, 271}}";
 		};
 	};

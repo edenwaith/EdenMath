@@ -305,7 +305,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>25</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -358,7 +358,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>843B23F81752EAA000551006</string>
+										<string>843B24061752EB6E00551006</string>
 										<key>history</key>
 										<array>
 											<string>84F1ADEB13BED7630094FF29</string>
@@ -561,7 +561,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>391309984.93787199</real>
+	<real>391310190.08872402</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -578,6 +578,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>843B24081752EB6E00551006</string>
+		<string>843B24091752EB6E00551006</string>
+		<string>843B240A1752EB6E00551006</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>84F1ADA813BED2680094FF29</string>
 		<string>/Users/admin/Programs/Mac/Edenmath/EdenMath.xcodeproj</string>
@@ -950,7 +954,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>841571AC1751BD7E00147AE6</string>
+				<string>843B24071752EB6E00551006</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

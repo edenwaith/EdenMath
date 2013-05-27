@@ -22,8 +22,8 @@
 // -------------------------------------------------------
 - (id) init
 {
-    current_value	= 0.0;
-    previous_value	= 0.0;
+    currentValue	= 0.0;
+    previousValue	= 0.0;
     op_type	 	= NO_OP;
     angle_type 		= DEGREE;
     e_value		= M_E; 		// 2.7182818285
@@ -40,7 +40,7 @@
 // -------------------------------------------------------
 - (double) getCurrentValue
 {
-    return current_value;
+    return currentValue;
 }
 
 
@@ -71,7 +71,7 @@
 // -------------------------------------------------------
 - (void) setCurrentValue:(double)num
 {
-    current_value = num;
+    currentValue = num;
 }
 
 
@@ -80,8 +80,8 @@
 // -------------------------------------------------------
 - (void)setState:(NSDictionary *)stateDictionary 
 {
-    current_value 	= [[stateDictionary objectForKey: @"current_value"] doubleValue];
-    previous_value   	= [[stateDictionary objectForKey: @"previous_value"] doubleValue];
+    currentValue 	= [[stateDictionary objectForKey: @"currentValue"] doubleValue];
+    previousValue   	= [[stateDictionary objectForKey: @"previousValue"] doubleValue];
     op_type     	= [[stateDictionary objectForKey: @"op_type"] intValue];
     trailing_digits   	= [[stateDictionary objectForKey: @"trailing_digits"] intValue];
     isNewDigit    	= [[stateDictionary objectForKey: @"isNewDigit"] boolValue];
@@ -93,8 +93,8 @@
 - (NSDictionary *)state 
 {
     NSDictionary *stateDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-        [NSNumber numberWithDouble: current_value], @"current_value",
-        [NSNumber numberWithDouble: previous_value], @"previous_value",
+        [NSNumber numberWithDouble: currentValue], @"currentValue",
+        [NSNumber numberWithDouble: previousValue], @"previousValue",
         [NSNumber numberWithInt: op_type], @"op_type",
         [NSNumber numberWithInt: trailing_digits], @"trailing_digits",
         [NSNumber numberWithBool: isNewDigit], @"isNewDigit",
@@ -110,33 +110,33 @@
 
     if (isNewDigit) 
     {
-        previous_value = current_value;
+        previousValue = currentValue;
         isNewDigit  = NO;
-        current_value = digit;
+        currentValue = digit;
     } 
     else 
     {
         BOOL negative = NO;
-        if (current_value < 0) 
+        if (currentValue < 0) 
         {
-            current_value = - current_value;
+            currentValue = - currentValue;
             negative = YES;
         }
         
         if (trailing_digits == 0) 
         {
-            current_value = current_value * 10 + digit;
+            currentValue = currentValue * 10 + digit;
         } 
         else 
         {
-            current_value = current_value + (digit/pow(10.0, trailing_digits));
+            currentValue = currentValue + (digit/pow(10.0, trailing_digits));
 
             trailing_digits++;
         }
         
         if (negative == YES)
         {
-            current_value = - current_value;
+            currentValue = - currentValue;
         }
     }
 }
@@ -148,7 +148,7 @@
 {
     if (isNewDigit) 
     {
-        current_value = 0.0;
+        currentValue = 0.0;
         isNewDigit = NO;
     }
     if (trailing_digits == 0) 
@@ -163,7 +163,7 @@
 // -------------------------------------------------------
 - (void) pi 
 {
-    current_value 	= M_PI;
+    currentValue 	= M_PI;
     trailing_digits = 0;
     isNewDigit 		= YES;
 }
@@ -174,7 +174,7 @@
 // -------------------------------------------------------
 - (void) trig_constant: (double) trig_const 
 {
-    current_value 	= trig_const;
+    currentValue 	= trig_const;
     trailing_digits = 0;
     isNewDigit 		= YES;
 }
@@ -185,7 +185,7 @@
 // -------------------------------------------------------
 - (void)e
 {
-    current_value 	= M_E; 
+    currentValue 	= M_E; 
     trailing_digits = 0;
     isNewDigit 		= YES;
 }
@@ -196,8 +196,8 @@
 // -------------------------------------------------------
 - (void) clear 
 {
-    current_value 	= 0.0;
-    previous_value 	= 0.0;
+    currentValue 	= 0.0;
+    previousValue 	= 0.0;
     op_type 		= NO_OP;
     trailing_digits = 0;
     isNewDigit		= YES;
@@ -210,7 +210,7 @@
 {
     if (op_type == NO_OP) 
     {
-        previous_value 	= current_value;
+        previousValue 	= currentValue;
         isNewDigit 	= YES;
         op_type 	= new_op_type;
         trailing_digits = 0;
@@ -219,7 +219,7 @@
     {
         // cascading operations
         [self enter]; // calculate previous value, first
-        previous_value = current_value;
+        previousValue = currentValue;
         isNewDigit = YES;
         op_type = new_op_type;
         trailing_digits = 0;        
@@ -229,7 +229,7 @@
 // -------------------------------------------------------
 // (void)enter
 // For binary operators (+, -, x, /, etc.), calculate
-// the value and place into current_value
+// the value and place into currentValue
 // -------------------------------------------------------
 - (void)enter 
 {
@@ -238,40 +238,40 @@
         case NO_OP:
             break;
         case ADD_OP:
-            current_value = previous_value + current_value;
+            currentValue = previousValue + currentValue;
             break;
         case SUBTRACT_OP:
-            current_value = previous_value - current_value;
+            currentValue = previousValue - currentValue;
             break;
         case MULTIPLY_OP:
-            current_value = previous_value * current_value;
+            currentValue = previousValue * currentValue;
             break;
         case DIVIDE_OP:
-            if (current_value != 0.0)
+            if (currentValue != 0.0)
             {
-                current_value = previous_value / current_value;
+                currentValue = previousValue / currentValue;
             }
             break;
         case EXPONENT_OP: // x^y
-            current_value = pow(previous_value, current_value);
+            currentValue = pow(previousValue, currentValue);
             break;
         case XROOT_OP: // yÃx
-            current_value = pow(previous_value, 1/current_value);
+            currentValue = pow(previousValue, 1/currentValue);
             break;
         case MOD_OP:
-            current_value = (int)previous_value % (int)current_value;
+            currentValue = (int)previousValue % (int)currentValue;
             break;
         case EE_OP:
-            current_value = previous_value * pow(10, current_value);
+            currentValue = previousValue * pow(10, currentValue);
             break;
         case NPR_OP: // n!/(n-r)!
-            current_value = [self factorial:previous_value] / [self factorial:(previous_value - current_value)];
+            currentValue = [self factorial:previousValue] / [self factorial:(previousValue - currentValue)];
             break;
         case NCR_OP: // n!/(r! * (n-r)!)
-            current_value = [self factorial:previous_value] / ([self factorial:current_value] * [self factorial:(previous_value - current_value)]);
+            currentValue = [self factorial:previousValue] / ([self factorial:currentValue] * [self factorial:(previousValue - currentValue)]);
             break;
     }
-    previous_value 	= 0.0;
+    previousValue 	= 0.0;
     op_type 		= NO_OP;
     trailing_digits 	= 0;
     isNewDigit 		= YES;
@@ -286,7 +286,7 @@
 // -------------------------------------------------------
 - (void) reverse_sign
 {
-    current_value = - current_value;
+    currentValue = - currentValue;
 }
 
 // -------------------------------------------------------
@@ -294,7 +294,7 @@
 // -------------------------------------------------------
 - (void)percentage
 {
-    current_value = current_value * 0.01;
+    currentValue = currentValue * 0.01;
     isNewDigit 	  = YES;
     trailing_digits = 0;
 }
@@ -304,7 +304,7 @@
 // -------------------------------------------------------
 - (void) squared
 {
-    current_value = pow(current_value, 2);
+    currentValue = pow(currentValue, 2);
     isNewDigit    = YES;
 }
 
@@ -313,7 +313,7 @@
 // -------------------------------------------------------
 - (void) cubed
 {
-    current_value = pow(current_value, 3);
+    currentValue = pow(currentValue, 3);
     isNewDigit    = true;
 }
 
@@ -322,9 +322,9 @@
 // -------------------------------------------------------
 - (void) square_root
 {
-    if (current_value >= 0.0)
+    if (currentValue >= 0.0)
     {
-        current_value = sqrt(current_value);
+        currentValue = sqrt(currentValue);
     }
     
     isNewDigit = YES;
@@ -335,9 +335,9 @@
 // -------------------------------------------------------
 - (void)cubed_root
 {
-    //if (current_value >= 0.0)
+    //if (currentValue >= 0.0)
     //{
-        current_value = pow(current_value, 0.3333333333333333);
+        currentValue = pow(currentValue, 0.3333333333333333);
     //}
     
     isNewDigit = YES;
@@ -349,9 +349,9 @@
 // -------------------------------------------------------
 - (void)ln
 {
-    if (current_value > 0.0)
+    if (currentValue > 0.0)
     {
-        current_value = log(current_value);
+        currentValue = log(currentValue);
     }
     
     isNewDigit = YES;
@@ -363,9 +363,9 @@
 // -------------------------------------------------------
 - (void) binaryLogarithm
 {
-    if (current_value > 0.0)
+    if (currentValue > 0.0)
     {
-        current_value = log2(current_value);
+        currentValue = log2(currentValue);
     }
     
     isNewDigit = YES;
@@ -377,9 +377,9 @@
 // -------------------------------------------------------
 - (void) logarithm
 {
-    if (current_value > 0.0)
+    if (currentValue > 0.0)
     {
-        current_value = log10(current_value);
+        currentValue = log10(currentValue);
     }
     
     isNewDigit = YES;
@@ -398,10 +398,10 @@
     double lg;
     
     // 170.5 seems to be the max value which EdenMath can handle
-    if (current_value < 170.5)
+    if (currentValue < 170.5)
     {
-        lg = lgamma(current_value+1.0);
-        current_value = signgam*exp(lg); /* signgam is a predefined variable */
+        lg = lgamma(currentValue+1.0);
+        currentValue = signgam*exp(lg); /* signgam is a predefined variable */
     }
     
     trailing_digits = 0; // this allows for more precise decimal precision
@@ -438,7 +438,7 @@
 // -------------------------------------------------------
 - (void) powerE
 {
-    current_value = pow(M_E, current_value);
+    currentValue = pow(M_E, currentValue);
     isNewDigit    = YES;
 }
 
@@ -448,7 +448,7 @@
 // -------------------------------------------------------
 - (void) power2
 {
-    current_value = pow(2, current_value);
+    currentValue = pow(2, currentValue);
     isNewDigit 	  = YES;
 }
 
@@ -458,7 +458,7 @@
 // -------------------------------------------------------
 - (void) power10
 {
-    current_value = pow(10, current_value);
+    currentValue = pow(10, currentValue);
     isNewDigit 	  = YES;
 }
 
@@ -467,9 +467,9 @@
 // -------------------------------------------------------
 - (void)inverse
 {
-    if (current_value != 0.0)
+    if (currentValue != 0.0)
     {
-        current_value = 1/current_value;
+        currentValue = 1/currentValue;
     }
     
     isNewDigit = YES;
@@ -564,14 +564,14 @@
 {
     if (angle_type == DEGREE)
     {
-        current_value = [self deg_to_rad:current_value];
+        currentValue = [self deg_to_rad:currentValue];
     }
     else if (angle_type == GRADIENT)
     {
-        current_value = [self grad_to_rad:current_value];
+        currentValue = [self grad_to_rad:currentValue];
     }
     
-    current_value = sin(current_value);
+    currentValue = sin(currentValue);
     isNewDigit 	  = YES;
 }
 
@@ -582,14 +582,14 @@
 {
     if (angle_type == DEGREE)
     {
-        current_value = [self deg_to_rad:current_value];
+        currentValue = [self deg_to_rad:currentValue];
     }
     else if (angle_type == GRADIENT)
     {
-        current_value = [self grad_to_rad:current_value];
+        currentValue = [self grad_to_rad:currentValue];
     }
     
-    current_value = cos(current_value);
+    currentValue = cos(currentValue);
     isNewDigit 	  = YES;
 }
 
@@ -600,15 +600,15 @@
 {
     if (angle_type == DEGREE)
     {
-        current_value = [self deg_to_rad:current_value];
+        currentValue = [self deg_to_rad:currentValue];
     }
     else if (angle_type == GRADIENT)
     {
-        current_value = [self grad_to_rad:current_value];
+        currentValue = [self grad_to_rad:currentValue];
     }
     
-    if ( ( current_value == M_PI/2) || (current_value == 3 * M_PI / 2) || 
-         ( current_value == - M_PI/2) || (current_value == -3 * M_PI / 2) )
+    if ( ( currentValue == M_PI/2) || (currentValue == 3 * M_PI / 2) || 
+         ( currentValue == - M_PI/2) || (currentValue == -3 * M_PI / 2) )
     {
         NSBeep();
         NSRunAlertPanel(@"Warning", @"Tan cannot calculate values of ¸/2 or 3¸/2",
@@ -616,7 +616,7 @@
     }
     else // otherwise, tan will still be calculated on ¸/2 or 3¸/2, which is wrong.
     {
-        current_value = tan(current_value);
+        currentValue = tan(currentValue);
     }
     
     isNewDigit    = YES;
@@ -629,16 +629,16 @@
 // -------------------------------------------------------
 - (void)arcsine
 {
-    current_value = asin(current_value);
+    currentValue = asin(currentValue);
     isNewDigit 	 = YES;
     
     if (angle_type == DEGREE)
     {
-        current_value = [self rad_to_deg:current_value];
+        currentValue = [self rad_to_deg:currentValue];
     }
     else if (angle_type == GRADIENT)
     {
-        current_value = [self rad_to_grad:current_value];
+        currentValue = [self rad_to_grad:currentValue];
     }
 }
 
@@ -649,16 +649,16 @@
 // -------------------------------------------------------
 - (void)arccosine
 { 
-    current_value = acos(current_value);
+    currentValue = acos(currentValue);
     isNewDigit 	  = YES;
     
     if (angle_type == DEGREE)
     {
-        current_value = [self rad_to_deg:current_value];
+        currentValue = [self rad_to_deg:currentValue];
     }
     else if (angle_type == GRADIENT)
     {
-        current_value = [self rad_to_grad:current_value];
+        currentValue = [self rad_to_grad:currentValue];
     }    
 }
 
@@ -669,16 +669,16 @@
 // -------------------------------------------------------
 - (void)arctangent
 {    
-    current_value = atan(current_value);
+    currentValue = atan(currentValue);
     isNewDigit 	  = YES;
     
     if (angle_type == DEGREE)
     {
-        current_value = [self rad_to_deg:current_value];
+        currentValue = [self rad_to_deg:currentValue];
     }
     else if (angle_type == GRADIENT)
     {
-        current_value = [self rad_to_grad:current_value];
+        currentValue = [self rad_to_grad:currentValue];
     }    
 }
 
@@ -712,7 +712,7 @@
 // -------------------------------------------------------
 - (void) random_num
 {
-    current_value = [self generate_random_num];
+    currentValue = [self generate_random_num];
     isNewDigit 	 = YES;
 }
 

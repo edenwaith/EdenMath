@@ -3,7 +3,7 @@
 //  EdenMath
 //
 //  Created by Chad Armstrong on 2/7/13.
-//  Copyright 2013 Edenwaith. All rights reserved.
+//  Copyright (c) 2002-2013 Edenwaith. All rights reserved.
 //
 
 #import "EMWindow.h"
@@ -17,48 +17,14 @@
 	[self center];
 }
 
-/*
-- (void) keyDown: (NSEvent *) event
-{
-	NSLog(@"EMWindow's keyDown:");
-}
-
-- (void) keyUp: (NSEvent *) event
-{
-	NSLog(@"EMWindow's keyUp:");
-}
-*/
-
 - (void) flagsChanged: (NSEvent *) event
 {
 	unsigned flags = [event modifierFlags];
 	
-	/*
-	NSEventType eventType = [event type];
-
-	if (eventType == NSKeyDown)
-	{
-		NSLog(@"Key down!");
-	}
-	else if (eventType == NSKeyUp)
-	{
-		NSLog(@"Key up!");
-	}
-	else if (eventType == NSFlagsChanged)
-	{
-		NSLog(@"Flags changed");
-	}
-//	else
-//	{
-//		NSLog(@"eventType: %@", eventType);
-//	}
-	*/
-	
-	// NSKeyDown, event type
-	
 	// NSAlphaShiftKeyMask -- CAPS LOCK
+	// NSShiftKeyMask
 	
-	if (flags & NSAlternateKeyMask) // NSShiftKeyMask) 
+	if (flags & NSAlternateKeyMask)
 	{
 		[[self delegate] showAlternates];
 	}
@@ -71,7 +37,6 @@
 	}
 	
 	previousFlags = flags;
-
 }
 
 @end

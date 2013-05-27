@@ -33,8 +33,8 @@ typedef enum Angle_Type
 
 @interface EMResponder : NSObject 
 {
-    double current_value;		// the current number (which is being edited)
-    double previous_value;		// the other operand (previous operand)
+    double currentValue;		// the current number (which is being edited)
+    double previousValue;		// the other operand (previous operand)
     double e_value;				// the number e
     OpType op_type;		        // the current operator
     AngleType angle_type;	   	// type of angle used (radian, degree, gradient)
