@@ -22,7 +22,6 @@
 		executables = (
 			F523AA7E02138B6B01000004 /* EdenMath */,
 			8405E9E80DF7861000A4E72F /* EdenMath (Upgraded) */,
-			84F1AD9E13BED2500094FF29 /* MathCore */,
 		);
 		perUserDictionary = {
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
@@ -52,7 +51,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					301,
+					589,
 					60,
 					20,
 					48,
@@ -559,6 +558,7 @@
 			8415720B1752E39B00147AE6 = 8415720B1752E39B00147AE6 /* PBXTextBookmark */;
 			8415720C1752E39B00147AE6 = 8415720C1752E39B00147AE6 /* PBXTextBookmark */;
 			841572121752E82600147AE6 = 841572121752E82600147AE6 /* PBXTextBookmark */;
+			843B23F81752EAA000551006 /* PBXTextBookmark */ = 843B23F81752EAA000551006 /* PBXTextBookmark */;
 			84F1ADEB13BED7630094FF29 = 84F1ADEB13BED7630094FF29 /* PBXBookmark */;
 			84F1ADF113BED7A60094FF29 = 84F1ADF113BED7A60094FF29 /* PBXTextBookmark */;
 			84F7525C16C5468800B63FBA = 84F7525C16C5468800B63FBA /* PBXTextBookmark */;
@@ -777,41 +777,15 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	84F1AD9C13BED2500094FF29 /* MathCore */ = {
-		activeExec = 0;
-		executables = (
-			84F1AD9E13BED2500094FF29 /* MathCore */,
-		);
-	};
-	84F1AD9E13BED2500094FF29 /* MathCore */ = {
-		isa = PBXExecutable;
-		activeArgIndices = (
-		);
-		argumentStrings = (
-		);
-		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
-		configStateDict = {
-		};
-		customDataFormattersEnabled = 1;
-		dataTipCustomDataFormattersEnabled = 1;
-		dataTipShowTypeColumn = 1;
-		dataTipSortType = 0;
-		debuggerPlugin = GDBDebugging;
-		disassemblyDisplayState = 0;
-		dylibVariantSuffix = "";
-		enableDebugStr = 1;
-		environmentEntries = (
-		);
-		executableSystemSymbolLevel = 0;
-		executableUserSymbolLevel = 0;
-		libgmallocEnabled = 0;
-		name = MathCore;
-		savedGlobals = {
-		};
-		showTypeColumn = 0;
-		sourceDirectories = (
-		);
+	843B23F81752EAA000551006 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F5FFB8C302223F9B0117F909 /* EMController.m */;
+		name = "EMController.m: 456";
+		rLen = 0;
+		rLoc = 13527;
+		rType = 0;
+		vrLen = 960;
+		vrLoc = 13241;
 	};
 	84F1ADEB13BED7630094FF29 /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -945,9 +919,9 @@
 	};
 	F5FFB8C302223F9B0117F909 /* EMController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {576, 11869}}";
-			sepNavSelRange = "{23074, 69}";
-			sepNavVisRange = "{23502, 577}";
+			sepNavIntBoundsRect = "{{0, 0}, {807, 12116}}";
+			sepNavSelRange = "{13527, 0}";
+			sepNavVisRange = "{13241, 960}";
 			sepNavVisRect = "{{0, 1742}, {557, 271}}";
 		};
 	};

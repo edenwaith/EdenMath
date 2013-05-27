@@ -101,7 +101,6 @@
 		841C3DEF16BDEAF4009A5E20 /* 10x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10x.png; path = images/10x.png; sourceTree = "<group>"; };
 		841C3DF016BDEAF4009A5E20 /* ex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ex.png; path = images/ex.png; sourceTree = "<group>"; };
 		845D31D3064F0D0F000C5867 /* EdenMath.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = EdenMath.icns; sourceTree = "<group>"; };
-		84F1AD9D13BED2500094FF29 /* MathCore */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = MathCore; path = /Users/admin/Programs/Mac/Edenmath/build/Development/MathCore; sourceTree = "<absolute>"; };
 		84F7522E16C4A54300B63FBA /* EMWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMWindow.h; sourceTree = "<group>"; };
 		84F7522F16C4A54300B63FBA /* EMWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMWindow.m; sourceTree = "<group>"; };
 		F5F86F740225FF320188614A /* EMResponder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EMResponder.h; sourceTree = "<group>"; };
@@ -124,13 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8405E9E10DF7861000A4E72F /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84F1AD9B13BED2500094FF29 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,22 +265,6 @@
 			productReference = 8405E9E70DF7861000A4E72F /* EdenMath.app */;
 			productType = "com.apple.product-type.application";
 		};
-		84F1AD9C13BED2500094FF29 /* MathCore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 84F1ADA413BED2610094FF29 /* Build configuration list for PBXNativeTarget "MathCore" */;
-			buildPhases = (
-				84F1AD9A13BED2500094FF29 /* Sources */,
-				84F1AD9B13BED2500094FF29 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MathCore;
-			productName = MathCore;
-			productReference = 84F1AD9D13BED2500094FF29 /* MathCore */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -310,7 +286,6 @@
 			targets = (
 				8405E9CF0DF7861000A4E72F /* EdenMath (Upgraded) */,
 				29B97326FDCFA39411CA2CEA /* EdenMath */,
-				84F1AD9C13BED2500094FF29 /* MathCore */,
 			);
 		};
 /* End PBXProject section */
@@ -361,13 +336,6 @@
 				8405E9DE0DF7861000A4E72F /* EMController.m in Sources */,
 				8405E9DF0DF7861000A4E72F /* EMResponder.m in Sources */,
 				84F7523116C4A54300B63FBA /* EMWindow.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84F1AD9A13BED2500094FF29 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,48 +559,6 @@
 			};
 			name = Default;
 		};
-		84F1AD9F13BED2500094FF29 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
-				PRODUCT_NAME = MathCore;
-			};
-			name = Development;
-		};
-		84F1ADA013BED2500094FF29 /* Deployment */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
-				PRODUCT_NAME = MathCore;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-		84F1ADA113BED2500094FF29 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
-				PRODUCT_NAME = MathCore;
-			};
-			name = Default;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -662,16 +588,6 @@
 				8430675B0951E69000198D61 /* Development */,
 				8430675C0951E69000198D61 /* Deployment */,
 				8430675D0951E69000198D61 /* Default */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
-		};
-		84F1ADA413BED2610094FF29 /* Build configuration list for PBXNativeTarget "MathCore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				84F1AD9F13BED2500094FF29 /* Development */,
-				84F1ADA013BED2500094FF29 /* Deployment */,
-				84F1ADA113BED2500094FF29 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Default;
