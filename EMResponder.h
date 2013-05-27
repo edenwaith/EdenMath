@@ -35,10 +35,10 @@ typedef enum Angle_Type
 {
     double currentValue;		// the current number (which is being edited)
     double previousValue;		// the other operand (previous operand)
-    double e_value;				// the number e
-    OpType op_type;		        // the current operator
-    AngleType angle_type;	   	// type of angle used (radian, degree, gradient)
-    int trailing_digits;		// used in decimal number input
+    double eValue;				// the number e
+    OpType opType;		        // the current operator
+    AngleType angleType;	   	// type of angle used (radian, degree, gradient)
+    int trailingDigits;			// used in decimal number input
     BOOL isNewDigit;           	// allow new number in display
 }
 
@@ -53,11 +53,11 @@ typedef enum Angle_Type
 - (void)newDigit:(int)digit;
 - (void)period;
 - (void)pi;
-- (void) trig_constant: (double) trig_const;
+- (void)trigConstant: (double) trig_const;
 - (void)e;
 
 - (void)clear;
-- (void)operation:(OpType)new_op_type;
+- (void)operation:(OpType)new_opType;
 - (void)enter;
 
 // Algebraic functions
@@ -66,10 +66,10 @@ typedef enum Angle_Type
 
 - (void)squared;
 - (void)cubed;
-- (void) square_root;
-- (void) cubed_root;
+- (void)square_root;
+- (void)cubed_root;
 - (void)ln;
-- (void) binaryLogarithm;
+- (void)binaryLogarithm;
 - (void)logarithm;
 - (void)factorial;
 - (double) factorial: (double) n;
@@ -93,8 +93,8 @@ typedef enum Angle_Type
 - (void)arctangent;
 
 // Probability functions
-- (double) generate_random_num;
-- (void)random_num;
+- (double)generateRandomNum;
+- (void)randomNum;
 
 
 @end

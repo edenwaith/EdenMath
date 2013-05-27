@@ -24,10 +24,10 @@
 {
     currentValue	= 0.0;
     previousValue	= 0.0;
-    op_type	 	= NO_OP;
-    angle_type 		= DEGREE;
-    e_value		= M_E; 		// 2.7182818285
-    trailing_digits 	= 0;
+    opType			= NO_OP;
+    angleType 		= DEGREE;
+    eValue			= M_E; 		// 2.7182818285
+    trailingDigits 	= 0;
     isNewDigit		= YES;
     
     return self;
@@ -54,16 +54,16 @@
 // -------------------------------------------------------
 - (int) getTrailingDigits
 {
-    if (trailing_digits == 0)
+    if (trailingDigits == 0)
     {
-        trailing_digits = 0;
+        trailingDigits = 0;
     }
-    else if (trailing_digits > 10)
+    else if (trailingDigits > 10)
     {
-        trailing_digits = 10;
+        trailingDigits = 10;
     }
     
-    return trailing_digits;
+    return trailingDigits;
 }
 
 // -------------------------------------------------------
@@ -82,8 +82,8 @@
 {
     currentValue 	= [[stateDictionary objectForKey: @"currentValue"] doubleValue];
     previousValue   	= [[stateDictionary objectForKey: @"previousValue"] doubleValue];
-    op_type     	= [[stateDictionary objectForKey: @"op_type"] intValue];
-    trailing_digits   	= [[stateDictionary objectForKey: @"trailing_digits"] intValue];
+    opType     	= [[stateDictionary objectForKey: @"opType"] intValue];
+    trailingDigits   	= [[stateDictionary objectForKey: @"trailingDigits"] intValue];
     isNewDigit    	= [[stateDictionary objectForKey: @"isNewDigit"] boolValue];
 }
 
@@ -95,8 +95,8 @@
     NSDictionary *stateDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
         [NSNumber numberWithDouble: currentValue], @"currentValue",
         [NSNumber numberWithDouble: previousValue], @"previousValue",
-        [NSNumber numberWithInt: op_type], @"op_type",
-        [NSNumber numberWithInt: trailing_digits], @"trailing_digits",
+        [NSNumber numberWithInt: opType], @"opType",
+        [NSNumber numberWithInt: trailingDigits], @"trailingDigits",
         [NSNumber numberWithBool: isNewDigit], @"isNewDigit",
         nil]; 
     return stateDictionary;
@@ -107,7 +107,6 @@
 // -------------------------------------------------------
 - (void)newDigit:(int)digit 
 {
-
     if (isNewDigit) 
     {
         previousValue = currentValue;
@@ -123,20 +122,20 @@
             negative = YES;
         }
         
-        if (trailing_digits == 0) 
+        if (trailingDigits == 0) 
         {
             currentValue = currentValue * 10 + digit;
         } 
         else 
         {
-            currentValue = currentValue + (digit/pow(10.0, trailing_digits));
+            currentValue = currentValue + (digit/pow(10.0, trailingDigits));
 
-            trailing_digits++;
+            trailingDigits++;
         }
         
         if (negative == YES)
         {
-            currentValue = - currentValue;
+            currentValue = -currentValue;
         }
     }
 }
@@ -151,9 +150,9 @@
         currentValue = 0.0;
         isNewDigit = NO;
     }
-    if (trailing_digits == 0) 
+    if (trailingDigits == 0) 
     {
-        trailing_digits = 1;
+        trailingDigits = 1;
     }
 }
 
@@ -164,18 +163,18 @@
 - (void) pi 
 {
     currentValue 	= M_PI;
-    trailing_digits = 0;
+    trailingDigits = 0;
     isNewDigit 		= YES;
 }
 
 // -------------------------------------------------------
-// (void) trig_constant
+// (void) trigConstant
 // Display the constant pi (3.141592653589793)
 // -------------------------------------------------------
-- (void) trig_constant: (double) trig_const 
+- (void) trigConstant: (double) trig_const 
 {
     currentValue 	= trig_const;
-    trailing_digits = 0;
+    trailingDigits = 0;
     isNewDigit 		= YES;
 }
 
@@ -186,7 +185,7 @@
 - (void)e
 {
     currentValue 	= M_E; 
-    trailing_digits = 0;
+    trailingDigits = 0;
     isNewDigit 		= YES;
 }
 
@@ -198,22 +197,22 @@
 {
     currentValue 	= 0.0;
     previousValue 	= 0.0;
-    op_type 		= NO_OP;
-    trailing_digits = 0;
+    opType 		= NO_OP;
+    trailingDigits = 0;
     isNewDigit		= YES;
 }
 
 // -------------------------------------------------------
-// (void)operation:(OpType)new_op_type
+// (void)operation:(OpType)new_opType
 // -------------------------------------------------------
-- (void)operation:(OpType)new_op_type
+- (void)operation:(OpType)new_opType
 {
-    if (op_type == NO_OP) 
+    if (opType == NO_OP) 
     {
         previousValue 	= currentValue;
         isNewDigit 	= YES;
-        op_type 	= new_op_type;
-        trailing_digits = 0;
+        opType 	= new_opType;
+        trailingDigits = 0;
     } 
     else 
     {
@@ -221,8 +220,8 @@
         [self enter]; // calculate previous value, first
         previousValue = currentValue;
         isNewDigit = YES;
-        op_type = new_op_type;
-        trailing_digits = 0;        
+        opType = new_opType;
+        trailingDigits = 0;        
     }
 }
 
@@ -233,7 +232,7 @@
 // -------------------------------------------------------
 - (void)enter 
 {
-    switch (op_type) 
+    switch (opType) 
     {
         case NO_OP:
             break;
@@ -272,14 +271,13 @@
             break;
     }
     previousValue 	= 0.0;
-    op_type 		= NO_OP;
-    trailing_digits 	= 0;
+    opType 		= NO_OP;
+    trailingDigits 	= 0;
     isNewDigit 		= YES;
 }
 
-// =====================================================================================
-// ALGEBRAIC FUNCTIONS
-// =====================================================================================
+#pragma mark -
+#pragma mark Algebraic Functions
 
 // -------------------------------------------------------
 // (void) reverse_sign
@@ -296,7 +294,7 @@
 {
     currentValue = currentValue * 0.01;
     isNewDigit 	  = YES;
-    trailing_digits = 0;
+    trailingDigits = 0;
 }
 
 // -------------------------------------------------------
@@ -404,7 +402,7 @@
         currentValue = signgam*exp(lg); /* signgam is a predefined variable */
     }
     
-    trailing_digits = 0; // this allows for more precise decimal precision
+    trailingDigits = 0; // this allows for more precise decimal precision
     isNewDigit = YES;
 
 }
@@ -475,9 +473,8 @@
     isNewDigit = YES;
 }
 
-// =====================================================================================
-// TRIGOMETRIC FUNCTIONS
-// =====================================================================================
+#pragma mark -
+#pragma mark Trigometric Functions
 
 // -------------------------------------------------------
 // (void) setAngleType:(AngleType)aType
@@ -489,14 +486,14 @@
 // -------------------------------------------------------
 - (void)setAngleType:(AngleType)aType
 {
-    angle_type = aType;
+    angleType = aType;
 }
 
 // -------------------------------------------------------
-// (double)deg_to_rad:(double)degrees
+// (double)degToRad:(double)degrees
 // Convert from degrees to radians
 // -------------------------------------------------------
-- (double)deg_to_rad:(double)degrees
+- (double)degToRad:(double)degrees
 {
     double radians = 0.0;
     radians = degrees * M_PI / 180;
@@ -562,11 +559,11 @@
 // -------------------------------------------------------
 - (void)sine
 {
-    if (angle_type == DEGREE)
+    if (angleType == DEGREE)
     {
-        currentValue = [self deg_to_rad:currentValue];
+        currentValue = [self degToRad:currentValue];
     }
-    else if (angle_type == GRADIENT)
+    else if (angleType == GRADIENT)
     {
         currentValue = [self grad_to_rad:currentValue];
     }
@@ -580,11 +577,11 @@
 // -------------------------------------------------------
 - (void)cosine
 {
-    if (angle_type == DEGREE)
+    if (angleType == DEGREE)
     {
-        currentValue = [self deg_to_rad:currentValue];
+        currentValue = [self degToRad:currentValue];
     }
-    else if (angle_type == GRADIENT)
+    else if (angleType == GRADIENT)
     {
         currentValue = [self grad_to_rad:currentValue];
     }
@@ -598,11 +595,11 @@
 // -------------------------------------------------------
 - (void)tangent
 {
-    if (angle_type == DEGREE)
+    if (angleType == DEGREE)
     {
-        currentValue = [self deg_to_rad:currentValue];
+        currentValue = [self degToRad:currentValue];
     }
-    else if (angle_type == GRADIENT)
+    else if (angleType == GRADIENT)
     {
         currentValue = [self grad_to_rad:currentValue];
     }
@@ -632,11 +629,11 @@
     currentValue = asin(currentValue);
     isNewDigit 	 = YES;
     
-    if (angle_type == DEGREE)
+    if (angleType == DEGREE)
     {
         currentValue = [self rad_to_deg:currentValue];
     }
-    else if (angle_type == GRADIENT)
+    else if (angleType == GRADIENT)
     {
         currentValue = [self rad_to_grad:currentValue];
     }
@@ -652,11 +649,11 @@
     currentValue = acos(currentValue);
     isNewDigit 	  = YES;
     
-    if (angle_type == DEGREE)
+    if (angleType == DEGREE)
     {
         currentValue = [self rad_to_deg:currentValue];
     }
-    else if (angle_type == GRADIENT)
+    else if (angleType == GRADIENT)
     {
         currentValue = [self rad_to_grad:currentValue];
     }    
@@ -672,26 +669,23 @@
     currentValue = atan(currentValue);
     isNewDigit 	  = YES;
     
-    if (angle_type == DEGREE)
+    if (angleType == DEGREE)
     {
         currentValue = [self rad_to_deg:currentValue];
     }
-    else if (angle_type == GRADIENT)
+    else if (angleType == GRADIENT)
     {
         currentValue = [self rad_to_grad:currentValue];
     }    
 }
 
-// =====================================================================================
-// PROBABILITY FUNCTIONS
-// The Probability and Combination functions are in the enter function since they
-// act as binary operators
-// =====================================================================================
+#pragma mark -
+#pragma mark Probability Functions
 
 // -------------------------------------------------------
-// (void) generate_random_num
+// (void) generateRandomNum
 // -------------------------------------------------------
-- (double) generate_random_num
+- (double) generateRandomNum
 {
     static int seeded = 0;
     double value = 0.0;
@@ -708,11 +702,11 @@
 }
 
 // -------------------------------------------------------
-// (void) random_num
+// (void) randomNum
 // -------------------------------------------------------
-- (void) random_num
+- (void) randomNum
 {
-    currentValue = [self generate_random_num];
+    currentValue = [self generateRandomNum];
     isNewDigit 	 = YES;
 }
 

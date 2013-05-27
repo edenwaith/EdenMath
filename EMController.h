@@ -47,6 +47,7 @@
 - (void)undoAction:(id)sender;
 - (NSUndoManager *)windowWillReturnUndoManager:(NSWindow *)sender;
 
+- (IBAction) checkForNewVersion: (id) sender;
 - (IBAction) goToProductPage : (id) sender;
 - (IBAction) goToFeedbackPage: (id) sender;
 

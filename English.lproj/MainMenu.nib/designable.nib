@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="169"/>
+			<integer value="29"/>
 			<integer value="871"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -62,6 +62,14 @@
 								<object class="NSMenuItem" id="761020547">
 									<reference key="NSMenu" ref="191909341"/>
 									<string key="NSTitle">About EdenMath</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="960989812"/>
+									<reference key="NSMixedImage" ref="159703989"/>
+								</object>
+								<object class="NSMenuItem" id="222455360">
+									<reference key="NSMenu" ref="191909341"/>
+									<string key="NSTitle">Check For Updates...</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="960989812"/>
@@ -2117,6 +2125,14 @@
 					</object>
 					<int key="connectionID">1026</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">checkForNewVersion:</string>
+						<reference key="source" ref="59843001"/>
+						<reference key="destination" ref="222455360"/>
+					</object>
+					<int key="connectionID">1028</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2220,6 +2236,7 @@
 							<reference ref="1048572513"/>
 							<reference ref="632661606"/>
 							<reference ref="992971584"/>
+							<reference ref="222455360"/>
 						</object>
 						<reference key="parent" ref="116875850"/>
 					</object>
@@ -3161,6 +3178,11 @@
 						<reference key="object" ref="748654670"/>
 						<reference key="parent" ref="736306334"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">1027</int>
+						<reference key="object" ref="222455360"/>
+						<reference key="parent" ref="191909341"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -3173,8 +3195,10 @@
 					<string>1019.IBPluginDependency</string>
 					<string>1019.IBViewBoundsToFrameTransform</string>
 					<string>1019.ImportedFromIB2</string>
+					<string>1027.IBPluginDependency</string>
 					<string>103.IBPluginDependency</string>
 					<string>103.ImportedFromIB2</string>
+					<string>106.IBEditorWindowLastContentRect</string>
 					<string>106.IBPluginDependency</string>
 					<string>106.ImportedFromIB2</string>
 					<string>111.IBPluginDependency</string>
@@ -3223,6 +3247,7 @@
 					<string>196.ImportedFromIB2</string>
 					<string>23.IBPluginDependency</string>
 					<string>23.ImportedFromIB2</string>
+					<string>24.IBEditorWindowLastContentRect</string>
 					<string>24.IBPluginDependency</string>
 					<string>24.ImportedFromIB2</string>
 					<string>29.IBEditorWindowLastContentRect</string>
@@ -3230,6 +3255,7 @@
 					<string>29.ImportedFromIB2</string>
 					<string>394.IBPluginDependency</string>
 					<string>394.ImportedFromIB2</string>
+					<string>395.IBEditorWindowLastContentRect</string>
 					<string>395.IBPluginDependency</string>
 					<string>395.ImportedFromIB2</string>
 					<string>396.IBPluginDependency</string>
@@ -3267,6 +3293,7 @@
 					<string>58.ImportedFromIB2</string>
 					<string>73.IBPluginDependency</string>
 					<string>73.ImportedFromIB2</string>
+					<string>81.IBEditorWindowLastContentRect</string>
 					<string>81.IBPluginDependency</string>
 					<string>81.ImportedFromIB2</string>
 					<string>83.IBPluginDependency</string>
@@ -3461,7 +3488,9 @@
 					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>{{345, 741}, {231, 73}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3510,6 +3539,7 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>{{274, 761}, {194, 53}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>{{0, 814}, {406, 20}}</string>
@@ -3517,6 +3547,7 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>{{187, 641}, {102, 173}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3547,13 +3578,14 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
-					<string>{{12, 661}, {188, 153}}</string>
+					<string>{{12, 641}, {217, 173}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>{{101, 791}, {115, 23}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4081,7 +4113,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">1026</int>
+			<int key="maxID">1028</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4099,6 +4131,7 @@
 							<string>arcsine:</string>
 							<string>arctangent:</string>
 							<string>binaryLogarithm:</string>
+							<string>checkForNewVersion:</string>
 							<string>clear:</string>
 							<string>combination:</string>
 							<string>copy:</string>
@@ -4204,6 +4237,7 @@
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
+							<string>id</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
@@ -4216,6 +4250,7 @@
 							<string>arcsine:</string>
 							<string>arctangent:</string>
 							<string>binaryLogarithm:</string>
+							<string>checkForNewVersion:</string>
 							<string>clear:</string>
 							<string>combination:</string>
 							<string>copy:</string>
@@ -4289,6 +4324,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">binaryLogarithm:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">checkForNewVersion:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

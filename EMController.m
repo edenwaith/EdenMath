@@ -269,6 +269,43 @@
 #pragma mark -
 
 // -------------------------------------------------------
+// (IBAction) checkForNewVersion: (id) sender
+// -------------------------------------------------------
+// Version: 27 May 2013 16:24
+// Created: 8. May 2004 23:55
+// -------------------------------------------------------
+- (IBAction) checkForNewVersion: (id) sender
+{
+    NSString *currentVersionNumber = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSDictionary *productVersionDict = [NSDictionary dictionaryWithContentsOfURL: [NSURL URLWithString:@"http://www.edenwaith.com/xml/version.xml"]];
+    NSString *latestVersionNumber = [productVersionDict valueForKey:@"EdenMath"];
+    int button = 0;
+	
+    if ( latestVersionNumber == nil )
+    {
+        NSBeep();
+        NSRunAlertPanel(NSLocalizedString(@"Could not check for update", nil), NSLocalizedString(@"A problem arose while attempting to check for a new version of EdenMath.  Edenwaith.com may be temporarily unavailable or your network may be down.", nil), NSLocalizedString(@"OK", nil), nil, nil);
+    }
+    else if ( [latestVersionNumber isEqualTo: currentVersionNumber] )
+    {
+        NSRunAlertPanel(NSLocalizedString(@"Software is Up-To-Date", nil), NSLocalizedString(@"You have the most recent version of EdenMath.", nil), NSLocalizedString(@"OK", nil), nil, nil);
+    }
+    else
+    {
+        button = NSRunAlertPanel(NSLocalizedString(@"New Version is Available", nil), NSLocalizedString(@"A new version of EdenMath is available.", nil), NSLocalizedString(@"Download", nil), NSLocalizedString(@"Cancel", nil), NSLocalizedString(@"More Info", nil), nil);
+        
+        if (button == NSOKButton)	// Download
+        {
+            [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/downloads/edenmath.php"]];
+        }
+		else if (NSAlertOtherReturn == button) // More Info
+        {
+            [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/edenmath/"]];
+        }
+    }
+}
+
+// -------------------------------------------------------
 // (IBAction) goToProductPage: (id) sender
 // -------------------------------------------------------
 // Version: 8. May 2004 23:55
@@ -278,7 +315,6 @@
 {
     [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/edenmath/"]];
 }
-
 
 // -------------------------------------------------------
 // (IBAction) goToFeedbackPage: (id) sender
@@ -325,7 +361,7 @@
 - (IBAction)pi2:(id)sender 
 {
     [self saveState];
-    [em trig_constant:2*M_PI];
+    [em trigConstant:2*M_PI];
     [self updateDisplay];
 }
 
@@ -335,7 +371,7 @@
 - (IBAction)pi3_2:(id)sender 
 {
     [self saveState];
-    [em trig_constant:3*M_PI/2];
+    [em trigConstant:3*M_PI/2];
     [self updateDisplay];
 }
 
@@ -355,7 +391,7 @@
 - (IBAction)pi_2:(id)sender 
 {
     [self saveState];
-    [em trig_constant:M_PI/2];
+    [em trigConstant:M_PI/2];
     [self updateDisplay];
 }
 
@@ -365,7 +401,7 @@
 - (IBAction)pi_3:(id)sender 
 {
     [self saveState];
-    [em trig_constant:M_PI/3];
+    [em trigConstant:M_PI/3];
     [self updateDisplay];
 }
 
@@ -375,7 +411,7 @@
 - (IBAction)pi_4:(id)sender 
 {
     [self saveState];
-    [em trig_constant:M_PI/4];
+    [em trigConstant:M_PI/4];
     [self updateDisplay];
 }
 
@@ -385,7 +421,7 @@
 - (IBAction)pi_6:(id)sender 
 {
     [self saveState];
-    [em trig_constant:M_PI/6];
+    [em trigConstant:M_PI/6];
     [self updateDisplay];
 }
 
@@ -798,7 +834,7 @@
 - (IBAction)randomNum:(id)sender
 {
     [self saveState];
-    [em random_num];
+    [em randomNum];
     [self updateDisplay];
 }
 
