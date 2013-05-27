@@ -495,7 +495,7 @@
 - (IBAction)reverseSign:(id)sender 
 {
     [self saveState];
-    [em reverse_sign];
+    [em reverseSign];
     [self updateDisplay];
 }
 
@@ -573,7 +573,7 @@
 - (IBAction)squareRoot:(id)sender
 {
     [self saveState];
-    [em square_root];
+    [em squareRoot];
     [self updateDisplay];
 }
 
@@ -584,7 +584,7 @@
 - (IBAction)cubedRoot:(id)sender
 {
     [self saveState];
-    [em cubed_root];
+    [em cubedRoot];
     [self updateDisplay];
 }
 

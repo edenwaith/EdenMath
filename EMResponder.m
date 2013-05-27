@@ -168,13 +168,13 @@
 }
 
 // -------------------------------------------------------
-// (void) trigConstant
+// (void) trigConstant: (double) trigConst
 // Display the constant pi (3.141592653589793)
 // -------------------------------------------------------
-- (void) trigConstant: (double) trig_const 
+- (void) trigConstant: (double) trigConst 
 {
-    currentValue 	= trig_const;
-    trailingDigits = 0;
+    currentValue 	= trigConst;
+    trailingDigits	= 0;
     isNewDigit 		= YES;
 }
 
@@ -203,15 +203,15 @@
 }
 
 // -------------------------------------------------------
-// (void)operation:(OpType)new_opType
+// (void)operation:(OpType)newOpTypeType
 // -------------------------------------------------------
-- (void)operation:(OpType)new_opType
+- (void)operation:(OpType)newOpTypeType
 {
     if (opType == NO_OP) 
     {
         previousValue 	= currentValue;
         isNewDigit 	= YES;
-        opType 	= new_opType;
+        opType 	= newOpTypeType;
         trailingDigits = 0;
     } 
     else 
@@ -220,7 +220,7 @@
         [self enter]; // calculate previous value, first
         previousValue = currentValue;
         isNewDigit = YES;
-        opType = new_opType;
+        opType = newOpTypeType;
         trailingDigits = 0;        
     }
 }
@@ -271,7 +271,7 @@
             break;
     }
     previousValue 	= 0.0;
-    opType 		= NO_OP;
+    opType			= NO_OP;
     trailingDigits 	= 0;
     isNewDigit 		= YES;
 }
@@ -280,9 +280,9 @@
 #pragma mark Algebraic Functions
 
 // -------------------------------------------------------
-// (void) reverse_sign
+// (void) reverseSign
 // -------------------------------------------------------
-- (void) reverse_sign
+- (void) reverseSign
 {
     currentValue = - currentValue;
 }
@@ -316,9 +316,9 @@
 }
 
 // -------------------------------------------------------
-// (void) square_root
+// (void) squareRoot
 // -------------------------------------------------------
-- (void) square_root
+- (void) squareRoot
 {
     if (currentValue >= 0.0)
     {
@@ -329,9 +329,9 @@
 }
 
 // -------------------------------------------------------
-// (void) cubed_root
+// (void) cubedRoot
 // -------------------------------------------------------
-- (void)cubed_root
+- (void)cubedRoot
 {
     //if (currentValue >= 0.0)
     //{
@@ -502,13 +502,13 @@
 }
 
 // -------------------------------------------------------
-// (double)rad_to_deg:(double)radians
+// (double)radToDeg:(double)radians
 // Convert from radians to degrees
 // -------------------------------------------------------
 // Created: 31. May 2003
 // Version: 31. May 2003
 // -------------------------------------------------------
-- (double)rad_to_deg:(double)radians
+- (double)radToDeg:(double)radians
 {
     double degrees = 0.0;
     degrees = radians * 180 / M_PI;
@@ -517,18 +517,20 @@
 }
 
 // -------------------------------------------------------
-// (double)grad_to_rad:(double)gradients
+// (double)gradToRad:(double)gradients
 // Convert from gradients to radians
 // http://www.onlineconversion.com/angles.htm
 // 1 gradient = 0.015707963267948966192 radians
 // 1 gradient = 0.9 degrees
+// 100 gradients = 90 degrees
+// 400 gradients = 360 degrees
 // Created higher precision for the conversion so 
 // Tan(50g) would equal 1.  Otherwise, if the conversion
 // isn't precise enough, it comes out to be 1.000003672.
 // -------------------------------------------------------
 // Version: 31. May 2003
 // -------------------------------------------------------
-- (double)grad_to_rad:(double)gradients
+- (double)gradToRad:(double)gradients
 {
     double radians = 0.0;
     radians = gradients * 0.015707963267948966192;
@@ -537,7 +539,7 @@
 }
 
 // -------------------------------------------------------
-// (double)rad_to_grad:(double)radians
+// (double)radToGrad:(double)radians
 // Convert from radians to gradients
 // http://www.onlineconversion.com/angles.htm
 // 1 gradient = 0.015707963267948966192 radians
@@ -546,7 +548,7 @@
 // Created: 31. May 2003
 // Version: 31. May 2003
 // -------------------------------------------------------
-- (double)rad_to_grad:(double)radians
+- (double)radToGrad:(double)radians
 {
     double gradients = 0.0;
     gradients = radians / 0.015707963267948966192;
@@ -565,7 +567,7 @@
     }
     else if (angleType == GRADIENT)
     {
-        currentValue = [self grad_to_rad:currentValue];
+        currentValue = [self gradToRad:currentValue];
     }
     
     currentValue = sin(currentValue);
@@ -583,7 +585,7 @@
     }
     else if (angleType == GRADIENT)
     {
-        currentValue = [self grad_to_rad:currentValue];
+        currentValue = [self gradToRad:currentValue];
     }
     
     currentValue = cos(currentValue);
@@ -601,7 +603,7 @@
     }
     else if (angleType == GRADIENT)
     {
-        currentValue = [self grad_to_rad:currentValue];
+        currentValue = [self gradToRad:currentValue];
     }
     
     if ( ( currentValue == M_PI/2) || (currentValue == 3 * M_PI / 2) || 
@@ -631,11 +633,11 @@
     
     if (angleType == DEGREE)
     {
-        currentValue = [self rad_to_deg:currentValue];
+        currentValue = [self radToDeg:currentValue];
     }
     else if (angleType == GRADIENT)
     {
-        currentValue = [self rad_to_grad:currentValue];
+        currentValue = [self radToGrad:currentValue];
     }
 }
 
@@ -651,11 +653,11 @@
     
     if (angleType == DEGREE)
     {
-        currentValue = [self rad_to_deg:currentValue];
+        currentValue = [self radToDeg:currentValue];
     }
     else if (angleType == GRADIENT)
     {
-        currentValue = [self rad_to_grad:currentValue];
+        currentValue = [self radToGrad:currentValue];
     }    
 }
 
@@ -671,11 +673,11 @@
     
     if (angleType == DEGREE)
     {
-        currentValue = [self rad_to_deg:currentValue];
+        currentValue = [self radToDeg:currentValue];
     }
     else if (angleType == GRADIENT)
     {
-        currentValue = [self rad_to_grad:currentValue];
+        currentValue = [self radToGrad:currentValue];
     }    
 }
 

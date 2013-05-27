@@ -53,21 +53,21 @@ typedef enum Angle_Type
 - (void)newDigit:(int)digit;
 - (void)period;
 - (void)pi;
-- (void)trigConstant: (double) trig_const;
+- (void)trigConstant: (double) trigConst;
 - (void)e;
 
 - (void)clear;
-- (void)operation:(OpType)new_opType;
+- (void)operation:(OpType)newOpType;
 - (void)enter;
 
 // Algebraic functions
-- (void)reverse_sign;
+- (void)reverseSign;
 - (void)percentage;
 
 - (void)squared;
 - (void)cubed;
-- (void)square_root;
-- (void)cubed_root;
+- (void)squareRoot;
+- (void)cubedRoot;
 - (void)ln;
 - (void)binaryLogarithm;
 - (void)logarithm;
@@ -81,10 +81,10 @@ typedef enum Angle_Type
 
 // Trigometric functions
 - (void)setAngleType:(AngleType)aType;
-- (double)deg_to_rad:(double)degrees;
-- (double)rad_to_deg:(double)radians;
-- (double)grad_to_rad:(double)gradients;
-- (double)rad_to_grad:(double)radians;
+- (double)degToRad:(double)degrees;
+- (double)radToDeg:(double)radians;
+- (double)gradToRad:(double)gradients;
+- (double)radToGrad:(double)radians;
 - (void)sine;
 - (void)cosine;
 - (void)tangent;

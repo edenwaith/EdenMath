@@ -30,7 +30,7 @@
 	
 	BOOL displayAlternates;
 	
-    NSUndoManager			*undoManager;		// the undo manager
+    NSUndoManager		 *undoManager;		// the undo manager
 }
 
 // prototypes for EMController class methods

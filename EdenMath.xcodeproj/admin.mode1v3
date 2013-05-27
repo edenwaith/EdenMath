@@ -303,7 +303,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>3</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -348,7 +348,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EMResponder.m</string>
+								<string>EMController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -356,11 +356,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EMResponder.m</string>
+										<string>EMController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>843B24A717540B8900551006</string>
+										<string>843B24B51754105F00551006</string>
 										<key>history</key>
 										<array>
 											<string>84F1ADEB13BED7630094FF29</string>
@@ -380,10 +380,10 @@
 											<string>843B246C175404E200551006</string>
 											<string>843B246D175404E200551006</string>
 											<string>843B246F175404E200551006</string>
-											<string>843B24A317540B8900551006</string>
-											<string>843B24A417540B8900551006</string>
-											<string>843B24A517540B8900551006</string>
-											<string>843B24A617540B8900551006</string>
+											<string>843B24AB17540EC100551006</string>
+											<string>843B24B21754105F00551006</string>
+											<string>843B24B31754105F00551006</string>
+											<string>843B24B41754105F00551006</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -564,7 +564,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>391383946.00021303</real>
+	<real>391385183.83102602</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -681,7 +681,7 @@
 			<key>WindowToolGUID</key>
 			<string>84F1ADA813BED2680094FF29</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
