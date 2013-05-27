@@ -51,16 +51,6 @@
 #pragma mark -
 
 // -------------------------------------------------------
-// (void) off:(id)sender
-// When the Off button is pressed, the application is
-// terminated
-// -------------------------------------------------------
-- (void)off:(id)sender
-{
-    [NSApp terminate:self];
-}
-
-// -------------------------------------------------------
 // (void) clear:(id)sender
 // -------------------------------------------------------
 - (void)clear:(id)sender 
@@ -118,6 +108,7 @@
 
 // -------------------------------------------------------
 // (void) updateDisplay:(id)sender
+// -------------------------------------------------------
 // Update the value in the display field on the
 // calculator.  In versions 1.0.0 and 1.0.1, this was
 // a 1 line method.  Because of odd precision problems and
@@ -228,6 +219,7 @@
 
 // -------------------------------------------------------
 // (BOOL) applicationShould....:(NSApplication *)theApplication
+// -------------------------------------------------------
 // Terminate the program when the last window closes
 // Need to connect File Owner and Window to EMController
 // for this to work correctly
@@ -302,18 +294,15 @@
 #pragma mark -
 #pragma mark Constants
 
-// =====================================================================================
-// CONSTANTS
-// =====================================================================================
-
 // -------------------------------------------------------
-// (void) digitButton:(id)sender
+// (IBAction) digitButton:(id)sender
+// -------------------------------------------------------
 // New addition to EM 1.1.1 which eliminates ten other
 // functions (zeroButton...nineButton) so each number
 // button does not explicitly need to point to a new
 // function.
 // -------------------------------------------------------
-- (void) digitButton: (id) sender
+- (IBAction) digitButton: (id) sender
 {
     [self saveState];
     [em newDigit: [[sender title] intValue]];
@@ -321,9 +310,9 @@
 }
 
 // -------------------------------------------------------
-// (void) period:(id)sender
+// (IBAction) period:(id)sender
 // -------------------------------------------------------
-- (void)period:(id)sender 
+- (IBAction)period:(id)sender 
 {
     [self saveState];
     [em period];
@@ -331,9 +320,9 @@
 }
 
 // -------------------------------------------------------
-// (void) pi2:(id)sender
+// (IBAction) pi2:(id)sender
 // -------------------------------------------------------
-- (void)pi2:(id)sender 
+- (IBAction)pi2:(id)sender 
 {
     [self saveState];
     [em trig_constant:2*M_PI];
@@ -341,9 +330,9 @@
 }
 
 // -------------------------------------------------------
-// (void) pi3_2:(id)sender
+// (IBAction) pi3_2:(id)sender
 // -------------------------------------------------------
-- (void)pi3_2:(id)sender 
+- (IBAction)pi3_2:(id)sender 
 {
     [self saveState];
     [em trig_constant:3*M_PI/2];
@@ -351,9 +340,9 @@
 }
 
 // -------------------------------------------------------
-// (void) pi:(id)sender
+// (IBAction) pi:(id)sender
 // -------------------------------------------------------
-- (void)pi:(id)sender 
+- (IBAction)pi:(id)sender 
 {
     [self saveState];
     [em pi];
@@ -361,9 +350,9 @@
 }
 
 // -------------------------------------------------------
-// (void) pi_2:(id)sender
+// (IBAction) pi_2:(id)sender
 // -------------------------------------------------------
-- (void)pi_2:(id)sender 
+- (IBAction)pi_2:(id)sender 
 {
     [self saveState];
     [em trig_constant:M_PI/2];
@@ -371,9 +360,9 @@
 }
 
 // -------------------------------------------------------
-// (void) pi_3:(id)sender
+// (IBAction) pi_3:(id)sender
 // -------------------------------------------------------
-- (void)pi_3:(id)sender 
+- (IBAction)pi_3:(id)sender 
 {
     [self saveState];
     [em trig_constant:M_PI/3];
@@ -381,9 +370,9 @@
 }
 
 // -------------------------------------------------------
-// (void) pi_4:(id)sender
+// (IBAction) pi_4:(id)sender
 // -------------------------------------------------------
-- (void)pi_4:(id)sender 
+- (IBAction)pi_4:(id)sender 
 {
     [self saveState];
     [em trig_constant:M_PI/4];
@@ -391,9 +380,9 @@
 }
 
 // -------------------------------------------------------
-// (void) pi_6:(id)sender
+// (IBAction) pi_6:(id)sender
 // -------------------------------------------------------
-- (void)pi_6:(id)sender 
+- (IBAction)pi_6:(id)sender 
 {
     [self saveState];
     [em trig_constant:M_PI/6];
@@ -401,9 +390,9 @@
 }
 
 // -------------------------------------------------------
-// (void) e:(id)sender
+// (IBAction) e:(id)sender
 // -------------------------------------------------------
-- (void)e:(id)sender
+- (IBAction)e:(id)sender
 {
     [self saveState];
     [em e];
@@ -413,14 +402,10 @@
 #pragma mark -
 #pragma mark Standard Functions
 
-// =====================================================================================
-// STANDARD FUNCTIONS
-// =====================================================================================
-
 // -------------------------------------------------------
-// (void) enter:(id)sender
+// (IBAction) enter:(id)sender
 // -------------------------------------------------------
-- (void)enter:(id)sender 
+- (IBAction)enter:(id)sender 
 {
     [self saveState];
     [em enter];
@@ -428,9 +413,9 @@
 }
 
 // -------------------------------------------------------
-// (void) add:(id)sender
+// (IBAction) add:(id)sender
 // -------------------------------------------------------
-- (void)add:(id)sender 
+- (IBAction)add:(id)sender 
 {
     [self saveState];
     [em operation:ADD_OP];
@@ -438,9 +423,9 @@
 }
 
 // -------------------------------------------------------
-// (void) subtract:(id)sender
+// (IBAction) subtract:(id)sender
 // -------------------------------------------------------
-- (void)subtract:(id)sender 
+- (IBAction)subtract:(id)sender 
 {
     [self saveState];
     [em operation:SUBTRACT_OP];
@@ -448,9 +433,9 @@
 }
 
 // -------------------------------------------------------
-// (void) multiply:(id)sender
+// (IBAction) multiply:(id)sender
 // -------------------------------------------------------
-- (void)multiply:(id)sender 
+- (IBAction)multiply:(id)sender 
 {
     [self saveState];
     [em operation:MULTIPLY_OP];
@@ -458,9 +443,9 @@
 }
 
 // -------------------------------------------------------
-// (void) divide:(id)sender
+// (IBAction) divide:(id)sender
 // -------------------------------------------------------
-- (void)divide:(id)sender 
+- (IBAction)divide:(id)sender 
 {
     [self saveState];
     [em operation:DIVIDE_OP];
@@ -468,9 +453,10 @@
 }
 
 // -------------------------------------------------------
-// (void) reverse_sign:(id)sender
+// (IBAction) reverseSign:(id)sender
+// +/-
 // -------------------------------------------------------
-- (void)reverse_sign:(id)sender 
+- (IBAction)reverseSign:(id)sender 
 {
     [self saveState];
     [em reverse_sign];
@@ -478,9 +464,9 @@
 }
 
 // -------------------------------------------------------
-// (void) percentage:(id)sender
+// (IBAction) percentage:(id)sender
 // -------------------------------------------------------
-- (void)percentage:(id)sender
+- (IBAction)percentage:(id)sender
 {
     [self saveState];
     [em percentage];
@@ -488,9 +474,10 @@
 }
 
 // -------------------------------------------------------
-// (void) mod:(id)sender
+// (IBAction) mod:(id)sender
+// modulus division
 // -------------------------------------------------------
-- (void)mod:(id)sender 
+- (IBAction)mod:(id)sender 
 {
     [self saveState];
     [em operation:MOD_OP];
@@ -498,25 +485,23 @@
 }
 
 // -------------------------------------------------------
-// (void) EE:(id)sender
+// (IBAction) EE:(id)sender
 // -------------------------------------------------------
-- (void)EE:(id)sender 
+- (IBAction)EE:(id)sender 
 {
     [self saveState];
     [em operation:EE_OP];
     [self updateDisplay];
 }
 
-
-// =====================================================================================
-// ALGEBRAIC FUNCTIONS
-// =====================================================================================
+#pragma mark -
+#pragma mark Algebraic Functions
 
 // -------------------------------------------------------
-// (void) exponent:(id)sender
+// (IBAction) exponent:(id)sender
 // x^2
 // -------------------------------------------------------
-- (void)squared:(id)sender
+- (IBAction)squared:(id)sender
 {
     [self saveState];
     [em squared];
@@ -524,10 +509,10 @@
 }
 
 // -------------------------------------------------------
-// (void) cubed:(id)sender
-// x^2
+// (IBAction) cubed:(id)sender
+// x^3
 // -------------------------------------------------------
-- (void)cubed:(id)sender
+- (IBAction)cubed:(id)sender
 {
     [self saveState];
     [em cubed];
@@ -535,10 +520,10 @@
 }
 
 // -------------------------------------------------------
-// (void) exponent:(id)sender
+// (IBAction) exponent:(id)sender
 // x^y
 // -------------------------------------------------------
-- (void)exponent:(id)sender
+- (IBAction)exponent:(id)sender
 {
     [self saveState];
     [em operation:EXPONENT_OP];
@@ -546,10 +531,10 @@
 }
 
 // -------------------------------------------------------
-// (void) xroot:(id)sender
+// (IBAction) squareRoot:(id)sender
 // √
 // -------------------------------------------------------
-- (void)square_root:(id)sender
+- (IBAction)squareRoot:(id)sender
 {
     [self saveState];
     [em square_root];
@@ -557,10 +542,10 @@
 }
 
 // -------------------------------------------------------
-// (void) xroot:(id)sender
+// (IBAction) cubedRoot:(id)sender
 // 3√
 // -------------------------------------------------------
-- (void)cubed_root:(id)sender
+- (IBAction)cubedRoot:(id)sender
 {
     [self saveState];
     [em cubed_root];
@@ -568,10 +553,10 @@
 }
 
 // -------------------------------------------------------
-// (void) xroot:(id)sender
+// (IBAction) xRoot:(id)sender
 // y√x
 // -------------------------------------------------------
-- (void)xroot:(id)sender
+- (IBAction)xRoot:(id)sender
 {
     [self saveState];
     [em operation:XROOT_OP];
@@ -579,9 +564,9 @@
 }
 
 // -------------------------------------------------------
-// (void) ln:(id)sender
+// (IBAction) ln:(id)sender
 // -------------------------------------------------------
-- (void)ln:(id)sender
+- (IBAction)ln:(id)sender
 {
     [self saveState];
     [em ln];
@@ -599,9 +584,9 @@
 }
 
 // -------------------------------------------------------
-// (void) logarithm:(id)sender
+// (IBAction) logarithm:(id)sender
 // -------------------------------------------------------
-- (void)logarithm:(id)sender
+- (IBAction)logarithm:(id)sender
 {
     [self saveState];
     [em logarithm];
@@ -609,9 +594,9 @@
 }
 
 // -------------------------------------------------------
-// (void) factorial:(id)sender
+// (IBAction) factorial:(id)sender
 // -------------------------------------------------------
-- (void)factorial:(id)sender
+- (IBAction)factorial:(id)sender
 {
     [self saveState];
     [em factorial];
@@ -619,10 +604,10 @@
 }
 
 // -------------------------------------------------------
-// (void) powerE:(id)sender
+// (IBAction) powerE:(id)sender
 // e^x
 // -------------------------------------------------------
-- (void)powerE:(id)sender
+- (IBAction)powerE:(id)sender
 {
     [self saveState];
     [em powerE];
@@ -630,7 +615,7 @@
 }
 
 // -------------------------------------------------------
-// (void) power2:(id)sender
+// (IBAction) power2:(id)sender
 // 2^x
 // -------------------------------------------------------
 - (IBAction) power2: (id) sender
@@ -641,10 +626,10 @@
 }
 
 // -------------------------------------------------------
-// (void) power10:(id)sender
+// (IBAction) power10:(id)sender
 // 10^x
 // -------------------------------------------------------
-- (void)power10:(id)sender
+- (IBAction)power10:(id)sender
 {
     [self saveState];
     [em power10];
@@ -652,9 +637,10 @@
 }
 
 // -------------------------------------------------------
-// (void) inverse:(id)sender
+// (IBAction) inverse:(id)sender
+// 1/x
 // -------------------------------------------------------
-- (void)inverse:(id)sender
+- (IBAction)inverse:(id)sender
 {
     [self saveState];
     [em inverse];
@@ -664,10 +650,6 @@
 
 #pragma mark -
 #pragma mark Trigometric Functions 
-
-// =====================================================================================
-// TRIGOMETRIC FUNCTIONS
-// =====================================================================================
 
 // -------------------------------------------------------
 // (IBAction) setAngleType:(id)sender
@@ -696,9 +678,9 @@
 
 
 // -------------------------------------------------------
-// (void) setDegree:(id)sender
+// (IBAction) setDegree:(id)sender
 // -------------------------------------------------------
-- (void)setDegree:(id)sender
+- (IBAction)setDegree:(id)sender
 {
     [self saveState];
     [em setAngleType:DEGREE];
@@ -706,9 +688,9 @@
 }
 
 // -------------------------------------------------------
-// (void) setRadian:(id)sender
+// (IBAction) setRadian:(id)sender
 // -------------------------------------------------------
-- (void)setRadian:(id)sender
+- (IBAction)setRadian:(id)sender
 {
     [self saveState];
     [em setAngleType:RADIAN];
@@ -716,9 +698,9 @@
 }
 
 // -------------------------------------------------------
-// (void) setGradient:(id)sender
+// (IBAction) setGradient:(id)sender
 // -------------------------------------------------------
-- (void)setGradient:(id)sender
+- (IBAction)setGradient:(id)sender
 {
     [self saveState];
     [em setAngleType:GRADIENT];
@@ -726,9 +708,9 @@
 }
 
 // -------------------------------------------------------
-// (void) sine:(id)sender
+// (IBAction) sine:(id)sender
 // -------------------------------------------------------
-- (void)sine:(id)sender
+- (IBAction)sine:(id)sender
 {
     [self saveState];
     [em sine];
@@ -736,9 +718,9 @@
 }
 
 // -------------------------------------------------------
-// (void) cosine:(id)sender
+// (IBAction) cosine:(id)sender
 // -------------------------------------------------------
-- (void)cosine:(id)sender
+- (IBAction)cosine:(id)sender
 {
     [self saveState];
     [em cosine];
@@ -746,9 +728,9 @@
 }
 
 // -------------------------------------------------------
-// (void) tangent:(id)sender
+// (IBAction) tangent:(id)sender
 // -------------------------------------------------------
-- (void)tangent:(id)sender
+- (IBAction)tangent:(id)sender
 {
     [self saveState];
     [em tangent];
@@ -756,9 +738,9 @@
 }
 
 // -------------------------------------------------------
-// (void) arcsine:(id)sender
+// (IBAction) arcsine:(id)sender
 // -------------------------------------------------------
-- (void)arcsine:(id)sender
+- (IBAction)arcsine:(id)sender
 {
     [self saveState];
     [em arcsine];
@@ -766,9 +748,9 @@
 }
 
 // -------------------------------------------------------
-// (void) arccosine:(id)sender
+// (IBAction) arccosine:(id)sender
 // -------------------------------------------------------
-- (void)arccosine:(id)sender
+- (IBAction)arccosine:(id)sender
 {
     [self saveState];
     [em arccosine];
@@ -776,9 +758,9 @@
 }
 
 // -------------------------------------------------------
-// (void) arctangent:(id)sender
+// (IBAction) arctangent:(id)sender
 // -------------------------------------------------------
-- (void)arctangent:(id)sender
+- (IBAction)arctangent:(id)sender
 {
     [self saveState];
     [em arctangent];
@@ -788,15 +770,11 @@
 #pragma mark -
 #pragma mark Probability Functions
 
-// =====================================================================================
-// PROBABILITY FUNCTIONS
-// =====================================================================================
-
 // -------------------------------------------------------
-// (void) permutation:(id)sender
+// (IBAction) permutation:(id)sender
 // nPr
 // -------------------------------------------------------
-- (void)permutation:(id)sender
+- (IBAction)permutation:(id)sender
 {
     [self saveState];
     [em operation:NPR_OP];
@@ -804,9 +782,10 @@
 }
 
 // -------------------------------------------------------
-// (void) combination:(id)sender
+// (IBAction) combination:(id)sender
+// nCr
 // -------------------------------------------------------
-- (void)combination:(id)sender
+- (IBAction)combination:(id)sender
 {
     [self saveState];
     [em operation:NCR_OP];
@@ -814,9 +793,9 @@
 }
 
 // -------------------------------------------------------
-// (void) random_num:(id)sender
+// (IBAction) randomNum:(id)sender
 // -------------------------------------------------------
-- (void)random_num:(id)sender
+- (IBAction)randomNum:(id)sender
 {
     [self saveState];
     [em random_num];
@@ -824,8 +803,12 @@
 }
 
 #pragma mark -
+#pragma mark Toggle alternate functions
 
-- (void) toggleAlernates: (id) sender
+// -------------------------------------------------------
+// (IBAction) toggleAlternates: (id) sender
+// -------------------------------------------------------
+- (IBAction) toggleAlernates: (id) sender
 {
 	if (displayAlternates == YES)
 	{
@@ -835,11 +818,11 @@
 	{
 		[self showAlternates];
 	}
-	
-	//	[self saveState];
-	//	[self updateDisplay];
 }
 
+// -------------------------------------------------------
+// (void) showAlternates: (id) sender
+// -------------------------------------------------------
 - (void) showAlternates
 {
 	if (displayAlternates == NO)
@@ -860,12 +843,12 @@
 		
 		[x3Button setTitle: @"3√"];
 		[x3Button setToolTip: NSLocalizedString(@"Cubed Root", nil)];
-		[x3Button setAction: @selector(cubed_root:)];
+		[x3Button setAction: @selector(cubedRoot:)];
 		
 		[xyButton setImage: nil];
 		[xyButton setTitle: @"y√x"];
 		[xyButton setToolTip: NSLocalizedString(@"", nil)];
-		[xyButton setAction: @selector(xroot:)];
+		[xyButton setAction: @selector(xRoot:)];
 		
 		[lnButton setTitle: @""];
 		[lnButton setToolTip: NSLocalizedString(@"", nil)];
@@ -886,6 +869,9 @@
 	}
 }
 
+// -------------------------------------------------------
+// (void) hideAlternates: (id) sender
+// -------------------------------------------------------
 - (void) hideAlternates
 {
 	if (displayAlternates == YES)

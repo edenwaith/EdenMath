@@ -77,8 +77,6 @@
 		841C3DF216BDEAF4009A5E20 /* 10x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEF16BDEAF4009A5E20 /* 10x.png */; };
 		841C3DF316BDEAF4009A5E20 /* ex.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DF016BDEAF4009A5E20 /* ex.png */; };
 		845D31D4064F0D0F000C5867 /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
-		84F1ADB213BED2810094FF29 /* grammar.y in Sources */ = {isa = PBXBuildFile; fileRef = 84F1ADB013BED2810094FF29 /* grammar.y */; };
-		84F1ADB313BED2810094FF29 /* rules.l in Sources */ = {isa = PBXBuildFile; fileRef = 84F1ADB113BED2810094FF29 /* rules.l */; };
 		84F7523016C4A54300B63FBA /* EMWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F7522E16C4A54300B63FBA /* EMWindow.h */; };
 		84F7523116C4A54300B63FBA /* EMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7522F16C4A54300B63FBA /* EMWindow.m */; };
 		F5F86F760225FF320188614A /* EMResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F86F740225FF320188614A /* EMResponder.h */; };
@@ -97,16 +95,13 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8405E9E60DF7861000A4E72F /* Info-EdenMath__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-EdenMath__Upgraded_.plist"; sourceTree = "<group>"; };
 		8405E9E70DF7861000A4E72F /* EdenMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdenMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8413BD6D1713A87A0047EDE1 /* grammar.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = grammar.ym; path = ../EdenGraph/grammar.ym; sourceTree = SOURCE_ROOT; };
 		841571B11751BF6500147AE6 /* 2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2x.png; path = images/2x.png; sourceTree = "<group>"; };
 		841C3D8F16BDD067009A5E20 /* EdenMath12.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = EdenMath12.icns; path = images/EdenMath12.icns; sourceTree = "<group>"; };
 		841C3DEE16BDEAF4009A5E20 /* xy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xy.png; path = images/xy.png; sourceTree = "<group>"; };
 		841C3DEF16BDEAF4009A5E20 /* 10x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10x.png; path = images/10x.png; sourceTree = "<group>"; };
 		841C3DF016BDEAF4009A5E20 /* ex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ex.png; path = images/ex.png; sourceTree = "<group>"; };
 		845D31D3064F0D0F000C5867 /* EdenMath.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = EdenMath.icns; sourceTree = "<group>"; };
-		84F1AD9D13BED2500094FF29 /* MathCore */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MathCore; sourceTree = BUILT_PRODUCTS_DIR; };
-		84F1ADB013BED2810094FF29 /* grammar.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = grammar.y; path = ../EdenGraph/grammar.y; sourceTree = SOURCE_ROOT; };
-		84F1ADB113BED2810094FF29 /* rules.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; name = rules.l; path = ../EdenGraph/rules.l; sourceTree = SOURCE_ROOT; };
+		84F1AD9D13BED2500094FF29 /* MathCore */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = MathCore; path = /Users/admin/Programs/Mac/Edenmath/build/Development/MathCore; sourceTree = "<absolute>"; };
 		84F7522E16C4A54300B63FBA /* EMWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMWindow.h; sourceTree = "<group>"; };
 		84F7522F16C4A54300B63FBA /* EMWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMWindow.m; sourceTree = "<group>"; };
 		F5F86F740225FF320188614A /* EMResponder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EMResponder.h; sourceTree = "<group>"; };
@@ -177,7 +172,6 @@
 			children = (
 				17587328FF379C6511CA2CBB /* EdenMath.app */,
 				8405E9E70DF7861000A4E72F /* EdenMath.app */,
-				84F1AD9D13BED2500094FF29 /* MathCore */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,7 +192,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				84F1ADA313BED2610094FF29 /* MathCore */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -234,16 +227,6 @@
 				841C3DF016BDEAF4009A5E20 /* ex.png */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		84F1ADA313BED2610094FF29 /* MathCore */ = {
-			isa = PBXGroup;
-			children = (
-				84F1ADB013BED2810094FF29 /* grammar.y */,
-				8413BD6D1713A87A0047EDE1 /* grammar.ym */,
-				84F1ADB113BED2810094FF29 /* rules.l */,
-			);
-			name = MathCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,8 +368,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F1ADB213BED2810094FF29 /* grammar.y in Sources */,
-				84F1ADB313BED2810094FF29 /* rules.l in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

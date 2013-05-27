@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="57"/>
+			<integer value="169"/>
 			<integer value="871"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -559,18 +559,18 @@
 								<int key="NSPeriodicInterval">25</int>
 							</object>
 						</object>
-						<object class="NSButton" id="928205019">
+						<object class="NSButton" id="736306334">
 							<reference key="NSNextResponder" ref="1048305596"/>
 							<int key="NSvFlags">256</int>
 							<string key="NSFrame">{{75, 86}, {50, 28}}</string>
 							<reference key="NSSuperview" ref="1048305596"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="NSButtonCell" key="NSCell" id="666055201">
+							<object class="NSButtonCell" key="NSCell" id="748654670">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">log₂</string>
 								<reference key="NSSupport" ref="17787321"/>
-								<reference key="NSControlView" ref="928205019"/>
+								<reference key="NSControlView" ref="736306334"/>
 								<int key="NSButtonFlags">-2038284033</int>
 								<int key="NSButtonFlags2">6</int>
 								<reference key="NSAlternateImage" ref="87642601"/>
@@ -1879,27 +1879,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">random_num:</string>
-						<reference key="source" ref="59843001"/>
-						<reference key="destination" ref="1039705737"/>
-					</object>
-					<int key="connectionID">975</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">enter:</string>
 						<reference key="source" ref="59843001"/>
 						<reference key="destination" ref="188710669"/>
 					</object>
 					<int key="connectionID">976</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">square_root:</string>
-						<reference key="source" ref="59843001"/>
-						<reference key="destination" ref="928821297"/>
-					</object>
-					<int key="connectionID">977</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -1956,14 +1940,6 @@
 						<reference key="destination" ref="673683804"/>
 					</object>
 					<int key="connectionID">984</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">reverse_sign:</string>
-						<reference key="source" ref="59843001"/>
-						<reference key="destination" ref="136315803"/>
-					</object>
-					<int key="connectionID">985</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -2105,7 +2081,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">binaryLogarithm:</string>
 						<reference key="source" ref="59843001"/>
-						<reference key="destination" ref="928205019"/>
+						<reference key="destination" ref="736306334"/>
 					</object>
 					<int key="connectionID">1022</int>
 				</object>
@@ -2113,9 +2089,33 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">binaryLogButton</string>
 						<reference key="source" ref="59843001"/>
-						<reference key="destination" ref="928205019"/>
+						<reference key="destination" ref="736306334"/>
 					</object>
 					<int key="connectionID">1023</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">squareRoot:</string>
+						<reference key="source" ref="59843001"/>
+						<reference key="destination" ref="928821297"/>
+					</object>
+					<int key="connectionID">1024</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">randomNum:</string>
+						<reference key="source" ref="59843001"/>
+						<reference key="destination" ref="1039705737"/>
+					</object>
+					<int key="connectionID">1025</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">reverseSign:</string>
+						<reference key="source" ref="59843001"/>
+						<reference key="destination" ref="136315803"/>
+					</object>
+					<int key="connectionID">1026</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2538,7 +2538,7 @@
 							<reference ref="188710669"/>
 							<reference ref="690825004"/>
 							<reference ref="544153758"/>
-							<reference ref="928205019"/>
+							<reference ref="736306334"/>
 							<reference ref="918951793"/>
 						</object>
 						<reference key="parent" ref="642872360"/>
@@ -3149,17 +3149,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1019</int>
-						<reference key="object" ref="928205019"/>
+						<reference key="object" ref="736306334"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="666055201"/>
+							<reference ref="748654670"/>
 						</object>
 						<reference key="parent" ref="1048305596"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1020</int>
-						<reference key="object" ref="666055201"/>
-						<reference key="parent" ref="928205019"/>
+						<reference key="object" ref="748654670"/>
+						<reference key="parent" ref="736306334"/>
 					</object>
 				</object>
 			</object>
@@ -3207,6 +3207,7 @@
 					<string>163.ImportedFromIB2</string>
 					<string>164.IBPluginDependency</string>
 					<string>164.ImportedFromIB2</string>
+					<string>169.IBEditorWindowLastContentRect</string>
 					<string>169.IBPluginDependency</string>
 					<string>169.ImportedFromIB2</string>
 					<string>171.IBPluginDependency</string>
@@ -3450,7 +3451,7 @@
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
 							<string key="name">ToolTip</string>
-							<reference key="object" ref="928205019"/>
+							<reference key="object" ref="736306334"/>
 							<string key="toolTip">Binary Logarithm</string>
 						</object>
 					</object>
@@ -3493,6 +3494,7 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>{{143, 661}, {151, 153}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4079,7 +4081,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">1023</int>
+			<int key="maxID">1026</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4102,7 +4104,7 @@
 							<string>copy:</string>
 							<string>cosine:</string>
 							<string>cubed:</string>
-							<string>cubed_root:</string>
+							<string>cubedRoot:</string>
 							<string>cut:</string>
 							<string>digitButton:</string>
 							<string>divide:</string>
@@ -4117,7 +4119,6 @@
 							<string>logarithm:</string>
 							<string>mod:</string>
 							<string>multiply:</string>
-							<string>off:</string>
 							<string>paste:</string>
 							<string>percentage:</string>
 							<string>period:</string>
@@ -4132,24 +4133,23 @@
 							<string>power10:</string>
 							<string>power2:</string>
 							<string>powerE:</string>
-							<string>random_num:</string>
-							<string>reverse_sign:</string>
+							<string>randomNum:</string>
+							<string>reverseSign:</string>
 							<string>setAngleType:</string>
 							<string>setDegree:</string>
 							<string>setGradient:</string>
 							<string>setRadian:</string>
 							<string>sine:</string>
-							<string>square_root:</string>
+							<string>squareRoot:</string>
 							<string>squared:</string>
 							<string>subtract:</string>
 							<string>tangent:</string>
 							<string>toggleAlernates:</string>
 							<string>undoAction:</string>
-							<string>xroot:</string>
+							<string>xRoot:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -4221,7 +4221,7 @@
 							<string>copy:</string>
 							<string>cosine:</string>
 							<string>cubed:</string>
-							<string>cubed_root:</string>
+							<string>cubedRoot:</string>
 							<string>cut:</string>
 							<string>digitButton:</string>
 							<string>divide:</string>
@@ -4236,7 +4236,6 @@
 							<string>logarithm:</string>
 							<string>mod:</string>
 							<string>multiply:</string>
-							<string>off:</string>
 							<string>paste:</string>
 							<string>percentage:</string>
 							<string>period:</string>
@@ -4251,20 +4250,20 @@
 							<string>power10:</string>
 							<string>power2:</string>
 							<string>powerE:</string>
-							<string>random_num:</string>
-							<string>reverse_sign:</string>
+							<string>randomNum:</string>
+							<string>reverseSign:</string>
 							<string>setAngleType:</string>
 							<string>setDegree:</string>
 							<string>setGradient:</string>
 							<string>setRadian:</string>
 							<string>sine:</string>
-							<string>square_root:</string>
+							<string>squareRoot:</string>
 							<string>squared:</string>
 							<string>subtract:</string>
 							<string>tangent:</string>
 							<string>toggleAlernates:</string>
 							<string>undoAction:</string>
-							<string>xroot:</string>
+							<string>xRoot:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -4313,7 +4312,7 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">cubed_root:</string>
+								<string key="name">cubedRoot:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -4373,10 +4372,6 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">off:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
 								<string key="name">paste:</string>
 								<string key="candidateClassName">id</string>
 							</object>
@@ -4433,11 +4428,11 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">random_num:</string>
+								<string key="name">randomNum:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">reverse_sign:</string>
+								<string key="name">reverseSign:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -4461,7 +4456,7 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">square_root:</string>
+								<string key="name">squareRoot:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -4485,7 +4480,7 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">xroot:</string>
+								<string key="name">xRoot:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>
