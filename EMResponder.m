@@ -333,10 +333,7 @@
 // -------------------------------------------------------
 - (void)cubedRoot
 {
-    //if (currentValue >= 0.0)
-    //{
-        currentValue = pow(currentValue, 0.3333333333333333);
-    //}
+	currentValue = pow(currentValue, 0.3333333333333333);
     
     isNewDigit = YES;
 }
