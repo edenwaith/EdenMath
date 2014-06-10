@@ -124,7 +124,7 @@
     char c_string[32] = "";
     NSString *true_precision = [[NSString alloc] initWithFormat: @"%s%d%s", y, i-1, z];
     
-    NSString *new_string; // = [[NSString alloc] init];
+    NSString *new_string = nil;
     
     // variables for the new algorithm to format numbers properly and eliminate unncessary
     // '0' from the end of a final number.
@@ -209,7 +209,7 @@
         }
         
         new_string = [NSString stringWithFormat:@"%s", final_string];
-        
+
         // When printing out to NSLog, new_string looks odd (\\304\\026\\010\\304),
         // but when placed as a parameter, it seems to work.  Go figure.
 
