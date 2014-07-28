@@ -116,43 +116,40 @@
 // typed has required the extra 50 (or so) lines of code
 // -------------------------------------------------------
 - (void)updateDisplay
- {
-    double current_value = [em getCurrentValue];
-    char *y = "%15.";
+{
+    double currentValue = [em getCurrentValue];
     int i = [em getTrailingDigits];
-    char *z = "f";
-    char c_string[32] = "";
-    NSString *true_precision = [[NSString alloc] initWithFormat: @"%s%d%s", y, i-1, z];
-    
-    NSString *new_string = nil;
+
+	NSString *truePrecision = [NSString stringWithFormat:@"%@%df", @"%15.", i-1];
+    NSString *precision = @"%15.10f"; // default precision
+    NSString *stringValue = [NSString stringWithFormat:precision, currentValue]; // convert to string with certain string format    
+    NSString *newDisplayString = nil;
     
     // variables for the new algorithm to format numbers properly and eliminate unncessary
     // '0' from the end of a final number.
-    char final_string[32] = "";
+	char c_string[64] = "";
+    char final_string[64] = "";
     int cs_len = 0;
     int j = 0;
     int decimal_places = 0;
-    BOOL is_decimal = NO; // 0 is false, 1 is true
+    BOOL hasDecimal = NO; // 0 is false, 1 is true
     BOOL is_zero = YES; // is true
     int new_len = 0;
     int num_zeros = 0;
 
-    NSString *precision = @"%15.10f"; // default precision
-    NSString *string_value = [NSString stringWithFormat:precision, current_value]; // convert to string with certain string format
-
     if (i != 0) // if there ARE some set trailing digits like 65.2 or 0.001
     {
-        NSString *other_value = [NSString stringWithFormat:true_precision, current_value];
-        [displayField setStringValue: other_value];
+        NSString *otherValue = [NSString stringWithFormat:truePrecision, currentValue];
+        [displayField setStringValue: otherValue];
     }
     else // no trailing_digits because it is a number like 6 or it is an answer and
         // trailing_digits was reset to 0
     {   
-        // loop through the string converted version of the current_value, and cut
+        // loop through the string converted version of the currentValue, and cut
         // off any excess 0's at the end of the number, so 63.20 will appear like 63.2
         
-        current_value = [string_value doubleValue];
-        [string_value getCString: c_string];
+        currentValue = [stringValue doubleValue];
+        [stringValue getCString: c_string];
         
         // new algorithm for formating numbers properly on output
         
@@ -164,7 +161,7 @@
         {
             if (c_string[j] == '.')
             {
-                is_decimal = YES;
+                hasDecimal = YES;
                 while (j < cs_len)
                 {
                     j++;
@@ -175,7 +172,7 @@
   
         // if a decimal place exists, go through to get rid of unnecessary 0's at
         // the end of the number so 65.20 will appear to be 65.2
-        if (is_decimal == YES)
+        if (hasDecimal == YES)
         {
             for (j = 0; (j < decimal_places) && (is_zero == YES); j++)
             {
@@ -208,12 +205,14 @@
             strcpy(final_string, c_string);
         }
         
-        new_string = [NSString stringWithFormat:@"%s", final_string];
+        newDisplayString = [NSString stringWithFormat:@"%s", final_string];
 
-        // When printing out to NSLog, new_string looks odd (\\304\\026\\010\\304),
-        // but when placed as a parameter, it seems to work.  Go figure.
-
-        [displayField setStringValue: new_string];
+		if ((newDisplayString == nil) || ([newDisplayString isEqualToString:@""] == YES)) {
+			newDisplayString = @"NaN";
+		}
+		
+		[displayField setStringValue: newDisplayString];
+		
     }
 }
 

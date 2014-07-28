@@ -386,15 +386,23 @@
 // with a gamma function.  For more information, read the
 // lgamma man page or 
 // http://www.gnu.org/software/libc/manual/html_node/Special-Functions.html
-// Previous version: 8. March 2004 23:40
-// Current version:  9 June 2014 21:00
+// Previous version: 8 March 2004 23:40
+// Current version:  27 July 2014 18:42
 // -------------------------------------------------------
 - (void) factorial
 {    
     // 170.5 seems to be the max value which EdenMath can handle
     if (currentValue < 170.5)
     {
-        currentValue = exp(lgamma(currentValue+1.0));
+		if (fmod(currentValue, floor(currentValue)) == 0) // integer
+		{
+			// rounding helps prevent precision errors
+			currentValue = round(exp(lgamma(currentValue+1.0)));
+		} 
+		else
+		{
+			currentValue = exp(lgamma(currentValue+1.0));
+		}
     }
     
     trailingDigits = 0; // this allows for more precise decimal precision
@@ -406,8 +414,8 @@
 // (double) factorial: (double) n
 // This is required for the permutations and combinations
 // calls.
-// Previous version: 9. March 2004 23:48
-// Current version:  9 June 2014 21:00
+// Previous version: 9 March 2004 23:48
+// Current version:  27 July 2014 18:42
 // -------------------------------------------------------
 - (double) factorial: (double) n
 {
@@ -416,7 +424,15 @@
     // 170.5 seems to be the max value which EdenMath can handle
     if (n < 170.5)
     {
-        lg = exp(lgamma(n+1.0));
+		if (fmod(n, floor(n)) == 0) // integer
+		{
+			// rounding helps prevent precision errors
+			lg = round(exp(lgamma(n+1.0)));
+		} 
+		else
+		{
+			lg = exp(lgamma(n+1.0));
+		}
     }
     
     return (lg);

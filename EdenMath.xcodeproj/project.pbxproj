@@ -72,11 +72,11 @@
 		8405E9DF0DF7861000A4E72F /* EMResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F86F750225FF320188614A /* EMResponder.m */; };
 		8405E9E10DF7861000A4E72F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		841571B21751BF6500147AE6 /* 2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841571B11751BF6500147AE6 /* 2x.png */; };
-		841C3D9016BDD067009A5E20 /* EdenMath12.icns in Resources */ = {isa = PBXBuildFile; fileRef = 841C3D8F16BDD067009A5E20 /* EdenMath12.icns */; };
 		841C3DF116BDEAF4009A5E20 /* xy.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEE16BDEAF4009A5E20 /* xy.png */; };
 		841C3DF216BDEAF4009A5E20 /* 10x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEF16BDEAF4009A5E20 /* 10x.png */; };
 		841C3DF316BDEAF4009A5E20 /* ex.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DF016BDEAF4009A5E20 /* ex.png */; };
 		845D31D4064F0D0F000C5867 /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
+		84CA655F1985BE9F00800BEA /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
 		84F7523016C4A54300B63FBA /* EMWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F7522E16C4A54300B63FBA /* EMWindow.h */; };
 		84F7523116C4A54300B63FBA /* EMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7522F16C4A54300B63FBA /* EMWindow.m */; };
 		F5F86F760225FF320188614A /* EMResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F86F740225FF320188614A /* EMResponder.h */; };
@@ -307,11 +307,11 @@
 			files = (
 				8405E9D40DF7861000A4E72F /* MainMenu.nib in Resources */,
 				8405E9D50DF7861000A4E72F /* InfoPlist.strings in Resources */,
-				841C3D9016BDD067009A5E20 /* EdenMath12.icns in Resources */,
 				841C3DF116BDEAF4009A5E20 /* xy.png in Resources */,
 				841C3DF216BDEAF4009A5E20 /* 10x.png in Resources */,
 				841C3DF316BDEAF4009A5E20 /* ex.png in Resources */,
 				841571B21751BF6500147AE6 /* 2x.png in Resources */,
+				84CA655F1985BE9F00800BEA /* EdenMath.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

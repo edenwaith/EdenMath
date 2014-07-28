@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>EdenMath</string>
 	<key>CFBundleIconFile</key>
-	<string>EdenMath12</string>
+	<string>EdenMath</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.edenwaith.edenmath</string>
 	<key>CFBundleInfoDictionaryVersion</key>
