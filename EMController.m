@@ -128,7 +128,7 @@
     // variables for the new algorithm to format numbers properly and eliminate unncessary
     // '0' from the end of a final number.
 	char c_string[64] = "";
-    char final_string[64] = "";
+    char finalString[64] = "";
     int cs_len = 0;
     int j = 0;
     int decimal_places = 0;
@@ -147,9 +147,19 @@
     {   
         // loop through the string converted version of the currentValue, and cut
         // off any excess 0's at the end of the number, so 63.20 will appear like 63.2
-        
+
         currentValue = [stringValue doubleValue];
-        [stringValue getCString: c_string];
+		
+		@try 
+		{
+			[stringValue getCString: c_string maxLength:64];
+		}
+		@catch (NSException *exception) 
+		{
+			// If the stringValue is too large, this results in the exception:
+			// Conversion to cString failed for string "some overly long string"
+			NSLog(@"Exception: %@", [exception description]);
+		}
         
         // new algorithm for formating numbers properly on output
         
@@ -197,15 +207,15 @@
             // unneeded 0's
             for (j = 0; j < (cs_len - num_zeros); j++)
             {
-                final_string[j] = c_string[j];
+                finalString[j] = c_string[j];
             }
         }
         else // otherwise, there is no decimal place 
         {
-            strcpy(final_string, c_string);
+            strcpy(finalString, c_string);
         }
         
-        newDisplayString = [NSString stringWithFormat:@"%s", final_string];
+        newDisplayString = [NSString stringWithFormat:@"%s", finalString];
 
 		if ((newDisplayString == nil) || ([newDisplayString isEqualToString:@""] == YES)) {
 			newDisplayString = @"NaN";
