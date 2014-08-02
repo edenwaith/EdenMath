@@ -41,6 +41,7 @@
 - (void)paste:(id)sender;
 
 - (void)updateDisplay;
+- (NSString *)stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)characterSet fromString:(NSString *)string;
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication;
 - (void)saveState;
 - (void)setState:(NSDictionary *)emState;

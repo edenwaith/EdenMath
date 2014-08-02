@@ -145,11 +145,23 @@
     else // no trailing_digits because it is a number like 6 or it is an answer and
         // trailing_digits was reset to 0
     {   
+		NSString *clippedString = nil;
+		
         // loop through the string converted version of the currentValue, and cut
         // off any excess 0's at the end of the number, so 63.20 will appear like 63.2
-        
+		if ([stringValue rangeOfString:@"."].location != NSNotFound) 
+		{
+			NSCharacterSet *zeroCharSet = [NSCharacterSet characterSetWithCharactersInString:@"0"];
+			clippedString = [self stringByTrimmingTrailingCharactersInSet:zeroCharSet fromString:stringValue];
+		}
+		else 
+		{
+			clippedString = stringValue;
+		}
+		NSLog(@"i: %d stringValue: %@ clippedString: %@", i, stringValue, clippedString);
+/*
         currentValue = [stringValue doubleValue];
-        [stringValue getCString: c_string];
+        [stringValue getCString: c_string maxLength:64];
         
         // new algorithm for formating numbers properly on output
         
@@ -210,10 +222,27 @@
 		if ((newDisplayString == nil) || ([newDisplayString isEqualToString:@""] == YES)) {
 			newDisplayString = @"NaN";
 		}
+		*/
 		
-		[displayField setStringValue: newDisplayString];
+		[displayField setStringValue: clippedString];
 		
     }
+}
+
+// -------------------------------------------------------
+// -------------------------------------------------------
+// http://stackoverflow.com/questions/5689288/how-to-remove-whitespace-from-right-end-of-nsstring
+// http://stackoverflow.com/questions/4158646/most-efficient-way-to-iterate-over-all-the-chars-in-an-nsstring/5691341#5691341
+// -------------------------------------------------------
+- (NSString *)stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)characterSet fromString:(NSString *)string 
+{
+    NSRange rangeOfLastWantedCharacter = [string rangeOfCharacterFromSet:[characterSet invertedSet]
+                                                               options:NSBackwardsSearch];
+    if (rangeOfLastWantedCharacter.location == NSNotFound) {
+        return @"";
+    }
+
+	return [string substringToIndex:rangeOfLastWantedCharacter.location+1]; // non-inclusive
 }
 
 // -------------------------------------------------------
