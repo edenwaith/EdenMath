@@ -115,29 +115,18 @@
 // numbers like 0.001 not showing the 0's as they are 
 // typed has required the extra 50 (or so) lines of code
 // -------------------------------------------------------
-- (void)updateDisplay
+// Version: 4 August 2014
+// -------------------------------------------------------
+- (void) updateDisplay
 {
     double currentValue = [em getCurrentValue];
-    int i = [em getTrailingDigits];
+    int trailingDigits = [em getTrailingDigits];
 
-	NSString *truePrecision = [NSString stringWithFormat:@"%@%df", @"%15.", i-1];
+	NSString *truePrecision = [NSString stringWithFormat:@"%@%df", @"%15.", trailingDigits-1];
     NSString *precision = @"%15.10f"; // default precision
     NSString *stringValue = [NSString stringWithFormat:precision, currentValue]; // convert to string with certain string format    
-    NSString *newDisplayString = nil;
     
-    // variables for the new algorithm to format numbers properly and eliminate unncessary
-    // '0' from the end of a final number.
-	char c_string[64] = "";
-    char final_string[64] = "";
-    int cs_len = 0;
-    int j = 0;
-    int decimal_places = 0;
-    BOOL hasDecimal = NO; // 0 is false, 1 is true
-    BOOL is_zero = YES; // is true
-    int new_len = 0;
-    int num_zeros = 0;
-
-    if (i != 0) // if there ARE some set trailing digits like 65.2 or 0.001
+    if (trailingDigits != 0) // if there ARE some set trailing digits like 65.2 or 0.001
     {
         NSString *otherValue = [NSString stringWithFormat:truePrecision, currentValue];
         [displayField setStringValue: otherValue];
@@ -146,95 +135,28 @@
         // trailing_digits was reset to 0
     {   
 		NSString *clippedString = nil;
+		NSCharacterSet *zeroCharSet = [NSCharacterSet characterSetWithCharactersInString:@"0"];
+		NSCharacterSet *periodCharSet = [NSCharacterSet characterSetWithCharactersInString:@"."];
 		
-        // loop through the string converted version of the currentValue, and cut
+		// loop through the string converted version of the currentValue, and cut
         // off any excess 0's at the end of the number, so 63.20 will appear like 63.2
-		if ([stringValue rangeOfString:@"."].location != NSNotFound) 
-		{
-			NSCharacterSet *zeroCharSet = [NSCharacterSet characterSetWithCharactersInString:@"0"];
-			clippedString = [self stringByTrimmingTrailingCharactersInSet:zeroCharSet fromString:stringValue];
-		}
-		else 
-		{
-			clippedString = stringValue;
-		}
-		NSLog(@"i: %d stringValue: %@ clippedString: %@", i, stringValue, clippedString);
-/*
-        currentValue = [stringValue doubleValue];
-        [stringValue getCString: c_string maxLength:64];
-        
-        // new algorithm for formating numbers properly on output
-        
-        // check to see if there is a decimal place, and if so, how many
-        // decimal places exist
-        cs_len = strlen(c_string);
-        
-        for (j = 0; j < cs_len; j++)
-        {
-            if (c_string[j] == '.')
-            {
-                hasDecimal = YES;
-                while (j < cs_len)
-                {
-                    j++;
-                    decimal_places++;
-                }
-            }
-        }
-  
-        // if a decimal place exists, go through to get rid of unnecessary 0's at
-        // the end of the number so 65.20 will appear to be 65.2
-        if (hasDecimal == YES)
-        {
-            for (j = 0; (j < decimal_places) && (is_zero == YES); j++)
-            {
-                new_len = cs_len - (1 + j);
-                // count the number of 0's at the end
-                if (c_string[new_len] == '0')
-                {
-                    num_zeros++;
-                }
-                else if (c_string[new_len] == '.')
-                {
-                    num_zeros++;
-                    is_zero = NO;
-                }
-                else // otherwise, no more excess 0's to be found
-                {
-                    is_zero = NO;
-                }
-            }
+		clippedString = [self stringByTrimmingTrailingCharactersInSet:zeroCharSet fromString:stringValue];
+		clippedString = [self stringByTrimmingTrailingCharactersInSet:periodCharSet fromString:clippedString];
 
-            // loop through the necessary number of times to get rid of
-            // unneeded 0's
-            for (j = 0; j < (cs_len - num_zeros); j++)
-            {
-                final_string[j] = c_string[j];
-            }
-        }
-        else // otherwise, there is no decimal place 
-        {
-            strcpy(final_string, c_string);
-        }
-        
-        newDisplayString = [NSString stringWithFormat:@"%s", final_string];
-
-		if ((newDisplayString == nil) || ([newDisplayString isEqualToString:@""] == YES)) {
-			newDisplayString = @"NaN";
-		}
-		*/
-		
 		[displayField setStringValue: clippedString];
-		
     }
 }
 
 // -------------------------------------------------------
+// (NSString *)stringByTrimmingTrailingCharactersInSet:fromString:
 // -------------------------------------------------------
+// References:
 // http://stackoverflow.com/questions/5689288/how-to-remove-whitespace-from-right-end-of-nsstring
 // http://stackoverflow.com/questions/4158646/most-efficient-way-to-iterate-over-all-the-chars-in-an-nsstring/5691341#5691341
 // -------------------------------------------------------
-- (NSString *)stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)characterSet fromString:(NSString *)string 
+// Created: 1 August 2014
+// -------------------------------------------------------
+- (NSString *) stringByTrimmingTrailingCharactersInSet: (NSCharacterSet *)characterSet fromString: (NSString *)string 
 {
     NSRange rangeOfLastWantedCharacter = [string rangeOfCharacterFromSet:[characterSet invertedSet]
                                                                options:NSBackwardsSearch];
@@ -252,7 +174,7 @@
 // Need to connect File Owner and Window to EMController
 // for this to work correctly
 // -------------------------------------------------------
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication 
+- (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication *)theApplication 
 {
     return YES;
 }
@@ -268,7 +190,7 @@
 // -------------------------------------------------------
 // (void) setState
 // -------------------------------------------------------
-- (void)setState:(NSDictionary *)emState 
+- (void) setState: (NSDictionary *)emState 
 {
     [self saveState];
     [em setState:emState];
@@ -278,7 +200,7 @@
 // -------------------------------------------------------
 // (void) undoAction
 // -------------------------------------------------------
-- (void)undoAction:(id)sender 
+- (void) undoAction: (id)sender 
 {
     if ([undoManager canUndo])
     {

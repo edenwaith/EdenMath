@@ -35,6 +35,7 @@
 
 // -------------------------------------------------------
 // (double) getCurrentValue
+// -------------------------------------------------------
 // Simple return function which returns the current
 // value
 // -------------------------------------------------------
@@ -46,6 +47,7 @@
 
 // -------------------------------------------------------
 // (int) getTrailingDigits
+// -------------------------------------------------------
 // Simple return function which returns the number of
 // trailing digits on the currently displayed number
 // so the proper amount of precision can be displayed.
@@ -158,6 +160,7 @@
 
 // -------------------------------------------------------
 // (void) pi
+// -------------------------------------------------------
 // Display the constant pi (3.141592653589793)
 // -------------------------------------------------------
 - (void) pi 
@@ -169,6 +172,7 @@
 
 // -------------------------------------------------------
 // (void) trigConstant: (double) trigConst
+// -------------------------------------------------------
 // Display the constant pi (3.141592653589793)
 // -------------------------------------------------------
 - (void) trigConstant: (double) trigConst 
@@ -180,9 +184,10 @@
 
 // -------------------------------------------------------
 // (void) e
+// -------------------------------------------------------
 // Display the constant e (2.718281828459045)
 // -------------------------------------------------------
-- (void)e
+- (void) e
 {
     currentValue 	= M_E; 
     trailingDigits = 0;
@@ -191,6 +196,7 @@
 
 // -------------------------------------------------------
 // (void) clear
+// -------------------------------------------------------
 // clear the displayField and reset several variables
 // -------------------------------------------------------
 - (void) clear 
@@ -226,11 +232,12 @@
 }
 
 // -------------------------------------------------------
-// (void)enter
+// (void) enter
+// -------------------------------------------------------
 // For binary operators (+, -, x, /, etc.), calculate
 // the value and place into currentValue
 // -------------------------------------------------------
-- (void)enter 
+- (void) enter 
 {
     switch (opType) 
     {
@@ -331,7 +338,7 @@
 // -------------------------------------------------------
 // (void) cubedRoot
 // -------------------------------------------------------
-- (void)cubedRoot
+- (void) cubedRoot
 {
 	currentValue = pow(currentValue, 0.3333333333333333);
     
@@ -340,9 +347,10 @@
 
 // -------------------------------------------------------
 // (void) ln
+// -------------------------------------------------------
 // natural log
 // -------------------------------------------------------
-- (void)ln
+- (void) ln
 {
     if (currentValue > 0.0)
     {
@@ -354,6 +362,7 @@
 
 // -------------------------------------------------------
 // (void) binaryLogarithm
+// -------------------------------------------------------
 // binary logarithm base 2
 // -------------------------------------------------------
 - (void) binaryLogarithm
@@ -368,6 +377,7 @@
 
 // -------------------------------------------------------
 // (void) logarithm
+// -------------------------------------------------------
 // logarithm base 10
 // -------------------------------------------------------
 - (void) logarithm
@@ -382,10 +392,12 @@
 
 // -------------------------------------------------------
 // (void) factorial
+// -------------------------------------------------------
 // This new function replaces the old factorial function
 // with a gamma function.  For more information, read the
 // lgamma man page or 
 // http://www.gnu.org/software/libc/manual/html_node/Special-Functions.html
+// -------------------------------------------------------
 // Previous version: 8 March 2004 23:40
 // Current version:  27 July 2014 18:42
 // -------------------------------------------------------
@@ -412,8 +424,10 @@
 
 // -------------------------------------------------------
 // (double) factorial: (double) n
+// -------------------------------------------------------
 // This is required for the permutations and combinations
 // calls.
+// -------------------------------------------------------
 // Previous version: 9 March 2004 23:48
 // Current version:  27 July 2014 18:42
 // -------------------------------------------------------
@@ -441,6 +455,7 @@
 
 // -------------------------------------------------------
 // (void) powerE
+// -------------------------------------------------------
 // e^x
 // M_E is a constant hidden somewhere in the included
 // libraries
@@ -453,6 +468,7 @@
 
 // -------------------------------------------------------
 // (void) power2
+// -------------------------------------------------------
 // 2^x
 // -------------------------------------------------------
 - (void) power2
@@ -463,6 +479,7 @@
 
 // -------------------------------------------------------
 // (void) power10
+// -------------------------------------------------------
 // 10^x
 // -------------------------------------------------------
 - (void) power10
@@ -489,6 +506,7 @@
 
 // -------------------------------------------------------
 // (void) setAngleType:(AngleType)aType
+// -------------------------------------------------------
 // Modify the type of angles using degrees, radians, or
 // gradients.  EM 1.1.1 reduced this code down to one
 // line, eliminating multiple IF-ELSE statements.
@@ -502,6 +520,7 @@
 
 // -------------------------------------------------------
 // (double)degToRad:(double)degrees
+// -------------------------------------------------------
 // Convert from degrees to radians
 // -------------------------------------------------------
 - (double)degToRad:(double)degrees
@@ -514,6 +533,7 @@
 
 // -------------------------------------------------------
 // (double)radToDeg:(double)radians
+// -------------------------------------------------------
 // Convert from radians to degrees
 // -------------------------------------------------------
 // Created: 31. May 2003
@@ -529,6 +549,7 @@
 
 // -------------------------------------------------------
 // (double)gradToRad:(double)gradients
+// -------------------------------------------------------
 // Convert from gradients to radians
 // http://www.onlineconversion.com/angles.htm
 // 1 gradient = 0.015707963267948966192 radians
@@ -551,6 +572,7 @@
 
 // -------------------------------------------------------
 // (double)radToGrad:(double)radians
+// -------------------------------------------------------
 // Convert from radians to gradients
 // http://www.onlineconversion.com/angles.htm
 // 1 gradient = 0.015707963267948966192 radians
@@ -623,7 +645,7 @@
          ( angle == - M_PI/2) || (angle == -3 * M_PI / 2) )
     {
         NSBeep();
-        NSRunAlertPanel(@"Warning", @"Tan cannot calculate values of ¸/2 or 3¸/2",
+        NSRunAlertPanel(NSLocalizedString(@"Warning", nil), NSLocalizedString(@"Tan cannot calculate values of ¸/2 or 3¸/2", nil),
                         NSLocalizedString(@"OK", nil), nil, nil);
     }
     else // otherwise, tan will still be calculated on ¸/2 or 3¸/2, which is wrong.
@@ -639,7 +661,7 @@
 // -------------------------------------------------------
 // Version: 31. May 2003
 // -------------------------------------------------------
-- (void)arcsine
+- (void) arcsine
 {
     currentValue = asin(currentValue);
     isNewDigit 	 = YES;
@@ -659,7 +681,7 @@
 // -------------------------------------------------------
 // Version: 31. May 2003
 // -------------------------------------------------------
-- (void)arccosine
+- (void) arccosine
 { 
     currentValue = acos(currentValue);
     isNewDigit 	  = YES;
@@ -679,7 +701,7 @@
 // -------------------------------------------------------
 // Version: 31. May 2003
 // -------------------------------------------------------
-- (void)arctangent
+- (void) arctangent
 {    
     currentValue = atan(currentValue);
     isNewDigit 	  = YES;
