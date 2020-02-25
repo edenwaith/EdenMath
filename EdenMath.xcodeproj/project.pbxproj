@@ -75,6 +75,18 @@
 		841C3DF116BDEAF4009A5E20 /* xy.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEE16BDEAF4009A5E20 /* xy.png */; };
 		841C3DF216BDEAF4009A5E20 /* 10x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEF16BDEAF4009A5E20 /* 10x.png */; };
 		841C3DF316BDEAF4009A5E20 /* ex.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DF016BDEAF4009A5E20 /* ex.png */; };
+		841E1DF11D2B288700D6F149 /* GCMathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 841E1DEF1D2B288700D6F149 /* GCMathParser.h */; };
+		841E1DF21D2B288700D6F149 /* GCMathParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E1DF01D2B288700D6F149 /* GCMathParser.m */; };
+		841E1DF31D2B288700D6F149 /* GCMathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 841E1DEF1D2B288700D6F149 /* GCMathParser.h */; };
+		841E1DF41D2B288700D6F149 /* GCMathParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E1DF01D2B288700D6F149 /* GCMathParser.m */; };
+		841E1DFF1D2B28FC00D6F149 /* ZExpParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 841E1DFD1D2B28FC00D6F149 /* ZExpParser.h */; };
+		841E1E001D2B28FC00D6F149 /* ZExpParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 841E1DFE1D2B28FC00D6F149 /* ZExpParser.mm */; };
+		841E1E011D2B28FC00D6F149 /* ZExpParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 841E1DFD1D2B28FC00D6F149 /* ZExpParser.h */; };
+		841E1E021D2B28FC00D6F149 /* ZExpParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 841E1DFE1D2B28FC00D6F149 /* ZExpParser.mm */; };
+		842C4B25220A99050053842B /* Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 842C4B23220A99050053842B /* Stack.h */; };
+		842C4B26220A99050053842B /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C4B24220A99050053842B /* Stack.m */; };
+		842C4B27220A99050053842B /* Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 842C4B23220A99050053842B /* Stack.h */; };
+		842C4B28220A99050053842B /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C4B24220A99050053842B /* Stack.m */; };
 		845D31D4064F0D0F000C5867 /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
 		84CA655F1985BE9F00800BEA /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
 		84F7523016C4A54300B63FBA /* EMWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F7522E16C4A54300B63FBA /* EMWindow.h */; };
@@ -96,10 +108,15 @@
 		8405E9E60DF7861000A4E72F /* Info-EdenMath__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-EdenMath__Upgraded_.plist"; sourceTree = "<group>"; };
 		8405E9E70DF7861000A4E72F /* EdenMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdenMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841571B11751BF6500147AE6 /* 2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2x.png; path = images/2x.png; sourceTree = "<group>"; };
-		841C3D8F16BDD067009A5E20 /* EdenMath12.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = EdenMath12.icns; path = images/EdenMath12.icns; sourceTree = "<group>"; };
 		841C3DEE16BDEAF4009A5E20 /* xy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xy.png; path = images/xy.png; sourceTree = "<group>"; };
 		841C3DEF16BDEAF4009A5E20 /* 10x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10x.png; path = images/10x.png; sourceTree = "<group>"; };
 		841C3DF016BDEAF4009A5E20 /* ex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ex.png; path = images/ex.png; sourceTree = "<group>"; };
+		841E1DEF1D2B288700D6F149 /* GCMathParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMathParser.h; sourceTree = "<group>"; };
+		841E1DF01D2B288700D6F149 /* GCMathParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCMathParser.m; sourceTree = "<group>"; };
+		841E1DFD1D2B28FC00D6F149 /* ZExpParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZExpParser.h; sourceTree = "<group>"; };
+		841E1DFE1D2B28FC00D6F149 /* ZExpParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZExpParser.mm; sourceTree = "<group>"; };
+		842C4B23220A99050053842B /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		842C4B24220A99050053842B /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		845D31D3064F0D0F000C5867 /* EdenMath.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = EdenMath.icns; sourceTree = "<group>"; };
 		84F7522E16C4A54300B63FBA /* EMWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMWindow.h; sourceTree = "<group>"; };
 		84F7522F16C4A54300B63FBA /* EMWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMWindow.m; sourceTree = "<group>"; };
@@ -132,12 +149,15 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				841E1DF51D2B289800D6F149 /* GCMathParser */,
 				F5FFB8C202223F9B0117F909 /* EMController.h */,
 				F5FFB8C302223F9B0117F909 /* EMController.m */,
 				F5F86F740225FF320188614A /* EMResponder.h */,
 				F5F86F750225FF320188614A /* EMResponder.m */,
 				84F7522E16C4A54300B63FBA /* EMWindow.h */,
 				84F7522F16C4A54300B63FBA /* EMWindow.m */,
+				842C4B23220A99050053842B /* Stack.h */,
+				842C4B24220A99050053842B /* Stack.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -208,10 +228,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		841E1DF51D2B289800D6F149 /* GCMathParser */ = {
+			isa = PBXGroup;
+			children = (
+				841E1DFD1D2B28FC00D6F149 /* ZExpParser.h */,
+				841E1DFE1D2B28FC00D6F149 /* ZExpParser.mm */,
+				841E1DEF1D2B288700D6F149 /* GCMathParser.h */,
+				841E1DF01D2B288700D6F149 /* GCMathParser.m */,
+			);
+			name = GCMathParser;
+			sourceTree = "<group>";
+		};
 		84380B0D0BCDE4E7009A8CC2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				841C3D8F16BDD067009A5E20 /* EdenMath12.icns */,
 				845D31D3064F0D0F000C5867 /* EdenMath.icns */,
 				841C3DEE16BDEAF4009A5E20 /* xy.png */,
 				841571B11751BF6500147AE6 /* 2x.png */,
@@ -230,6 +260,9 @@
 			files = (
 				F5FFB8C402223F9B0117F909 /* EMController.h in Headers */,
 				F5F86F760225FF320188614A /* EMResponder.h in Headers */,
+				841E1DF31D2B288700D6F149 /* GCMathParser.h in Headers */,
+				841E1E011D2B28FC00D6F149 /* ZExpParser.h in Headers */,
+				842C4B27220A99050053842B /* Stack.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +273,9 @@
 				8405E9D10DF7861000A4E72F /* EMController.h in Headers */,
 				8405E9D20DF7861000A4E72F /* EMResponder.h in Headers */,
 				84F7523016C4A54300B63FBA /* EMWindow.h in Headers */,
+				841E1DF11D2B288700D6F149 /* GCMathParser.h in Headers */,
+				841E1DFF1D2B28FC00D6F149 /* ZExpParser.h in Headers */,
+				842C4B25220A99050053842B /* Stack.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +361,9 @@
 				29B9732CFDCFA39411CA2CEA /* main.m in Sources */,
 				F5FFB8C502223F9B0117F909 /* EMController.m in Sources */,
 				F5F86F770225FF320188614A /* EMResponder.m in Sources */,
+				841E1DF41D2B288700D6F149 /* GCMathParser.m in Sources */,
+				841E1E021D2B28FC00D6F149 /* ZExpParser.mm in Sources */,
+				842C4B28220A99050053842B /* Stack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +375,9 @@
 				8405E9DE0DF7861000A4E72F /* EMController.m in Sources */,
 				8405E9DF0DF7861000A4E72F /* EMResponder.m in Sources */,
 				84F7523116C4A54300B63FBA /* EMWindow.m in Sources */,
+				841E1DF21D2B288700D6F149 /* GCMathParser.m in Sources */,
+				841E1E001D2B28FC00D6F149 /* ZExpParser.mm in Sources */,
+				842C4B26220A99050053842B /* Stack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,16 +550,14 @@
 		8430675B0951E69000198D61 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				GCC_VERSION_i386 = 4.0;
 				GCC_VERSION_ppc = 4.0;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.5;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
 				OTHER_LDFLAGS_ppc = "-prebind";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
 				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
@@ -526,16 +566,14 @@
 		8430675C0951E69000198D61 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				GCC_VERSION_i386 = 4.0;
 				GCC_VERSION_ppc = 4.0;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.5;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
 				OTHER_LDFLAGS_ppc = "-prebind";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
 				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
@@ -544,16 +582,14 @@
 		8430675D0951E69000198D61 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				GCC_VERSION_i386 = 4.0;
 				GCC_VERSION_ppc = 3.3;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.5;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3.9;
 				OTHER_LDFLAGS_ppc = "-prebind";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
 				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
 			};

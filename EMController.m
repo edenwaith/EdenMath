@@ -179,7 +179,9 @@
                 }
             }
         }
-  
+		
+		// rangeOfString: // {NSNotFound, 0}
+		
         // if a decimal place exists, go through to get rid of unnecessary 0's at
         // the end of the number so 65.20 will appear to be 65.2
         if (hasDecimal == YES)
