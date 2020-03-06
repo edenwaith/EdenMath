@@ -278,6 +278,7 @@
 }
 
 #pragma mark -
+#pragma mark Other menu methods
 
 // -------------------------------------------------------
 // (IBAction) checkForNewVersion: (id) sender
@@ -290,7 +291,6 @@
     NSString *currentVersionNumber = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     NSDictionary *productVersionDict = [NSDictionary dictionaryWithContentsOfURL: [NSURL URLWithString:@"http://www.edenwaith.com/xml/version.xml"]];
     NSString *latestVersionNumber = [productVersionDict valueForKey:@"EdenMath"];
-    int button = 0;
 	
     if ( latestVersionNumber == nil )
     {
@@ -303,17 +303,82 @@
     }
     else
     {
-        button = NSRunAlertPanel(NSLocalizedString(@"New Version is Available", nil), NSLocalizedString(@"A new version of EdenMath is available.", nil), NSLocalizedString(@"Download", nil), NSLocalizedString(@"Cancel", nil), NSLocalizedString(@"More Info", nil), nil);
-        
-        if (button == NSOKButton)	// Download
-        {
-            [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/downloads/edenmath.php"]];
-        }
-		else if (NSAlertOtherReturn == button) // More Info
-        {
-            [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/edenmath/"]];
-        }
+		int button = 0;
+		
+		if ([self isLatestVersion:latestVersionNumber newerThan:currentVersionNumber] == YES)
+		{
+			button = NSRunAlertPanel(NSLocalizedString(@"New Version is Available", nil), NSLocalizedString(@"A new version of EdenMath is available.", nil), NSLocalizedString(@"Download", nil), NSLocalizedString(@"Cancel", nil), NSLocalizedString(@"More Info", nil), nil);
+			
+			if (button == NSOKButton)	// Download
+			{
+				[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/downloads/edenmath.php"]];
+			}
+			else if (NSAlertOtherReturn == button) // More Info
+			{
+				[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/edenmath/"]];
+			}
+		}
+		else
+		{
+			NSRunAlertPanel(NSLocalizedString(@"Software is Up-To-Date", nil), NSLocalizedString(@"You have the most recent version of EdenMath.", nil), NSLocalizedString(@"OK", nil), nil, nil);
+		}
     }
+}
+
+// -------------------------------------------------------
+// (BOOL) isLatestVersion: (NSString *)latestVersionNumber newerThan: (NSString *) currentVersionNumber
+// -------------------------------------------------------
+// Check to see if the latestVersionNumber is higher/newer 
+// than the currentVersionNumber.  Return YES if true.
+// -------------------------------------------------------
+// Version: 29 February 2020 20:00
+// Created: 29 February 2020 20:00
+// -------------------------------------------------------
+- (BOOL) isLatestVersion: (NSString *)latestVersionNumber newerThan: (NSString *) currentVersionNumber
+{
+	NSInteger currentVersionMajor = 0;
+	NSInteger currentVersionMinor = 0;
+	NSInteger currentVersionPatch = 0;
+	NSInteger latestVersionMajor = 0;
+	NSInteger latestVersionMinor = 0;
+	NSInteger latestVersionPatch = 0;
+	
+	// Split the version number strings into their component parts
+	if (currentVersionNumber != nil)
+	{
+		// Parse out the minimum OS version required for the upgrade.
+		NSArray *parts = [currentVersionNumber componentsSeparatedByString:@"."];
+		
+		currentVersionMajor = [parts count] > 0 ? [[parts objectAtIndex:0] integerValue] : 0;
+		currentVersionMinor = [parts count] > 1 ? [[parts objectAtIndex:1] integerValue] : 0;
+		currentVersionPatch = [parts count] > 2 ? [[parts objectAtIndex:2] integerValue] : 0;
+	}
+	
+	if (latestVersionNumber != nil)
+	{	// Parse out the minimum OS version required for the upgrade.
+		NSArray *parts = [latestVersionNumber componentsSeparatedByString:@"."];
+		
+		latestVersionMajor = [parts count] > 0 ? [[parts objectAtIndex:0] integerValue] : 0;
+		latestVersionMinor = [parts count] > 1 ? [[parts objectAtIndex:1] integerValue] : 0;
+		latestVersionPatch = [parts count] > 2 ? [[parts objectAtIndex:2] integerValue] : 0;
+	}
+	
+	if (latestVersionMajor > currentVersionMajor)
+	{
+		return YES;
+	}
+	else if (latestVersionMinor > currentVersionMinor)
+	{
+		return YES;
+	}
+	else if (latestVersionPatch > currentVersionPatch)
+	{
+		return YES;
+	}
+	else 
+	{
+		return NO;
+	}
 }
 
 // -------------------------------------------------------

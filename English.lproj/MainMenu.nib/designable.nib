@@ -737,7 +737,7 @@
 								<string key="NSContents">x³</string>
 								<reference key="NSSupport" ref="17787321"/>
 								<reference key="NSControlView" ref="740111627"/>
-								<int key="NSButtonFlags">-2038152961</int>
+								<int key="NSButtonFlags">-2033434369</int>
 								<int key="NSButtonFlags2">6</int>
 								<string key="NSAlternateContents"/>
 								<object class="NSMutableString" key="NSKeyEquivalent">
@@ -759,7 +759,7 @@
 								<string key="NSContents">x²</string>
 								<reference key="NSSupport" ref="17787321"/>
 								<reference key="NSControlView" ref="89772400"/>
-								<int key="NSButtonFlags">-2037645057</int>
+								<int key="NSButtonFlags">-2033450753</int>
 								<int key="NSButtonFlags2">6</int>
 								<string key="NSAlternateContents"/>
 								<object class="NSMutableString" key="NSKeyEquivalent">
@@ -938,7 +938,11 @@
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">e</string>
-								<reference key="NSSupport" ref="17787321"/>
+								<object class="NSFont" key="NSSupport">
+									<string key="NSName">LucidaGrande</string>
+									<double key="NSSize">13</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<reference key="NSControlView" ref="428041884"/>
 								<int key="NSButtonFlags">-2038021889</int>
 								<int key="NSButtonFlags2">6</int>
@@ -5227,7 +5231,7 @@
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
-			<integer value="1040" key="NS.object.0"/>
+			<integer value="1050" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.InterfaceBuilder3</string>

@@ -75,18 +75,16 @@
 		841C3DF116BDEAF4009A5E20 /* xy.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEE16BDEAF4009A5E20 /* xy.png */; };
 		841C3DF216BDEAF4009A5E20 /* 10x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DEF16BDEAF4009A5E20 /* 10x.png */; };
 		841C3DF316BDEAF4009A5E20 /* ex.png in Resources */ = {isa = PBXBuildFile; fileRef = 841C3DF016BDEAF4009A5E20 /* ex.png */; };
-		841E1DF11D2B288700D6F149 /* GCMathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 841E1DEF1D2B288700D6F149 /* GCMathParser.h */; };
-		841E1DF21D2B288700D6F149 /* GCMathParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E1DF01D2B288700D6F149 /* GCMathParser.m */; };
 		841E1DF31D2B288700D6F149 /* GCMathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 841E1DEF1D2B288700D6F149 /* GCMathParser.h */; };
 		841E1DF41D2B288700D6F149 /* GCMathParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E1DF01D2B288700D6F149 /* GCMathParser.m */; };
-		841E1DFF1D2B28FC00D6F149 /* ZExpParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 841E1DFD1D2B28FC00D6F149 /* ZExpParser.h */; };
-		841E1E001D2B28FC00D6F149 /* ZExpParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 841E1DFE1D2B28FC00D6F149 /* ZExpParser.mm */; };
 		841E1E011D2B28FC00D6F149 /* ZExpParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 841E1DFD1D2B28FC00D6F149 /* ZExpParser.h */; };
 		841E1E021D2B28FC00D6F149 /* ZExpParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 841E1DFE1D2B28FC00D6F149 /* ZExpParser.mm */; };
-		842C4B25220A99050053842B /* Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 842C4B23220A99050053842B /* Stack.h */; };
-		842C4B26220A99050053842B /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C4B24220A99050053842B /* Stack.m */; };
 		842C4B27220A99050053842B /* Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 842C4B23220A99050053842B /* Stack.h */; };
 		842C4B28220A99050053842B /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C4B24220A99050053842B /* Stack.m */; };
+		84410699240790E5004B477D /* ex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84410698240790E5004B477D /* ex@2x.png */; };
+		844106B024079374004B477D /* 2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 844106AD24079374004B477D /* 2x@2x.png */; };
+		844106B124079374004B477D /* 10x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 844106AE24079374004B477D /* 10x@2x.png */; };
+		844106B224079374004B477D /* xy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 844106AF24079374004B477D /* xy@2x.png */; };
 		845D31D4064F0D0F000C5867 /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
 		84CA655F1985BE9F00800BEA /* EdenMath.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845D31D3064F0D0F000C5867 /* EdenMath.icns */; };
 		84F7523016C4A54300B63FBA /* EMWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F7522E16C4A54300B63FBA /* EMWindow.h */; };
@@ -117,6 +115,10 @@
 		841E1DFE1D2B28FC00D6F149 /* ZExpParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZExpParser.mm; sourceTree = "<group>"; };
 		842C4B23220A99050053842B /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		842C4B24220A99050053842B /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		84410698240790E5004B477D /* ex@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ex@2x.png"; path = "images/ex@2x.png"; sourceTree = "<group>"; };
+		844106AD24079374004B477D /* 2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "2x@2x.png"; path = "images/2x@2x.png"; sourceTree = "<group>"; };
+		844106AE24079374004B477D /* 10x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "10x@2x.png"; path = "images/10x@2x.png"; sourceTree = "<group>"; };
+		844106AF24079374004B477D /* xy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xy@2x.png"; path = "images/xy@2x.png"; sourceTree = "<group>"; };
 		845D31D3064F0D0F000C5867 /* EdenMath.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = EdenMath.icns; sourceTree = "<group>"; };
 		84F7522E16C4A54300B63FBA /* EMWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMWindow.h; sourceTree = "<group>"; };
 		84F7522F16C4A54300B63FBA /* EMWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMWindow.m; sourceTree = "<group>"; };
@@ -243,10 +245,14 @@
 			isa = PBXGroup;
 			children = (
 				845D31D3064F0D0F000C5867 /* EdenMath.icns */,
-				841C3DEE16BDEAF4009A5E20 /* xy.png */,
 				841571B11751BF6500147AE6 /* 2x.png */,
+				844106AD24079374004B477D /* 2x@2x.png */,
 				841C3DEF16BDEAF4009A5E20 /* 10x.png */,
+				844106AE24079374004B477D /* 10x@2x.png */,
 				841C3DF016BDEAF4009A5E20 /* ex.png */,
+				84410698240790E5004B477D /* ex@2x.png */,
+				841C3DEE16BDEAF4009A5E20 /* xy.png */,
+				844106AF24079374004B477D /* xy@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -273,9 +279,6 @@
 				8405E9D10DF7861000A4E72F /* EMController.h in Headers */,
 				8405E9D20DF7861000A4E72F /* EMResponder.h in Headers */,
 				84F7523016C4A54300B63FBA /* EMWindow.h in Headers */,
-				841E1DF11D2B288700D6F149 /* GCMathParser.h in Headers */,
-				841E1DFF1D2B28FC00D6F149 /* ZExpParser.h in Headers */,
-				842C4B25220A99050053842B /* Stack.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +351,10 @@
 				841C3DF316BDEAF4009A5E20 /* ex.png in Resources */,
 				841571B21751BF6500147AE6 /* 2x.png in Resources */,
 				84CA655F1985BE9F00800BEA /* EdenMath.icns in Resources */,
+				84410699240790E5004B477D /* ex@2x.png in Resources */,
+				844106B024079374004B477D /* 2x@2x.png in Resources */,
+				844106B124079374004B477D /* 10x@2x.png in Resources */,
+				844106B224079374004B477D /* xy@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,9 +382,6 @@
 				8405E9DE0DF7861000A4E72F /* EMController.m in Sources */,
 				8405E9DF0DF7861000A4E72F /* EMResponder.m in Sources */,
 				84F7523116C4A54300B63FBA /* EMWindow.m in Sources */,
-				841E1DF21D2B288700D6F149 /* GCMathParser.m in Sources */,
-				841E1E001D2B28FC00D6F149 /* ZExpParser.mm in Sources */,
-				842C4B26220A99050053842B /* Stack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,11 +559,11 @@
 				GCC_VERSION_i386 = 4.0;
 				GCC_VERSION_ppc = 4.0;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.5;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.5;
 				OTHER_LDFLAGS_ppc = "-prebind";
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Development;
 		};
@@ -571,11 +575,11 @@
 				GCC_VERSION_i386 = 4.0;
 				GCC_VERSION_ppc = 4.0;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.5;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.5;
 				OTHER_LDFLAGS_ppc = "-prebind";
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Deployment;
 		};
