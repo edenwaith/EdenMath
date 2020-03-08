@@ -116,43 +116,50 @@
 // typed has required the extra 50 (or so) lines of code
 // -------------------------------------------------------
 - (void)updateDisplay
- {
-    double current_value = [em getCurrentValue];
-    char *y = "%15.";
+{
+    double currentValue = [em getCurrentValue];
     int i = [em getTrailingDigits];
-    char *z = "f";
-    char c_string[32] = "";
-    NSString *true_precision = [[NSString alloc] initWithFormat: @"%s%d%s", y, i-1, z];
-    
-    NSString *new_string; // = [[NSString alloc] init];
+
+	NSString *truePrecision = [NSString stringWithFormat:@"%@%df", @"%15.", i-1];
+    NSString *precision = @"%15.10f"; // default precision
+    NSString *stringValue = [NSString stringWithFormat:precision, currentValue]; // convert to string with certain string format    
+    NSString *newDisplayString = nil;
     
     // variables for the new algorithm to format numbers properly and eliminate unncessary
     // '0' from the end of a final number.
-    char final_string[32] = "";
+	char c_string[64] = "";
+    char finalString[64] = "";
     int cs_len = 0;
     int j = 0;
     int decimal_places = 0;
-    BOOL is_decimal = NO; // 0 is false, 1 is true
+    BOOL hasDecimal = NO; // 0 is false, 1 is true
     BOOL is_zero = YES; // is true
     int new_len = 0;
     int num_zeros = 0;
 
-    NSString *precision = @"%15.10f"; // default precision
-    NSString *string_value = [NSString stringWithFormat:precision, current_value]; // convert to string with certain string format
-
     if (i != 0) // if there ARE some set trailing digits like 65.2 or 0.001
     {
-        NSString *other_value = [NSString stringWithFormat:true_precision, current_value];
-        [displayField setStringValue: other_value];
+        NSString *otherValue = [NSString stringWithFormat:truePrecision, currentValue];
+        [displayField setStringValue: otherValue];
     }
     else // no trailing_digits because it is a number like 6 or it is an answer and
         // trailing_digits was reset to 0
     {   
-        // loop through the string converted version of the current_value, and cut
+        // loop through the string converted version of the currentValue, and cut
         // off any excess 0's at the end of the number, so 63.20 will appear like 63.2
-        
-        current_value = [string_value doubleValue];
-        [string_value getCString: c_string];
+
+        currentValue = [stringValue doubleValue];
+		
+		@try 
+		{
+			[stringValue getCString: c_string maxLength:64];
+		}
+		@catch (NSException *exception) 
+		{
+			// If the stringValue is too large, this results in the exception:
+			// Conversion to cString failed for string "some overly long string"
+			NSLog(@"Exception: %@", [exception description]);
+		}
         
         // new algorithm for formating numbers properly on output
         
@@ -164,7 +171,7 @@
         {
             if (c_string[j] == '.')
             {
-                is_decimal = YES;
+                hasDecimal = YES;
                 while (j < cs_len)
                 {
                     j++;
@@ -172,10 +179,12 @@
                 }
             }
         }
-  
+		
+		// rangeOfString: // {NSNotFound, 0}
+		
         // if a decimal place exists, go through to get rid of unnecessary 0's at
         // the end of the number so 65.20 will appear to be 65.2
-        if (is_decimal == YES)
+        if (hasDecimal == YES)
         {
             for (j = 0; (j < decimal_places) && (is_zero == YES); j++)
             {
@@ -200,20 +209,22 @@
             // unneeded 0's
             for (j = 0; j < (cs_len - num_zeros); j++)
             {
-                final_string[j] = c_string[j];
+                finalString[j] = c_string[j];
             }
         }
         else // otherwise, there is no decimal place 
         {
-            strcpy(final_string, c_string);
+            strcpy(finalString, c_string);
         }
         
-        new_string = [NSString stringWithFormat:@"%s", final_string];
-        
-        // When printing out to NSLog, new_string looks odd (\\304\\026\\010\\304),
-        // but when placed as a parameter, it seems to work.  Go figure.
+        newDisplayString = [NSString stringWithFormat:@"%s", finalString];
 
-        [displayField setStringValue: new_string];
+		if ((newDisplayString == nil) || ([newDisplayString isEqualToString:@""] == YES)) {
+			newDisplayString = @"NaN";
+		}
+		
+		[displayField setStringValue: newDisplayString];
+		
     }
 }
 
@@ -267,6 +278,7 @@
 }
 
 #pragma mark -
+#pragma mark Other menu methods
 
 // -------------------------------------------------------
 // (IBAction) checkForNewVersion: (id) sender
@@ -279,7 +291,6 @@
     NSString *currentVersionNumber = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     NSDictionary *productVersionDict = [NSDictionary dictionaryWithContentsOfURL: [NSURL URLWithString:@"http://www.edenwaith.com/xml/version.xml"]];
     NSString *latestVersionNumber = [productVersionDict valueForKey:@"EdenMath"];
-    int button = 0;
 	
     if ( latestVersionNumber == nil )
     {
@@ -292,17 +303,82 @@
     }
     else
     {
-        button = NSRunAlertPanel(NSLocalizedString(@"New Version is Available", nil), NSLocalizedString(@"A new version of EdenMath is available.", nil), NSLocalizedString(@"Download", nil), NSLocalizedString(@"Cancel", nil), NSLocalizedString(@"More Info", nil), nil);
-        
-        if (button == NSOKButton)	// Download
-        {
-            [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/downloads/edenmath.php"]];
-        }
-		else if (NSAlertOtherReturn == button) // More Info
-        {
-            [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/edenmath/"]];
-        }
+		int button = 0;
+		
+		if ([self isLatestVersion:latestVersionNumber newerThan:currentVersionNumber] == YES)
+		{
+			button = NSRunAlertPanel(NSLocalizedString(@"New Version is Available", nil), NSLocalizedString(@"A new version of EdenMath is available.", nil), NSLocalizedString(@"Download", nil), NSLocalizedString(@"Cancel", nil), NSLocalizedString(@"More Info", nil), nil);
+			
+			if (button == NSOKButton)	// Download
+			{
+				[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/downloads/edenmath.php"]];
+			}
+			else if (NSAlertOtherReturn == button) // More Info
+			{
+				[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/edenmath/"]];
+			}
+		}
+		else
+		{
+			NSRunAlertPanel(NSLocalizedString(@"Software is Up-To-Date", nil), NSLocalizedString(@"You have the most recent version of EdenMath.", nil), NSLocalizedString(@"OK", nil), nil, nil);
+		}
     }
+}
+
+// -------------------------------------------------------
+// (BOOL) isLatestVersion: (NSString *)latestVersionNumber newerThan: (NSString *) currentVersionNumber
+// -------------------------------------------------------
+// Check to see if the latestVersionNumber is higher/newer 
+// than the currentVersionNumber.  Return YES if true.
+// -------------------------------------------------------
+// Version: 29 February 2020 20:00
+// Created: 29 February 2020 20:00
+// -------------------------------------------------------
+- (BOOL) isLatestVersion: (NSString *)latestVersionNumber newerThan: (NSString *) currentVersionNumber
+{
+	NSInteger currentVersionMajor = 0;
+	NSInteger currentVersionMinor = 0;
+	NSInteger currentVersionPatch = 0;
+	NSInteger latestVersionMajor = 0;
+	NSInteger latestVersionMinor = 0;
+	NSInteger latestVersionPatch = 0;
+	
+	// Split the version number strings into their component parts
+	if (currentVersionNumber != nil)
+	{
+		// Parse out the minimum OS version required for the upgrade.
+		NSArray *parts = [currentVersionNumber componentsSeparatedByString:@"."];
+		
+		currentVersionMajor = [parts count] > 0 ? [[parts objectAtIndex:0] integerValue] : 0;
+		currentVersionMinor = [parts count] > 1 ? [[parts objectAtIndex:1] integerValue] : 0;
+		currentVersionPatch = [parts count] > 2 ? [[parts objectAtIndex:2] integerValue] : 0;
+	}
+	
+	if (latestVersionNumber != nil)
+	{	// Parse out the minimum OS version required for the upgrade.
+		NSArray *parts = [latestVersionNumber componentsSeparatedByString:@"."];
+		
+		latestVersionMajor = [parts count] > 0 ? [[parts objectAtIndex:0] integerValue] : 0;
+		latestVersionMinor = [parts count] > 1 ? [[parts objectAtIndex:1] integerValue] : 0;
+		latestVersionPatch = [parts count] > 2 ? [[parts objectAtIndex:2] integerValue] : 0;
+	}
+	
+	if (latestVersionMajor > currentVersionMajor)
+	{
+		return YES;
+	}
+	else if (latestVersionMinor > currentVersionMinor)
+	{
+		return YES;
+	}
+	else if (latestVersionPatch > currentVersionPatch)
+	{
+		return YES;
+	}
+	else 
+	{
+		return NO;
+	}
 }
 
 // -------------------------------------------------------

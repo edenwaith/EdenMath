@@ -386,17 +386,23 @@
 // with a gamma function.  For more information, read the
 // lgamma man page or 
 // http://www.gnu.org/software/libc/manual/html_node/Special-Functions.html
-// Version: 8. March 2004 23:40
+// Previous version: 8 March 2004 23:40
+// Current version:  27 July 2014 18:42
 // -------------------------------------------------------
 - (void) factorial
-{
-    double lg;
-    
+{    
     // 170.5 seems to be the max value which EdenMath can handle
     if (currentValue < 170.5)
     {
-        lg = lgamma(currentValue+1.0);
-        currentValue = signgam*exp(lg); /* signgam is a predefined variable */
+		if (fmod(currentValue, floor(currentValue)) == 0) // integer
+		{
+			// rounding helps prevent precision errors
+			currentValue = round(exp(lgamma(currentValue+1.0)));
+		} 
+		else
+		{
+			currentValue = exp(lgamma(currentValue+1.0));
+		}
     }
     
     trailingDigits = 0; // this allows for more precise decimal precision
@@ -408,20 +414,28 @@
 // (double) factorial: (double) n
 // This is required for the permutations and combinations
 // calls.
-// Version: 9. March 2004 23:48
+// Previous version: 9 March 2004 23:48
+// Current version:  27 July 2014 18:42
 // -------------------------------------------------------
 - (double) factorial: (double) n
 {
-    double lg;
+    double lg = 0;
     
     // 170.5 seems to be the max value which EdenMath can handle
     if (n < 170.5)
     {
-        lg = lgamma(n+1.0);
-        n = signgam*exp(lg);
+		if (fmod(n, floor(n)) == 0) // integer
+		{
+			// rounding helps prevent precision errors
+			lg = round(exp(lgamma(n+1.0)));
+		} 
+		else
+		{
+			lg = exp(lgamma(n+1.0));
+		}
     }
     
-    return (n);
+    return (lg);
     
 }
 
@@ -594,25 +608,27 @@
 // -------------------------------------------------------
 - (void)tangent
 {
+	double angle = currentValue;
+	
     if (angleType == DEGREE)
     {
-        currentValue = [self degToRad:currentValue];
+        angle = [self degToRad:currentValue];
     }
     else if (angleType == GRADIENT)
     {
-        currentValue = [self gradToRad:currentValue];
+        angle = [self gradToRad:currentValue];
     }
     
-    if ( ( currentValue == M_PI/2) || (currentValue == 3 * M_PI / 2) || 
-         ( currentValue == - M_PI/2) || (currentValue == -3 * M_PI / 2) )
+    if ( ( angle == M_PI/2) || (angle == 3 * M_PI / 2) || 
+         ( angle == - M_PI/2) || (angle == -3 * M_PI / 2) )
     {
         NSBeep();
         NSRunAlertPanel(@"Warning", @"Tan cannot calculate values of ¸/2 or 3¸/2",
-                        @"OK", nil, nil);
+                        NSLocalizedString(@"OK", nil), nil, nil);
     }
     else // otherwise, tan will still be calculated on ¸/2 or 3¸/2, which is wrong.
     {
-        currentValue = tan(currentValue);
+        currentValue = tan(angle);
     }
     
     isNewDigit    = YES;
